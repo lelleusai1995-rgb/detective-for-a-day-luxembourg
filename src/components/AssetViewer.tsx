@@ -93,9 +93,8 @@ export default function AssetViewer({
               data={file.url}
               type="application/pdf"
               aria-label={loc(evidence.title)}
-            >
-              <p className="muted small">{t("assetMissing")}</p>
-            </object>
+            />
+
             <div className="btn-row">
               <a
                 className="btn"
@@ -112,11 +111,7 @@ export default function AssetViewer({
           </>
         )}
 
-        {isAudio && (
-          <audio controls preload="none" src={file.url}>
-            {t("assetMissing")}
-          </audio>
-        )}
+        {isAudio && <audio controls preload="none" src={file.url} />}
 
         {(isTextish || (!isImage && !isPdf && !isAudio)) && (
           <a
@@ -137,13 +132,6 @@ export default function AssetViewer({
       </div>
     );
   }
-
-  const expectsFile =
-    evidence.type === "pdf" ||
-    evidence.type === "image" ||
-    evidence.type === "audio";
-  const showMissingNote =
-    attachments.length === 0 && externalUrl === undefined && expectsFile;
 
   return (
     <div className="stack">
@@ -174,12 +162,7 @@ export default function AssetViewer({
         </div>
       )}
 
-      {/* ---- Gentle, non-immersion-breaking note when a file is not added yet ---- */}
-      {showMissingNote && (
-        <p className="notice">{t("assetMissing")}</p>
-      )}
-
-      {/* ---- Internal text content: the always-available fallback ---- */}
+      {/* ---- Internal text content: the always-available canonical fallback ---- */}
       {content && <div className="doc-text">{content}</div>}
 
       {/* ---- Transcript (esp. for audio) ---- */}
@@ -188,10 +171,6 @@ export default function AssetViewer({
           <p className="section-label">{t("transcript")}</p>
           <div className="doc-text">{transcript}</div>
         </div>
-      )}
-
-      {!content && !transcript && attachments.length === 0 && !externalUrl && (
-        <p className="muted">{t("assetMissing")}</p>
       )}
     </div>
   );

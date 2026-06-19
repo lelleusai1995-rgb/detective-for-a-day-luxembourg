@@ -15,7 +15,13 @@ function initials(name: string): string {
     .join("");
 }
 
-export default function SuspectCard({ suspect }: { suspect: Suspect }) {
+export default function SuspectCard({
+  suspect,
+  revealDetails = true,
+}: {
+  suspect: Suspect;
+  revealDetails?: boolean;
+}) {
   const { t, loc } = useLanguage();
 
   const statusLabelKey: Record<SuspectStatus, string> = {
@@ -64,26 +70,36 @@ export default function SuspectCard({ suspect }: { suspect: Suspect }) {
         <p style={{ margin: "8px 0 0" }}>{loc(suspect.motive)}</p>
       </details>
 
-      {suspect.contraEvidence && suspect.contraEvidence.length > 0 && (
-        <details>
-          <summary>{t("evidenceAgainst")}</summary>
-          <ul className="inline-list" style={{ marginTop: 8 }}>
-            {suspect.contraEvidence.map((c, i) => (
-              <li key={i}>{loc(c)}</li>
-            ))}
-          </ul>
-        </details>
-      )}
+      {revealDetails ? (
+        <>
+          {suspect.contraEvidence && suspect.contraEvidence.length > 0 && (
+            <details>
+              <summary>{t("evidenceAgainst")}</summary>
+              <ul className="inline-list" style={{ marginTop: 8 }}>
+                {suspect.contraEvidence.map((c, i) => (
+                  <li key={i}>{loc(c)}</li>
+                ))}
+              </ul>
+            </details>
+          )}
 
-      {suspect.proEvidence && suspect.proEvidence.length > 0 && (
-        <details>
-          <summary>{t("evidenceFor")}</summary>
-          <ul className="inline-list" style={{ marginTop: 8 }}>
-            {suspect.proEvidence.map((c, i) => (
-              <li key={i}>{loc(c)}</li>
-            ))}
-          </ul>
-        </details>
+          {suspect.proEvidence && suspect.proEvidence.length > 0 && (
+            <details>
+              <summary>{t("evidenceFor")}</summary>
+              <ul className="inline-list" style={{ marginTop: 8 }}>
+                {suspect.proEvidence.map((c, i) => (
+                  <li key={i}>{loc(c)}</li>
+                ))}
+              </ul>
+            </details>
+          )}
+        </>
+      ) : (
+        !!(suspect.contraEvidence?.length || suspect.proEvidence?.length) && (
+          <p className="muted small" style={{ marginBottom: 0 }}>
+            {t("suspectDetailsLocked")}
+          </p>
+        )
       )}
     </div>
   );

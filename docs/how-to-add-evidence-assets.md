@@ -92,9 +92,10 @@ guidance.
 ## Empty folders never break the game
 
 If a folder is empty (or you remove a file and re-run the manifest), the
-evidence still works: it shows its full text content, and — only when a document
-was expected — a small, neutral "The attached file is not available yet." note.
-There are no immersion-breaking placeholder banners.
+evidence still works: it shows its full text content. There is **no** missing-file
+notice and **no** placeholder banner — players never see any message about a
+missing document. The text content is the canonical playable evidence, so the
+absence of an uploaded file is completely invisible to players.
 
 ## Per-language files
 

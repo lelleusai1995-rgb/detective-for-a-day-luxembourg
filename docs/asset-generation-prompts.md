@@ -121,11 +121,12 @@ not reveal**, and **Visual style**.
 **Prompt:**
 > Create a clean, stylised, invented city-centre map (not a real map) marking
 > five labelled points: "Gëlle Fra / Place de la Constitution", "Pont Adolphe",
-> "Place de Glacis", "Armundia House — Rue de l'Aciérie 86", "LHoFT — Rue du
-> Laboratoire 9". Draw simple connector lines with walking-time labels (e.g.
+> "Place de Glacis", "Armundia House", "LHoFT". Use **place names only — do NOT
+> print any street name or number** (no "Rue de l'Aciérie 86", no "Rue du
+> Laboratoire 9"). Draw simple connector lines with walking-time labels (e.g.
 > "15–20 min"). Large legible labels, dark dossier background, gold accents.
 
-- **Must not reveal:** nothing sensitive; purely geographic.
+- **Must not reveal:** no street names/numbers (they are not needed and must not appear); purely geographic.
 - **Visual style:** schematic map, large labels, high contrast, mobile-friendly.
 
 ---
@@ -175,19 +176,20 @@ not reveal**, and **Visual style**.
 - **Target filename:** `suspect-statements.pdf`
 - **Target folder:** `public/cases/lux-gelle-fra/assets/chapter-2/`
 - **Asset type:** PDF
-- **Purpose:** five declared alibis; repeats the "Rue de l'Aciérie 86" base
+- **Purpose:** five declared alibis to cross-check against distances and the call log
 - **Priority:** MUST
 
 **Prompt:**
 > Create an invented "collected statements" document summarising five short
 > alibis from retreat members: Marco Bellandi (fireworks at Gëlle Fra, then back
-> to Rue de l'Aciérie 86), Davide Rinaldi (at/near Glacis, phone dead 23:50–00:40,
+> to the house), Davide Rinaldi (at/near Glacis, phone dead 23:50–00:40,
 > reported his temporary badge lost), Elira Kodra (passed Glacis, back early,
-> briefly near the office), Nora Weiss (organisational calls then back to Rue de
-> l'Aciérie 86), Arben Leka (Gëlle Fra 23:55, Pont Adolphe 00:20, home 00:45).
-> Note that the group base is Rue de l'Aciérie 86. Tidy interview-summary layout.
+> briefly near the office), Nora Weiss (organisational calls then back to the
+> house), Arben Leka (Gëlle Fra 23:55, Pont Adolphe 00:20, home 00:45). Do **not**
+> emphasise or repeat any street name/number; the base is just "the house".
+> Tidy interview-summary layout.
 
-- **Must not reveal:** that Nora is lying; present all alibis evenly.
+- **Must not reveal:** that Nora is lying; present all alibis evenly; do not telegraph any answer (this document is no longer a password source).
 - **Visual style:** statement sheet, one boxed paragraph per person.
 
 ---
@@ -202,10 +204,10 @@ not reveal**, and **Visual style**.
 
 **Prompt:**
 > Create a clear walking-distances chart between Gëlle Fra, Pont
-> Adolphe, Place de Glacis, Armundia House (Rue de l'Aciérie 86) and LHoFT (Rue
-> du Laboratoire 9), with times rounded to 5 minutes (e.g. "LHoFT → Glacis:
-> 25–30 min"). Add a highlighted note: a person genuinely at the Glacis could
-> not be at the side room near the LHoFT within minutes. Large readable table.
+> Adolphe, Place de Glacis, Armundia House and LHoFT (place names only — no
+> street names or numbers), with times rounded to 5 minutes (e.g. "LHoFT →
+> Glacis: 25–30 min"). Add a highlighted note: a person genuinely at the Glacis
+> could not be at the side room near the LHoFT within minutes. Large readable table.
 
 - **Must not reveal:** the culprit by name.
 - **Visual style:** matrix/table or labelled diagram, high contrast.
@@ -298,14 +300,15 @@ not reveal**, and **Visual style**.
 - **Priority:** MUST
 
 **Prompt:**
-> Create an invented door access log near "Rue du Laboratoire 9 (LHoFT)" and a
-> side room for the night of 22–23 June. Entries: 00:11 LHoFT main door badge
-> #0044 (N. Weiss) GRANTED; 00:19 service corridor #0044 GRANTED; 00:28 side
-> room #0017 (D. Rinaldi) GRANTED; 00:42 side room #0017 GRANTED (exit); 00:49
-> service corridor #0044 GRANTED. Add observations that #0017 was the lost badge
-> and that #0044 brackets the side-room events. Monospace log table.
+> Create an invented door access log for an institutional building's LHoFT
+> service corridor and a side room for the night of 22–23 June (use place names
+> only in the header — **no street name or number**). Entries: 00:11 LHoFT main
+> door badge #0044 (N. Weiss) GRANTED; 00:19 service corridor #0044 GRANTED;
+> 00:28 side room #0017 (D. Rinaldi) GRANTED; 00:42 side room #0017 GRANTED
+> (exit); 00:49 service corridor #0044 GRANTED. Add observations that #0017 was
+> the lost badge and that #0044 brackets the side-room events. Monospace log table.
 
-- **Must not reveal:** an explicit statement that Nora held #0017 — let players infer it.
+- **Must not reveal:** an explicit statement that Nora held #0017 — let players infer it. The header/location is NOT a password; the gate answer is the bracketing badge number (#0044), derived by reading this log together with the badge note.
 - **Visual style:** system log, monospace, fixed columns.
 
 ---
@@ -502,14 +505,18 @@ spoken lines as above. Keep voices invented; no real names of real people.
 - **Priority:** NICE TO HAVE
 
 **Prompt:**
-> Create an invented reconstructed timeline of the night with rows for 00:00–
-> 00:20 fireworks (crowd at Gëlle Fra; Davide at Glacis per audio 00:31),
-> 00:11/00:19 badge #0044 (Nora) in the LHoFT corridor, 00:23 Nora's 41s LuxEvent
-> call, 00:28 side room opened with #0017, 00:31 Grand Duke enters, 00:33–00:39
-> the killing, 00:42 #0017 exits, 00:45 return toward Rue de l'Aciérie 86.
-> Vertical timeline layout.
+> Create an invented timeline of the night listing **logged facts only** (no
+> interpretation, no conclusion, no named killer): 00:00–00:20 fireworks (crowd
+> at Gëlle Fra; Davide audible at Glacis per audio 00:31); 00:11/00:19 badge
+> #0044 at the LHoFT main door and corridor; 00:23 a 41-second LuxEvent call,
+> lower-town sector; 00:28 side room opened with #0017; 00:42 #0017 exits; 00:49
+> badge #0044 again at the LHoFT corridor; 00:51 a group-chat line "back at the
+> house"; 07:50 body found. Note estimated time of death 00:30–00:45 and a
+> heavy technical flashlight never returned. Do **not** add a "Grand Duke
+> enters", a "killing" row, a "false operational message", a street name/number,
+> or any "name that person" line. Vertical timeline layout.
 
-- **Must not reveal:** keep it factual; the conclusion is for the solution screen.
+- **Must not reveal:** the killer, the murder sequence, or any conclusion — facts only; interpretation belongs to the solution screen.
 - **Visual style:** vertical timeline with time chips.
 
 ---
@@ -560,19 +567,21 @@ spoken lines as above. Keep voices invented; no real names of real people.
 - **Target filename:** `real-patch-notes.pdf`
 - **Target folder:** `public/cases/lux-gelle-fra/assets/chapter-4/`
 - **Asset type:** PDF release/patch notes
-- **Purpose:** explains the "patch notes" phrase, clears Davide, holds the final password
+- **Purpose:** explains the "patch notes" phrase, clears Davide; its BODY holds the final password
 - **Priority:** MUST
 
 **Prompt:**
-> Create invented software patch notes titled "PATCH NOTES — royal-demo 1.4.1":
-> removed an undocumented "royal-preview" mode showing unauthorised sample data;
-> fixed an access-log rounding bug mislabelling event times. Explain the secrecy
-> was about not showing a buggy hidden preview to the Grand Duke — a software
-> embarrassment, not a murder plan — so Davide's alarming message is actually his
-> exoneration. Release-notes layout. (Title doubles as the final password: PATCH
-> NOTES.)
+> Create invented software patch notes titled "PATCH NOTES — royal-demo 1.4.1".
+> In the body, the first fix must name the removed hidden mode in this exact
+> form: removed an undocumented **"royal-preview"** mode that could display
+> unauthorised sample data; second fix: corrected an access-log rounding bug
+> mislabelling event times. Add a short in-world note that the team did not want
+> the buggy hidden preview shown to the Grand Duke before it was fixed — that is
+> what the chat line "they must not see the patch notes" refers to. Release-notes
+> layout. The final password is the name of the removed hidden mode in the body
+> (**ROYAL-PREVIEW**) — it is NOT the document title, so players must read the body.
 
-- **Must not reveal:** anything beyond the software explanation; do NOT mention Nora here.
+- **Must not reveal:** anything beyond the software explanation; do NOT mention Nora, the murder, or that the title is a key.
 - **Visual style:** changelog/release-notes, version header, bullet fixes.
 
 ---
@@ -642,5 +651,6 @@ the evidence by the `assetFolder` field already present in `case.json`.
 
 You do **not** edit `case.json` or any code to add a file to an existing
 evidence folder. The app never breaks if a file is missing: the evidence title,
-description and full text fallback are always shown, with — only when a document
-was expected — a small, neutral "The attached file is not available yet." note.
+description and full text fallback are always shown. There is **no** missing-file
+notice or placeholder banner — the absence of an uploaded file is invisible to
+players, because the text content is the canonical playable evidence.

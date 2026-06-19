@@ -101,7 +101,15 @@ export type Suspect = {
   contraEvidence?: LocalizedText[];
   avatar?: string;
   status?: SuspectStatus;
+  /** When set, the suspect card is hidden until this chapter is accessible. */
   visibleFromChapter?: string;
+  /**
+   * When set, the deeper analysis (points for/against = proEvidence /
+   * contraEvidence) stays hidden until this chapter is accessible. The neutral
+   * profile (name, role, origin, profile, motive, alibi) always shows. Generic:
+   * any case can use it to avoid spoiling late-game reasoning from minute one.
+   */
+  revealFromChapter?: string;
 };
 
 export type TimelineReliability = "confirmed" | "probable" | "disputed";

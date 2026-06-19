@@ -74,11 +74,11 @@ Key capabilities:
 2. **Start screen** — User selects language (EN/IT/SQ) and contrast mode, then taps "Start the investigation". No nickname, no login.
 3. **Briefing (Chapter 0)** — User reads the confidential police email introducing the case
 4. **Home screen** — User sees objective, progress bar, and navigation grid (Archive, Chapters, Timeline, Suspects, Final Accusation)
-5. **Chapter progression** — Chapter 1 is open. Chapters 2–4 are genuinely locked: tapping a locked chapter only shows a password gate (no content/evidence). Entering the answer from the previous chapter unlocks the next:
-   - Solve Chapter 1 → `GELLEFRA` unlocks Chapter 2
-   - Solve Chapter 2 → `ACIERIE86` unlocks Chapter 3
-   - Solve Chapter 3 → `LAB9` unlocks Chapter 4
-   - Solve Chapter 4 → `PATCHNOTES` unlocks the Final Accusation
+5. **Chapter progression** — Chapter 1 is open. Chapters 2–4 are genuinely locked: tapping a locked chapter only shows a password gate (no content/evidence). Each password requires combining at least two evidence items (no answer is a visible string copied from a title):
+   - Solve Chapter 1 → `PONTADOLPHE` unlocks Chapter 2
+   - Solve Chapter 2 → `GLACIS` unlocks Chapter 3
+   - Solve Chapter 3 → `0044` unlocks Chapter 4
+   - Solve Chapter 4 → `ROYALPREVIEW` unlocks the Final Accusation
 6. **Evidence exploration** — The archive shows only evidence from unlocked chapters (`chapter_locked` mode); locked-chapter evidence is not revealed
 7. **Final accusation** — After unlocking with the final password, user submits culprit, motive, method, decisive evidence, red herring, and confidence
 8. **Solution** — User views the solution screen showing whether the accusation was correct, with a detailed explanation
@@ -116,9 +116,8 @@ Key capabilities:
 **Evidence Detail** (`/game/:caseId/evidence/:evidenceId`)
 - Evidence title and description
 - Asset viewer (PDF/image/audio/link or text-only)
-- Placeholder notice if assetStatus is "placeholder"
-- Missing file notice if file is unavailable
-- Text content always shown as fallback
+- No placeholder notice and no missing-file notice (removed) — a missing file is invisible
+- Text content always shown as the canonical fallback
 - Transcript shown for audio evidence
 - Related suspects (if any)
 - Related timeline events (if any)
@@ -148,13 +147,13 @@ Key capabilities:
 
 **Suspects** (`/game/:caseId/suspects`)
 - List of 10 suspects
-- Each suspect shows name, role, origin, status badge (witness/suspect/strong_suspect)
-- Click to open suspect detail
+- Each suspect shows name, role, status badge (witness/person of interest) — there is no "strong suspect" red badge anymore
+- Early on, only neutral profile info is shown (profile, motive, declared alibi). The deeper "points for/against" sections stay hidden until the suspect's `revealFromChapter` chapter is unlocked (Chapter 3), so the screen no longer spoils late-game reasoning from minute one
+- Click to expand suspect detail
 
 **Suspect Detail** (`/game/:caseId/suspects` - inline expansion)
-- Full profile, motive, declared alibi
-- Evidence for (proEvidence)
-- Evidence against (contraEvidence)
+- Full profile, motive, declared alibi (always)
+- Evidence for (proEvidence) / against (contraEvidence) — only once `revealFromChapter` is reached; before that a short neutral note explains more becomes available later
 - Avatar or initials
 
 **Final Answer** (`/game/:caseId/final`)
@@ -203,7 +202,7 @@ The `"all_unlocked"` mode is still supported by the code (it makes every clue vi
 
 **Critical for the live demo session:**
 1. **Case content completeness** — All 25 evidence items have full text fallback, so the game is playable without assets
-2. **Password codes** — Ensure chapter passwords (GELLEFRA, ACIERIE86, LAB9, PATCHNOTES) and host code (DETECTIVE2026) are communicated to the facilitator
+2. **Password codes** — Ensure chapter passwords (PONTADOLPHE, GLACIS, 0044, ROYALPREVIEW) and host code (DETECTIVE2026) are communicated to the facilitator (the old GELLEFRA/ACIERIE86/LAB9/PATCHNOTES are no longer valid)
 3. **Language defaults** — English is the default and is complete; IT/SQ work via fallback
 4. **LocalStorage behavior** — Each device stores progress independently; no sync between devices
 5. **Mobile responsiveness** — App is designed for mobile; test on actual smartphones

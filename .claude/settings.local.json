@@ -16,7 +16,11 @@
       "Bash(curl -s http://localhost:4173/cases/lux-gelle-fra/case.json)",
       "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\('mode',j.evidenceUnlockMode,'| ch0 folder',j.evidence[0].assetFolder\\)}\\)\")",
       "Bash(kill %1)",
-      "Bash(node --input-type=module -e ' *)"
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('public/cases/lux-gelle-fra/case.json','utf8'\\)\\); console.log\\('JSON OK'\\)\")",
+      "Bash(python -c 'import sys,re *)",
+      "Bash(python -c ' *)",
+      "Bash(node -e ' *)"
     ]
   }
 }

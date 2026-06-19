@@ -132,9 +132,9 @@
         "sq": "Përcaktoni vendin dhe dritaren kohore të vdekjes dhe kuptoni pse një distinktiv Armundia e përfshin grupin."
       },
       "question": {
-        "en": "The first point is not where the body was found, but where everyone was looking while no one was watching. Read the scene-setting evidence and name that place.",
-        "it": "Il primo punto non è dove è stato trovato il corpo, ma dove tutti guardavano mentre nessuno vedeva. Leggete le prove e nominate quel luogo.",
-        "sq": "Pika e parë nuk është ku u gjet trupi, por ku po shihnin të gjithë ndërsa askush nuk po vëzhgonte. Lexoni provat dhe emërtoni atë vend."
+        "en": "The fireworks were launched from one point and watched from another. Read the programme and the map together, then name the launch point.",
+        "it": "I fuochi sono stati lanciati da un punto e guardati da un altro. Leggete insieme il programma e la mappa, poi nominate il punto di lancio.",
+        "sq": "Fishekzjarrët u lëshuan nga një pikë dhe u shikuan nga një tjetër. Lexoni së bashku programin dhe hartën, pastaj emërtoni pikën e lëshimit."
       },
       "evidenceIds": [
         "ch1-newspaper-article",
@@ -145,11 +145,12 @@
       ],
       "unlock": {
         "nextChapterId": "chapter-2",
-        "password": "GELLEFRA",
+        "password": "PONTADOLPHE",
         "acceptedAnswers": [
-          "GELLE FRA",
-          "GËLLE FRA",
-          "GOLDEN LADY"
+          "PONT ADOLPHE",
+          "ADOLPHE",
+          "BRIDGE",
+          "ADOLPHE BRIDGE"
         ]
       }
     },
@@ -172,9 +173,9 @@
         "sq": "Krahasoni alibitë e deklaruara me distancat dhe oraret. Vini re se disa alibi janë të paplota."
       },
       "question": {
-        "en": "The place everyone returns to is not the place everyone says they were. Read the statements and find the group's base — the exact street and number.",
-        "it": "Il luogo dove tutti tornano non è quello dove tutti dicono di essere stati. Leggete le dichiarazioni e trovate la base del gruppo: via e numero esatti.",
-        "sq": "Vendi ku kthehen të gjithë nuk është vendi ku të gjithë thonë se ishin. Lexoni deklaratat dhe gjeni bazën e grupit — rrugën dhe numrin e saktë."
+        "en": "One person's stated location cannot be reconciled with the walking times and the call log. From which place could nobody reach the side room in time? Name that place.",
+        "it": "La posizione dichiarata da una persona non si concilia con i tempi a piedi e con i tabulati. Da quale luogo nessuno avrebbe potuto raggiungere in tempo la sala secondaria? Nominate quel luogo.",
+        "sq": "Vendndodhja e deklaruar nga një person nuk pajtohet me kohët në këmbë dhe me regjistrin e thirrjeve. Nga cili vend askush nuk do të arrinte dot në kohë te dhoma anësore? Emërtoni atë vend."
       },
       "evidenceIds": [
         "ch2-suspect-statements",
@@ -186,11 +187,10 @@
       ],
       "unlock": {
         "nextChapterId": "chapter-3",
-        "password": "ACIERIE86",
+        "password": "GLACIS",
         "acceptedAnswers": [
-          "ACIERIE 86",
-          "RUE DE L ACIERIE 86",
-          "RUE DE L'ACIERIE 86"
+          "PLACE DE GLACIS",
+          "PLACEDEGLACIS"
         ]
       }
     },
@@ -203,19 +203,19 @@
         "sq": "Provat nuk përputhen"
       },
       "intro": {
-        "en": "The forensic and technical traces look damning for one developer. Read them closely: a badge proves the use of an object, not the identity of the person holding it.",
-        "it": "Le tracce forensi e tecniche sembrano schiaccianti per un developer. Leggetele con attenzione: un badge prova l'uso di un oggetto, non l'identità di chi lo usa.",
-        "sq": "Gjurmët forenzike dhe teknike duken shkatërruese për një zhvillues. Lexojini me kujdes: një distinktiv provon përdorimin e një objekti, jo identitetin e mbajtësit."
+        "en": "The forensic and technical traces look damning for one developer. Read them closely and decide how much they really prove — and whether each one identifies a person or only an access object.",
+        "it": "Le tracce forensi e tecniche sembrano schiaccianti per un developer. Leggetele con attenzione e valutate quanto provano davvero — e se ciascuna identifica una persona o solo un oggetto di accesso.",
+        "sq": "Gjurmët forenzike dhe teknike duken shkatërruese për një zhvillues. Lexojini me kujdes dhe vendosni sa provojnë vërtet — dhe nëse secila identifikon një person apo vetëm një objekt hyrjeje."
       },
       "objective": {
-        "en": "Separate the strong-looking technical clues from the truth. Show that Davide's badge could have been used by someone else, and that the patch is not the murder.",
-        "it": "Separate gli indizi tecnici apparentemente forti dalla verità. Dimostrate che il badge di Davide poteva essere usato da altri e che la patch non è il delitto.",
-        "sq": "Ndani gjurmët teknike që duken të forta nga e vërteta. Tregoni se distinktivi i Davides mund të jetë përdorur nga dikush tjetër."
+        "en": "Weigh each technical clue: which are solid, and which only look strong? Test whether the evidence points to a person or only to the object that was used.",
+        "it": "Valutate ogni indizio tecnico: quali sono solidi e quali sembrano solo forti? Verificate se le prove indicano una persona o solo l'oggetto che è stato usato.",
+        "sq": "Peshoni çdo gjurmë teknike: cilat janë solide dhe cilat vetëm duken të forta? Testoni nëse provat tregojnë një person apo vetëm objektin që u përdor."
       },
       "question": {
-        "en": "Which evidence looks strong but is actually contaminated or misread? Hint: consider the location where official records might be misleading.",
-        "it": "Quale prova sembra forte ma in realtà è contaminata o mal interpretata? Indizio: considerate la sede dove i registri ufficiali potrebbero essere ingannevoli.",
-        "sq": "Cila provë duket e fortë por në fakt është e kontaminuar ose e keqlexuar? Indizi: konsideroni vendin ku regjistrat zyrtarë mund të jenë mashtrues."
+        "en": "Two badges move through the building that night. One is loud and obvious. Which badge number actually brackets the side-room events? Give the number.",
+        "it": "Quella notte due badge si muovono nell'edificio. Uno è rumoroso e ovvio. Quale numero di badge incornicia davvero gli eventi della sala secondaria? Indicate il numero.",
+        "sq": "Atë natë dy distinktivë lëvizin nëpër ndërtesë. Njëri është i zhurmshëm dhe i dukshëm. Cili numër distinktivi në të vërtetë i rrethon ngjarjet e dhomës anësore? Jepni numrin."
       },
       "evidenceIds": [
         "ch3-badge-access-log",
@@ -227,11 +227,13 @@
       ],
       "unlock": {
         "nextChapterId": "chapter-4",
-        "password": "LAB9",
+        "password": "0044",
         "acceptedAnswers": [
-          "LABORATOIRE 9",
-          "LABORATOIRE9",
-          "RUE DU LABORATOIRE 9"
+          "BADGE0044",
+          "BADGE 0044",
+          "NORA BADGE",
+          "NORA'S BADGE",
+          "#0044"
         ]
       }
     },
@@ -249,14 +251,14 @@
         "sq": "Lidhni furnitorin, distinktivët, rrugët e hyrjes dhe motivin. Personi në qendër të të gjithave është ai që kërkoni."
       },
       "objective": {
-        "en": "Tie LuxEvent Secure, the temporary badges, the side-room access and the motive together. Find the final password and submit your accusation.",
-        "it": "Collegate LuxEvent Secure, i badge temporanei, l'accesso alla sala e il movente. Trovate la password finale e formulate l'accusa.",
-        "sq": "Lidhni LuxEvent Secure, distinktivët e përkohshëm, hyrjen anësore dhe motivin. Gjeni fjalëkalimin përfundimtar."
+        "en": "Tie LuxEvent Secure, the temporary badges, the side-room access and the motive together, and compare each person's claimed location against the badge access times. Then find the final password and submit your accusation.",
+        "it": "Collegate LuxEvent Secure, i badge temporanei, l'accesso alla sala e il movente, e confrontate la posizione dichiarata da ciascuno con gli orari di accesso dei badge. Poi trovate la password finale e formulate l'accusa.",
+        "sq": "Lidhni LuxEvent Secure, distinktivët e përkohshëm, hyrjen anësore dhe motivin, dhe krahasoni vendndodhjen e deklaruar nga secili me oraret e hyrjeve me distinktiv. Pastaj gjeni fjalëkalimin përfundimtar dhe paraqitni akuzën."
       },
       "question": {
-        "en": "Do not look for the code that kills. Look for the document that explains what had been fixed before everyone started lying — its title is your final key.",
-        "it": "Non cercate il codice che uccide. Cercate il documento che spiega cosa era stato corretto prima che tutti iniziassero a mentire: il suo titolo è la chiave finale.",
-        "sq": "Mos kërkoni kodin që vret. Kërkoni dokumentin që shpjegon çfarë ishte rregulluar para se të gjithë të fillonin të gënjenin — titulli i tij është çelësi juaj përfundimtar."
+        "en": "Do not look for the code that kills. The patch notes record what was actually fixed that night — read the body and name the hidden mode that was removed. That name is your final key.",
+        "it": "Non cercate il codice che uccide. Le patch notes registrano cosa è stato davvero corretto quella notte — leggete il testo e nominate la modalità nascosta che è stata rimossa. Quel nome è la chiave finale.",
+        "sq": "Mos kërkoni kodin që vret. Patch notes-at regjistrojnë çfarë u rregullua vërtet atë natë — lexoni përmbajtjen dhe emërtoni modalitetin e fshehur që u hoq. Ai emër është çelësi juaj përfundimtar."
       },
       "evidenceIds": [
         "ch4-luxevent-contract",
@@ -270,9 +272,11 @@
       ],
       "unlock": {
         "unlocksFinal": true,
-        "password": "PATCHNOTES",
+        "password": "ROYALPREVIEW",
         "acceptedAnswers": [
-          "PATCH NOTES"
+          "ROYAL PREVIEW",
+          "ROYAL-PREVIEW",
+          "ROYAL_PREVIEW"
         ]
       }
     }
@@ -305,8 +309,8 @@
         "sq": "Një email urgjent që i kërkon ekipit tuaj të rishikojë një paketë provash të kufizuar."
       },
       "content": {
-        "en": "From: Luxembourg Police Liaison Office\nTo: External Investigative Review Team\nSubject: Urgent Investigative Support Request — The Gëlle Fra Case\nClassification: CONFIDENTIAL\n\nDear colleagues,\n\nYou have been granted temporary access to a restricted evidence package concerning the death of Grand Duke Émeric IV of Luxembourg-Vallée, found on the morning of 23 June, a few hours after the National Day fireworks.\n\nA temporary access badge linked to the Armundia Luxembourg retreat appears in the access trail near the body. The official investigation is struggling with conflicting alibis, unreliable crowd-movement data and several misleading technical traces.\n\nYour task is to:\n  1. review the evidence archive in full;\n  2. reconstruct the timeline of the night;\n  3. identify the culprit;\n  4. explain the motive;\n  5. describe the method;\n  6. isolate the decisive evidence.\n\nA warning from our analysts: do not rely on a single document. The badge logs, call records, maps, chat screenshots and forensic notes only make sense when read together. The loudest clue is not always the true one.\n\nWhen your team is ready, submit your final accusation through this application.\n\nWith thanks for your discretion,\nLuxembourg Police Liaison Office",
-        "it": "Da: Ufficio di collegamento della Polizia del Lussemburgo\nA: Squadra esterna di revisione investigativa\nOggetto: Richiesta urgente di supporto investigativo — Il Caso Gëlle Fra\nClassificazione: RISERVATO\n\nGentili colleghi,\n\nVi è stato concesso un accesso temporaneo a un pacchetto di prove riservato relativo alla morte del Granduca Émeric IV di Luxembourg-Vallée, trovato la mattina del 23 giugno, poche ore dopo i fuochi della festa nazionale.\n\nUn badge di accesso temporaneo collegato al retreat di Armundia Luxembourg compare negli accessi vicino al corpo. L'indagine ufficiale è alle prese con alibi contraddittori, dati di movimento della folla inaffidabili e diverse tracce tecniche fuorvianti.\n\nIl vostro compito è:\n  1. esaminare l'intero archivio delle prove;\n  2. ricostruire la cronologia della notte;\n  3. identificare il colpevole;\n  4. spiegare il movente;\n  5. descrivere il metodo;\n  6. isolare la prova decisiva.\n\nUn avvertimento dai nostri analisti: non fidatevi di un singolo documento. Log dei badge, tabulati, mappe, screenshot delle chat e referti forensi hanno senso solo letti insieme. L'indizio più rumoroso non è sempre quello vero.\n\nQuando la squadra è pronta, inviate l'accusa finale tramite questa applicazione.\n\nGrazie per la vostra discrezione,\nUfficio di collegamento della Polizia del Lussemburgo"
+        "en": "From: Luxembourg Police Liaison Office\nTo: External Investigative Review Team\nSubject: Urgent Investigative Support Request — The Gëlle Fra Case\nClassification: CONFIDENTIAL\n\nDear colleagues,\n\nYou have been granted temporary access to a restricted evidence package concerning the death of Grand Duke Émeric IV of Luxembourg-Vallée, found on the morning of 23 June, a few hours after the National Day fireworks.\n\nA temporary access badge linked to the Armundia Luxembourg retreat appears in the access trail near the body. The official investigation is struggling with conflicting alibis, unreliable crowd-movement data and several misleading technical traces.\n\nYour task is to:\n  1. review the evidence archive in full;\n  2. reconstruct the timeline of the night;\n  3. identify the culprit;\n  4. explain the motive;\n  5. describe the method;\n  6. isolate the decisive evidence.\n\nA warning from our analysts: do not rely on a single document. The badge logs, call records, maps, chat screenshots and forensic notes only make sense when read together. No single document is decisive on its own.\n\nWhen your team is ready, submit your final accusation through this application.\n\nWith thanks for your discretion,\nLuxembourg Police Liaison Office",
+        "it": "Da: Ufficio di collegamento della Polizia del Lussemburgo\nA: Squadra esterna di revisione investigativa\nOggetto: Richiesta urgente di supporto investigativo — Il Caso Gëlle Fra\nClassificazione: RISERVATO\n\nGentili colleghi,\n\nVi è stato concesso un accesso temporaneo a un pacchetto di prove riservato relativo alla morte del Granduca Émeric IV di Luxembourg-Vallée, trovato la mattina del 23 giugno, poche ore dopo i fuochi della festa nazionale.\n\nUn badge di accesso temporaneo collegato al retreat di Armundia Luxembourg compare negli accessi vicino al corpo. L'indagine ufficiale è alle prese con alibi contraddittori, dati di movimento della folla inaffidabili e diverse tracce tecniche fuorvianti.\n\nIl vostro compito è:\n  1. esaminare l'intero archivio delle prove;\n  2. ricostruire la cronologia della notte;\n  3. identificare il colpevole;\n  4. spiegare il movente;\n  5. descrivere il metodo;\n  6. isolare la prova decisiva.\n\nUn avvertimento dai nostri analisti: non fidatevi di un singolo documento. Log dei badge, tabulati, mappe, screenshot delle chat e referti forensi hanno senso solo letti insieme. Nessun documento da solo è decisivo.\n\nQuando la squadra è pronta, inviate l'accusa finale tramite questa applicazione.\n\nGrazie per la vostra discrezione,\nUfficio di collegamento della Polizia del Lussemburgo"
       },
       "assetFolder": "chapter-0/00-police-engagement-email__ONE_FILE__pdf-or-png"
     },
@@ -435,7 +439,7 @@
         "sq": "Programi zyrtar i 21–23 qershorit, i dobishëm për të ankoruar kronologjinë."
       },
       "content": {
-        "en": "NATIONAL DAY PROGRAMME\n\n21 June\n  20:00–04:00 — Distributed concerts across districts (techno, rock, hip hop).\n\n22 June\n  21:00–02:00 — Mega concert, Place de Glacis.\n  00:00–00:20 — Fireworks launched from the lower town, viewed from Place de la Constitution / Gëlle Fra and Pont Adolphe.\n\n23 June\n  10:00 — National Day ceremony; a public address by the Grand Duke was scheduled.\n\nNote: the official address of 23 June did not take place."
+        "en": "NATIONAL DAY PROGRAMME\n\n21 June\n  20:00–04:00 — Distributed concerts across districts (techno, rock, hip hop).\n\n22 June\n  21:00–02:00 — Mega concert, Place de Glacis.\n\n23 June\n  00:00–00:20 — Fireworks launched from the lower town (near Pont Adolphe), viewed from Place de la Constitution / Gëlle Fra and Pont Adolphe.\n  10:00 — National Day ceremony; a public address by the Grand Duke was scheduled.\n\nNote: the official address of 23 June did not take place."
       },
       "assetFolder": "chapter-1/04-fireworks-program__ONE_FILE__pdf"
     },
@@ -497,9 +501,9 @@
         "sq": "Deklaratat e mbledhura (anëtarët e retreat-it)"
       },
       "description": {
-        "en": "Short declared alibis from five members. Several mention the same base address.",
-        "it": "Brevi alibi dichiarati di cinque membri. Diversi citano lo stesso indirizzo base.",
-        "sq": "Alibi të shkurtra të deklaruara nga pesë anëtarë. Disa përmendin të njëjtën adresë bazë."
+        "en": "Five short declared alibis. Cross-check them against the walking distances and the call log — at least one cannot be true.",
+        "it": "Cinque brevi alibi dichiarati. Confrontateli con le distanze a piedi e con i tabulati: almeno uno non può essere vero.",
+        "sq": "Pesë alibi të shkurtra të deklaruara. Krahasojini me distancat në këmbë dhe me regjistrin e thirrjeve — të paktën njëra nuk mund të jetë e vërtetë."
       },
       "content": {
         "en": "STATEMENTS (summarised)\n\nMARCO BELLANDI (Director): \"I watched the fireworks under the Gëlle Fra with part of the group. After midnight I walked back to our base at Rue de l'Aciérie 86.\"\n\nDAVIDE RINALDI (Backend Dev): \"I was at or near the Glacis concert. My phone was dead from 23:50 to 00:40. I lost my temporary badge the day before — I reported it.\"\n\nELIRA KODRA (Senior BA): \"I passed by Glacis, then went back early. I was near the office area at one point but only briefly.\"\n\nNORA WEISS (Operations): \"I was handling organisational calls for the events and then went back to the house at Rue de l'Aciérie 86. Nothing unusual.\"\n\nARBEN LEKA (Frontend Dev): \"At 23:55 I was under the Gëlle Fra. Around 00:20 I moved toward Pont Adolphe. By 00:45 I was heading back to the house.\"",
@@ -639,7 +643,7 @@
         "sq": "Një shënim i shkurtër i brendshëm për kush i menaxhonte distinktivët e përkohshëm."
       },
       "content": {
-        "en": "INTERNAL NOTE\n\nTemporary access badges for the retreat were issued and managed by Operations (N. Weiss), in coordination with the external supplier LuxEvent Secure.\n\n• Badge #0017 was issued to D. Rinaldi for the demo area.\n• On 21 June, D. Rinaldi reported badge #0017 as lost.\n• The badge was NOT deactivated immediately.\n\nReminder: badge issuance, spares and deactivation were all handled through Operations."
+        "en": "INTERNAL NOTE\n\nTemporary access badges for the retreat were issued and managed by Operations (N. Weiss), in coordination with the external supplier LuxEvent Secure.\n\n• Badge #0017 was issued to D. Rinaldi for the demo area.\n• On 21 June, D. Rinaldi reported badge #0017 as lost.\n• The badge was NOT deactivated immediately.\n• Any recovered or handed-in badge is kept in the spare-badge envelope in the Operations drawer until it is deactivated.\n\nReminder: badge issuance, spares and deactivation were all handled through Operations."
       },
       "assetFolder": "chapter-2/05-first-badge-access-note__ONE_FILE__pdf"
     },
@@ -694,7 +698,7 @@
         "access log",
         "00:28",
         "side room",
-        "laboratoire"
+        "0044"
       ],
       "relatedSuspects": [
         "davide-rinaldi",
@@ -711,7 +715,7 @@
         "sq": "Ngjarjet e hyrjeve gjatë natës, përfshirë dhomën anësore."
       },
       "content": {
-        "en": "ACCESS LOG — doors near Rue du Laboratoire 9 (LHoFT) and the side room\n\n00:11 — LHoFT main door — badge #0044 (N. Weiss) — GRANTED\n00:19 — LHoFT service corridor — badge #0044 (N. Weiss) — GRANTED\n00:28 — Side room (institutional building) — badge #0017 (D. Rinaldi) — GRANTED\n00:42 — Side room — badge #0017 (D. Rinaldi) — GRANTED (exit)\n00:49 — LHoFT service corridor — badge #0044 (N. Weiss) — GRANTED\n\nObservations:\n• Badge #0017 is the badge Davide reported lost on 21 June.\n• Badge #0044 (Operations) moves through the service corridor just before and after the side-room events.\n• The side room sits a short walk from the LHoFT (Rue du Laboratoire 9)."
+        "en": "ACCESS LOG — institutional building: LHoFT service corridor and the side room\n\n00:11 — LHoFT main door — badge #0044 (N. Weiss) — GRANTED\n00:19 — LHoFT service corridor — badge #0044 (N. Weiss) — GRANTED\n00:28 — Side room (institutional building) — badge #0017 (D. Rinaldi) — GRANTED\n00:42 — Side room — badge #0017 (D. Rinaldi) — GRANTED (exit)\n00:49 — LHoFT service corridor — badge #0044 (N. Weiss) — GRANTED\n\nObservations:\n• Badge #0017 is the badge Davide reported lost on 21 June.\n• Badge #0044 (Operations) moves through the service corridor just before and after the side-room events.\n• The side room sits a short walk from the LHoFT."
       },
       "assetFolder": "chapter-3/01-badge-access-log__ONE_FILE__pdf"
     },
@@ -730,9 +734,7 @@
         "badge holder",
         "luxevent batch"
       ],
-      "relatedSuspects": [
-        "nora-weiss"
-      ],
+      "relatedSuspects": [],
       "title": {
         "en": "Badge Holder Fragment — Forensic Photo",
         "it": "Frammento porta-badge — foto forense",
@@ -764,9 +766,7 @@
         "not fireworks",
         "luxevent"
       ],
-      "relatedSuspects": [
-        "nora-weiss"
-      ],
+      "relatedSuspects": [],
       "title": {
         "en": "Golden Dust — Forensic Analysis",
         "it": "Polvere dorata — analisi forense",
@@ -851,7 +851,9 @@
         "sq": "Një klip i rikuperuar nga regjistrimet e Erionit, pranë Glacis në momentin kyç."
       },
       "content": {
-        "en": "Audio file may be added later. The transcript below carries the full content."
+        "en": "Recovered clip from the retreat recordings. Transcript below.",
+        "it": "Clip recuperata dalle registrazioni del retreat. Trascrizione qui sotto.",
+        "sq": "Klip i rikuperuar nga regjistrimet e retreat-it. Transkripti më poshtë."
       },
       "transcript": {
         "en": "RECOVERED AUDIO — TRANSCRIPT\nTimestamp on file: 00:31\nLocation: near Place de Glacis (loud concert in background)\n\n[crowd, music]\nVoice 1 (recognised as Davide, in Italian): \"...no, my phone's dead, use yours to film...\"\nVoice 2 (Erion): \"ok ok, turn around, the stage —\"\n[a separate voice in the crowd, in Albanian]: \"po vijmë, prit te ura\" (\"we're coming, wait at the bridge\")\n\nAnalyst note: an earlier theory held that an Albanian-language phrase on another clip was Arben near Pont Adolphe. This clip shows such phrases are common in the crowd. Crucially, Davide is audible at the Glacis at 00:31 — when badge #0017 was inside the side room. He could not be in both places.",
@@ -956,7 +958,7 @@
         "sq": "Një mesazh konfidencial që tregon se Duka ishte gati të urdhëronte një rishikim furnitori."
       },
       "content": {
-        "en": "CONFIDENTIAL EMAIL — EXTRACT\nFrom: Office of Grand Duke Émeric IV\nDate: 22 June, 18:40\n\n\"Following the internal flag, I want a full review of the LuxEvent Secure arrangement opened immediately after the weekend. The pattern of renewals and the personal closeness of certain coordinators to this supplier must be examined. Please prepare the paperwork; I will raise it on the 24th.\"\n\nMOTIVE: this review threatened to expose a system of favours funnelled through Operations toward LuxEvent Secure. The review was due to start the day after the murder."
+        "en": "CONFIDENTIAL EMAIL — EXTRACT\nFrom: Office of Grand Duke Émeric IV\nDate: 22 June, 18:40\n\n\"Following the internal flag, I want a full review of the LuxEvent Secure arrangement opened immediately after the weekend. The pattern of renewals and the personal closeness of certain coordinators to this supplier must be examined, including any payments routed to coordinators outside the standard schedule. Please prepare the paperwork; I will raise it on the 24th.\""
       },
       "assetFolder": "chapter-4/02-grand-duke-supplier-review-email__ONE_FILE__pdf"
     },
@@ -992,7 +994,7 @@
         "sq": "Regjistër i detajuar i thirrjes së 00:23, brenda dritares së vdekjes."
       },
       "content": {
-        "en": "CALL DETAIL RECORD\n\nParty A: N. Weiss\nParty B: LuxEvent Secure (operations contact)\nStart: 23 June 00:23:11\nDuration: 41 seconds\nCell sector: lower town, consistent with the LHoFT / side-room area — NOT the Glacis.\n\nCross-reference:\n• 00:28 — badge #0017 (Davide, reported lost) opens the side room.\n• 00:23 — this 41-second call places Nora in the lower town, beside the route, minutes before.\n\nThis is the call the police flagged. Combined with the badge fragment, the golden dust and the access log, it ties Nora to the scene and to the supplier."
+        "en": "CALL DETAIL RECORD\n\nParty A: N. Weiss\nParty B: LuxEvent Secure (operations contact)\nStart: 23 June 00:23:11\nDuration: 41 seconds\nCell sector: lower town, consistent with the LHoFT / side-room area — NOT the Glacis.\n\nCross-reference:\n• 00:23 — this 41-second call is placed in the lower-town sector, beside the route.\n• 00:28 — badge #0017 (Davide, reported lost) opens the side room, minutes later.\n• Compare with the badge access log and the walking distances."
       },
       "assetFolder": "chapter-4/03-nora-luxevent-call-log__ONE_FILE__pdf"
     },
@@ -1058,12 +1060,12 @@
         "sq": "Kronologjia e rindërtuar e natës"
       },
       "description": {
-        "en": "The investigators' best reconstruction once the traces are read together.",
-        "it": "La migliore ricostruzione degli investigatori una volta lette insieme le tracce.",
-        "sq": "Rindërtimi më i mirë i hetuesve kur gjurmët lexohen së bashku."
+        "en": "A plain timeline of the night's independently logged events — facts only, no conclusion.",
+        "it": "Una semplice cronologia degli eventi registrati della notte — solo fatti, nessuna conclusione.",
+        "sq": "Një kronologji e thjeshtë e ngjarjeve të regjistruara të natës — vetëm fakte, asnjë përfundim."
       },
       "content": {
-        "en": "RECONSTRUCTED TIMELINE\n\n00:00–00:20  Fireworks. Crowd at the Gëlle Fra (Marco, Sofia, Arben visible). Davide at/near the Glacis (audio at 00:31).\n00:11 / 00:19  Badge #0044 (Nora) moves through the LHoFT service corridor.\n00:23  Nora calls LuxEvent Secure (41s), lower town sector.\n00:28  Badge #0017 (Davide's lost badge) opens the side room.\n00:31  Grand Duke enters the side room (false 'operational check' message).\n00:33–00:39  The killing.\n00:42  Badge #0017 exits the side room.\n00:45  Nora heads back toward Rue de l'Aciérie 86.\n\nReading: only one person's movements thread the LHoFT corridor, the supplier call and the side-room window — while the loud suspect (Davide) is provably elsewhere. Name that person."
+        "en": "TIMELINE — logged facts only\n\n00:00–00:20  Fireworks; crowd at the Gëlle Fra (Marco, Sofia and Arben visible in the group photo).\n00:11 / 00:19  Badge #0044 recorded at the LHoFT main door and service corridor.\n00:23  A 41-second call to LuxEvent Secure, lower-town sector.\n00:28  Badge #0017 (reported lost) opens the side room.\n00:31  Davide audible near Place de Glacis on the recovered audio.\n00:42  Badge #0017 records an exit from the side room.\n00:49  Badge #0044 recorded again at the LHoFT service corridor.\n00:51  A group-chat message states 'back at the house'.\n07:50  The body is found in the side room.\n\nAlso on file: estimated time of death 00:30–00:45; a heavy technical flashlight signed out for the events was never returned. These are observations only — no conclusion is drawn here."
       },
       "assetFolder": "chapter-4/05-final-reconstructed-timeline__ONE_FILE__pdf"
     },
@@ -1098,7 +1100,7 @@
         "sq": "Kush mund të merrte dhe mos ta çaktivizonte një distinktiv «të humbur»."
       },
       "content": {
-        "en": "MEMO\n\nTemporary badges are physically collected at the Operations desk. When a badge is reported lost, Operations is responsible for immediate deactivation and for storing any recovered badge.\n\nBadge #0017 (Davide) was reported lost on 21 June but was NOT deactivated. It remained usable until at least 00:42 on 23 June.\n\nOnly Operations (N. Weiss) had routine custody of recovered and spare badges. A developer could not deactivate or hold these badges; Operations could."
+        "en": "MEMO\n\nTemporary badges are physically collected at the Operations desk. When a badge is reported lost, Operations is responsible for immediate deactivation and for storing any recovered badge.\n\nBadge #0017 (Davide) was reported lost on 21 June and was later logged as handed in at the Operations desk, where it was placed in the spare-badge drawer. It was NOT deactivated and remained usable until at least 00:42 on 23 June.\n\nOnly Operations (N. Weiss) had routine custody of recovered and spare badges. A developer could not deactivate or hold these badges; Operations could."
       },
       "assetFolder": "chapter-4/06-temporary-badge-memo__ONE_FILE__pdf"
     },
@@ -1165,7 +1167,7 @@
         "sq": "Dokumenti që shpjegon çfarë u rregullua vërtet — dhe largon dyshimin teknik."
       },
       "content": {
-        "en": "PATCH NOTES — royal-demo 1.4.1\n\nFix: removed an undocumented 'royal-preview' mode that could display unauthorised sample data.\nFix: corrected an access-log rounding bug that mislabelled event times.\nReason for secrecy: the team did not want the demo's hidden preview shown to the Grand Duke before it was fixed — hence \"they must not see the patch notes.\"\n\nThis is the whole meaning of Davide's alarming message: a software embarrassment, not a murder plan. The phrase that framed him is, in fact, his exoneration."
+        "en": "PATCH NOTES — royal-demo 1.4.1\n\nFix: removed an undocumented 'royal-preview' mode that could display unauthorised sample data.\nFix: corrected an access-log rounding bug that mislabelled event times.\nNote: the team did not want the buggy hidden preview shown to the Grand Duke before it was fixed — that is what the group-chat line 'they must not see the patch notes' refers to."
       },
       "assetFolder": "chapter-4/08-real-patch-notes__ONE_FILE__pdf"
     }
@@ -1175,6 +1177,7 @@
       "id": "marco-bellandi",
       "name": "Marco Bellandi",
       "status": "suspect",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "Director / Country Lead",
         "it": "Direttore / Country Lead",
@@ -1219,6 +1222,7 @@
       "id": "elira-kodra",
       "name": "Elira Kodra",
       "status": "suspect",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "Senior Business Analyst",
         "it": "Business Analyst senior",
@@ -1231,7 +1235,8 @@
       },
       "profile": {
         "en": "Precise, excellent at gathering requirements, a natural bridge between Italian and Albanian colleagues.",
-        "it": "Precisa, ottima nella raccolta requisiti, ponte naturale tra colleghi italiani e albanesi."
+        "it": "Precisa, ottima nella raccolta requisiti, ponte naturale tra colleghi italiani e albanesi.",
+        "sq": "E saktë, shumë e mirë në mbledhjen e kërkesave, urë natyrale mes kolegëve italianë dhe shqiptarë."
       },
       "motive": {
         "en": "Feared being blamed for a documentation error in the compliance pack.",
@@ -1261,7 +1266,8 @@
     {
       "id": "davide-rinaldi",
       "name": "Davide Rinaldi",
-      "status": "strong_suspect",
+      "status": "suspect",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "Backend Developer",
         "it": "Sviluppatore backend",
@@ -1274,7 +1280,8 @@
       },
       "profile": {
         "en": "Highly skilled, introverted, knows APIs, logs, audit trails and access systems. Blunt with colleagues.",
-        "it": "Molto competente, introverso, conosce API, log, audit trail e sistemi di accesso. Brusco con i colleghi."
+        "it": "Molto competente, introverso, conosce API, log, audit trail e sistemi di accesso. Brusco con i colleghi.",
+        "sq": "Shumë i aftë, i mbyllur, njeh API-të, log-et, gjurmët e auditimit dhe sistemet e hyrjes. I drejtpërdrejtë me kolegët."
       },
       "motive": {
         "en": "Apparently: to cover a technical manipulation. In reality, none for the murder.",
@@ -1305,6 +1312,7 @@
       "id": "arben-leka",
       "name": "Arben Leka",
       "status": "suspect",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "Frontend Developer",
         "it": "Sviluppatore frontend",
@@ -1317,7 +1325,8 @@
       },
       "profile": {
         "en": "Brilliant and creative, great at demo interfaces, often underestimated by senior colleagues.",
-        "it": "Brillante e creativo, bravissimo con le interfacce demo, spesso sottovalutato."
+        "it": "Brillante e creativo, bravissimo con le interfacce demo, spesso sottovalutato.",
+        "sq": "Brilant dhe krijues, shumë i mirë me ndërfaqet demo, shpesh i nënvlerësuar nga kolegët e lartë."
       },
       "motive": {
         "en": "Avoid the Grand Duke discovering an undocumented demo mode he had hidden.",
@@ -1348,6 +1357,7 @@
       "id": "sofia-martelli",
       "name": "Sofia Martelli",
       "status": "suspect",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "Business Analyst",
         "it": "Business Analyst",
@@ -1360,7 +1370,8 @@
       },
       "profile": {
         "en": "Very sociable, excellent communicator, handles minutes, follow-ups and client materials.",
-        "it": "Molto socievole, ottima comunicatrice, gestisce minute, follow-up e materiali cliente."
+        "it": "Molto socievole, ottima comunicatrice, gestisce minute, follow-up e materiali cliente.",
+        "sq": "Shumë shoqërore, komunikuese e shkëlqyer, merret me procesverbale, ndjekje dhe materiale për klientët."
       },
       "motive": {
         "en": "Avoid a scandal over a document sent by mistake; protect an external contact.",
@@ -1391,6 +1402,7 @@
       "id": "matteo-serra",
       "name": "Matteo Serra",
       "status": "suspect",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "Full-stack Developer",
         "it": "Sviluppatore full-stack",
@@ -1403,7 +1415,8 @@
       },
       "profile": {
         "en": "Practical and fast, fixes problems at the last minute, knows both frontend and backend.",
-        "it": "Pratico e veloce, risolve problemi all'ultimo, conosce frontend e backend."
+        "it": "Pratico e veloce, risolve problemi all'ultimo, conosce frontend e backend.",
+        "sq": "Praktik dhe i shpejtë, zgjidh problemet në minutën e fundit, njeh si frontend-in ashtu edhe backend-in."
       },
       "motive": {
         "en": "Apparently: hide a backdoor. In reality, none for the murder.",
@@ -1431,6 +1444,7 @@
       "id": "giulia-ferri",
       "name": "Giulia Ferri",
       "status": "witness",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "Junior Business Analyst",
         "it": "Business Analyst junior",
@@ -1443,7 +1457,8 @@
       },
       "profile": {
         "en": "New to the team, very observant, tends not to speak up.",
-        "it": "Nuova nel team, molto osservatrice, tende a non esporsi."
+        "it": "Nuova nel team, molto osservatrice, tende a non esporsi.",
+        "sq": "E re në ekip, shumë vëzhguese, priret të mos flasë."
       },
       "motive": {
         "en": "None significant.",
@@ -1468,6 +1483,7 @@
       "id": "erion-dervishi",
       "name": "Erion Dervishi",
       "status": "witness",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "QA Automation Developer",
         "it": "Sviluppatore QA automation",
@@ -1480,7 +1496,8 @@
       },
       "profile": {
         "en": "Methodical, loves logs, screenshots and automated tests; records everything.",
-        "it": "Metodico, ama log, screenshot e test automatici; registra tutto."
+        "it": "Metodico, ama log, screenshot e test automatici; registra tutto.",
+        "sq": "Metodik, i pëlqejnë log-et, pamjet e ekranit dhe testet e automatizuara; regjistron gjithçka."
       },
       "motive": {
         "en": "Negligible.",
@@ -1505,6 +1522,7 @@
       "id": "nora-weiss",
       "name": "Nora Weiss",
       "status": "suspect",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "Operations Coordinator",
         "it": "Operations Coordinator",
@@ -1517,7 +1535,8 @@
       },
       "profile": {
         "en": "Organises logistics, badges, rooms and movements; knows suppliers and city events. Easy to overlook.",
-        "it": "Organizza logistica, badge, sale e spostamenti; conosce fornitori ed eventi cittadini. Facile da sottovalutare."
+        "it": "Organizza logistica, badge, sale e spostamenti; conosce fornitori ed eventi cittadini. Facile da sottovalutare.",
+        "sq": "Organizon logjistikën, distinktivët, sallat dhe lëvizjet; njeh furnitorët dhe eventet e qytetit. E lehtë për t'u anashkaluar."
       },
       "motive": {
         "en": "Coordinated the logistics protocol and knew exactly where and when the Grand Duke would pass.",
@@ -1529,18 +1548,26 @@
       },
       "contraEvidence": [
         {
-          "en": "Managed and could retrieve temporary badges; knew the side-room access."
+          "en": "Coordinated logistics, badges and suppliers across the retreat.",
+          "it": "Coordinava logistica, badge e fornitori durante il retreat.",
+          "sq": "Koordinonte logjistikën, distinktivët dhe furnitorët gjatë retreat-it."
         },
         {
-          "en": "Repeatedly called by an external supplier."
+          "en": "Was in contact with the event supplier during the night.",
+          "it": "Era in contatto con il fornitore dell'evento durante la notte.",
+          "sq": "Ishte në kontakt me furnitorin e eventit gjatë natës."
         }
       ],
       "proEvidence": [
         {
-          "en": "No technical ability to cover logs."
+          "en": "No technical ability to cover logs.",
+          "it": "Nessuna capacità tecnica di coprire i log.",
+          "sq": "Pa aftësi teknike për të fshehur log-et."
         },
         {
-          "en": "Her calls look genuinely operational — at first."
+          "en": "Her calls look genuinely operational — at first.",
+          "it": "Le sue chiamate sembrano davvero operative — all'inizio.",
+          "sq": "Thirrjet e saj duken vërtet operacionale — në fillim."
         }
       ]
     },
@@ -1548,6 +1575,7 @@
       "id": "luca-moretti",
       "name": "Luca Moretti",
       "status": "suspect",
+      "revealFromChapter": "chapter-3",
       "role": {
         "en": "Business Analyst / Product Owner",
         "it": "Business Analyst / Product Owner",
@@ -1560,7 +1588,8 @@
       },
       "profile": {
         "en": "Ambitious, wants a more senior role, very good at telling the product story.",
-        "it": "Ambizioso, vuole un ruolo più alto, molto bravo a raccontare il prodotto."
+        "it": "Ambizioso, vuole un ruolo più alto, molto bravo a raccontare il prodotto.",
+        "sq": "Ambicioz, dëshiron një rol më të lartë, shumë i mirë në tregimin e produktit."
       },
       "motive": {
         "en": "A failed professional opportunity; fear the Grand Duke would block the partnership.",
@@ -1614,7 +1643,7 @@
     },
     {
       "id": "tl-22-fireworks",
-      "date": "22 June",
+      "date": "23 June",
       "time": "00:00–00:20",
       "title": {
         "en": "Midnight fireworks",
@@ -1688,15 +1717,16 @@
     {
       "id": "tl-22-murder",
       "date": "23 June",
-      "time": "00:33–00:39",
+      "time": "00:30–00:45",
       "title": {
-        "en": "The killing",
-        "it": "L'omicidio",
-        "sq": "Vrasja"
+        "en": "Estimated time of death",
+        "it": "Ora stimata della morte",
+        "sq": "Ora e vlerësuar e vdekjes"
       },
       "description": {
-        "en": "The Grand Duke, lured by a false operational message, is struck with a heavy technical flashlight.",
-        "it": "Il Granduca, attirato da un falso messaggio operativo, è colpito con una pesante torcia tecnica."
+        "en": "The estimated time of death falls within the 00:30–00:45 window, in the aftermath of the fireworks.",
+        "it": "L'ora stimata della morte ricade nella finestra 00:30–00:45, subito dopo i fuochi.",
+        "sq": "Ora e vlerësuar e vdekjes bie brenda dritares 00:30–00:45, menjëherë pas fishekzjarrëve."
       },
       "location": "Side room",
       "reliability": "probable",
@@ -1705,18 +1735,19 @@
     {
       "id": "tl-22-return",
       "date": "23 June",
-      "time": "00:45",
+      "time": "00:51",
       "title": {
-        "en": "Return toward the house",
-        "it": "Rientro verso la casa",
-        "sq": "Kthim drejt shtëpisë"
+        "en": "Chat message: 'back at the house'",
+        "it": "Messaggio in chat: «rientrata a casa»",
+        "sq": "Mesazh në chat: «u ktheva në shtëpi»"
       },
       "description": {
-        "en": "Movement back toward the group's base.",
-        "it": "Spostamento verso la base del gruppo."
+        "en": "A group-chat message claims the sender is back at the house. Worth comparing against the badge access times.",
+        "it": "Un messaggio nella chat di gruppo afferma che la mittente è rientrata a casa. Da confrontare con gli orari di accesso dei badge.",
+        "sq": "Një mesazh në bisedën e grupit pohon se dërguesja është kthyer në shtëpi. Vlen të krahasohet me oraret e hyrjeve me distinktiv."
       },
       "location": "Armundia House",
-      "reliability": "probable"
+      "reliability": "disputed"
     },
     {
       "id": "tl-23-discovery",
@@ -1736,9 +1767,11 @@
     }
   ],
   "final": {
-    "unlockPassword": "PATCHNOTES",
+    "unlockPassword": "ROYALPREVIEW",
     "acceptedUnlockAnswers": [
-      "PATCH NOTES"
+      "ROYAL PREVIEW",
+      "ROYAL-PREVIEW",
+      "ROYAL_PREVIEW"
     ],
     "culpritSuspectId": "nora-weiss",
     "motiveKeywords": [
@@ -1802,12 +1835,14 @@
       "sq": "Rasti u zgjidh — Logjistika mundi teknologjinë"
     },
     "solutionExplanation": {
-      "en": "The culprit is Nora Weiss — the person everyone underestimated.\n\nThroughout the case, the clues seemed to point at the technical profiles. Davide's badge, the 00:17 patch, the dead phone, the incomplete logs and his knowledge of the systems made him the perfect suspect. That was exactly the trap: it was too perfect.\n\nThe killer did not need to manipulate the system from the inside. They needed to know how to move between events, badges, suppliers and secondary accesses. Nora was the only one with complete logistical knowledge and a direct link to LuxEvent Secure.\n\nGrand Duke Émeric IV was about to order a review of the supplier contract after receiving an internal flag. Nora, embedded in the system of favours that had benefited LuxEvent Secure, was about to be exposed.\n\nDuring the midnight fireworks the city was perfect for disappearing: crowds, noise, music, unusable phones, confused movements. Nora used Davide's lost temporary badge (#0017), lured the Grand Duke into a side room with a false operational message and struck him with a heavy technical flashlight. She then removed the weapon through the supplier's logistics circuit.\n\nThe decisive evidence was not one item but the mosaic:\n• Davide's badge used at a time incompatible with his real position (he is on Erion's audio at the Glacis at 00:31);\n• the badge-holder fragment matching a LuxEvent batch handled by Operations;\n• the golden dust linked to LuxEvent material, not the fireworks;\n• Nora's 41-second call to LuxEvent at 00:23 from the lower-town sector;\n• the side-room access reachable via the LHoFT service corridor her badge used;\n• the motive tied to the supplier contract review.\n\nDavide was framed. Marco protected the reputation. Elira feared a bug. Matteo's patch was a scheduled deploy. Arben had glimpsed a fragment of the truth. Sofia hid a personal chat. But Nora is the only one for whom every element converges.",
-      "it": "Il colpevole è Nora Weiss — la persona che tutti avevano sottovalutato.\n\nPer tutta l'indagine gli indizi sembravano puntare ai profili tecnici. Il badge di Davide, la patch delle 00:17, il telefono scarico, i log incompleti e la sua conoscenza dei sistemi lo rendevano il sospetto perfetto. Era proprio questo il punto: troppo perfetto.\n\nL'assassino non aveva bisogno di manipolare il sistema dall'interno. Doveva sapere come muoversi tra eventi, badge, fornitori e accessi secondari. Nora era l'unica con conoscenza logistica completa e un legame diretto con LuxEvent Secure.\n\nIl Granduca Émeric IV stava per chiedere una revisione del contratto del fornitore dopo una segnalazione interna. Nora, parte del sistema di favori che aveva favorito LuxEvent Secure, rischiava di essere esposta.\n\nDurante i fuochi di mezzanotte la città era perfetta per sparire. Nora ha usato il badge temporaneo smarrito di Davide (#0017), ha attirato il Granduca in una sala con un falso messaggio operativo e lo ha colpito con una pesante torcia tecnica, poi ha fatto sparire l'arma attraverso il circuito logistico del fornitore.\n\nLe prove decisive erano il mosaico: il badge di Davide usato a un orario incompatibile (è nell'audio di Erion al Glacis alle 00:31); il frammento di porta-badge di un lotto LuxEvent gestito da Operations; la polvere dorata legata al materiale LuxEvent, non ai fuochi; la chiamata di 41 secondi a LuxEvent alle 00:23; l'accesso alla sala dal corridoio LHoFT usato dal suo badge; il movente legato alla revisione del contratto.\n\nDavide era stato incastrato. Solo per Nora tutti gli elementi convergono."
+      "en": "The culprit is Nora Weiss — the person everyone underestimated.\n\nThroughout the case, the clues seemed to point at the technical profiles. Davide's badge, the 00:17 patch, the dead phone, the incomplete logs and his knowledge of the systems made him the perfect suspect. That was exactly the trap: it was too perfect.\n\nThe killer did not need to manipulate the system from the inside. They needed to know how to move between events, badges, suppliers and secondary accesses. Nora was the only one with complete logistical knowledge and a direct link to LuxEvent Secure.\n\nMotive: Grand Duke Émeric IV was about to order a review of the LuxEvent Secure contract, including payments routed to coordinators outside the standard schedule. Nora had signed off the renewals and benefited from that arrangement — the review would have exposed her personally.\n\nMethod and physical access: temporary badges were collected, stored and deactivated only through Operations, which Nora ran. Davide's badge #0017 was reported lost, handed in to the Operations desk and never deactivated, so Nora could retrieve it from the spare-badge drawer. During the midnight fireworks the city was perfect for disappearing — crowds, noise, music, unusable phones. She used #0017 to enter the side room and struck the Grand Duke with a heavy technical flashlight signed out from the LuxEvent event kit.\n\nDisposal: the weapon was never found at the scene. It was removed through the supplier's logistics circuit, inside a LuxEvent equipment container she could access.\n\nThe decisive evidence was not one item but the mosaic:\n• Davide's badge #0017 used at 00:28 while he is on Erion's recovered audio at the Glacis at 00:31 — he cannot be in two places;\n• Nora's own badge #0044 in the LHoFT service corridor at 00:49, impossible to reconcile with her chat claim of being 'back at the house' at 00:51 (a 20–25 minute walk away);\n• the badge-holder fragment matching a LuxEvent batch handled by Operations;\n• the golden dust linked to LuxEvent material, not the fireworks;\n• Nora's 41-second call to LuxEvent at 00:23 from the lower-town sector;\n• the motive tied to the supplier contract review.\n\nDavide was framed. Marco protected the reputation. Elira feared a bug. Matteo's patch was a scheduled deploy. Arben had glimpsed a fragment of the truth. Sofia hid a personal chat. But Nora is the only one for whom every element converges.",
+      "it": "Il colpevole è Nora Weiss — la persona che tutti avevano sottovalutato.\n\nPer tutta l'indagine gli indizi sembravano puntare ai profili tecnici. Il badge di Davide, la patch delle 00:17, il telefono scarico, i log incompleti e la sua conoscenza dei sistemi lo rendevano il sospetto perfetto. Era proprio questo il punto: troppo perfetto.\n\nL'assassino non aveva bisogno di manipolare il sistema dall'interno. Doveva sapere come muoversi tra eventi, badge, fornitori e accessi secondari. Nora era l'unica con conoscenza logistica completa e un legame diretto con LuxEvent Secure.\n\nMovente: il Granduca Émeric IV stava per ordinare una revisione del contratto LuxEvent Secure, inclusi pagamenti verso coordinatori fuori dalle procedure standard. Nora aveva approvato i rinnovi e traeva vantaggio da quell'accordo: la revisione l'avrebbe esposta personalmente.\n\nMetodo e accesso fisico: i badge temporanei venivano raccolti, conservati e disattivati solo tramite Operations, gestita da Nora. Il badge #0017 di Davide era stato segnalato perso, consegnato al desk di Operations e mai disattivato, quindi Nora poteva recuperarlo dal cassetto dei badge di scorta. Durante i fuochi di mezzanotte la città era perfetta per sparire. Ha usato il #0017 per entrare nella sala e ha colpito il Granduca con una pesante torcia tecnica presa dal kit LuxEvent.\n\nSmaltimento: l'arma non è mai stata trovata sul posto. È stata rimossa attraverso il circuito logistico del fornitore, in un container di attrezzature LuxEvent a cui aveva accesso.\n\nLe prove decisive erano il mosaico:\n• il badge #0017 di Davide usato alle 00:28 mentre lui è nell'audio di Erion al Glacis alle 00:31 — non può essere in due posti;\n• il badge #0044 di Nora nel corridoio LHoFT alle 00:49, inconciliabile con il messaggio in chat «rientrata a casa» alle 00:51 (a 20–25 minuti a piedi);\n• il frammento di porta-badge di un lotto LuxEvent gestito da Operations;\n• la polvere dorata legata al materiale LuxEvent, non ai fuochi;\n• la chiamata di 41 secondi a LuxEvent alle 00:23 dal settore della città bassa;\n• il movente legato alla revisione del contratto del fornitore.\n\nDavide era stato incastrato. Solo per Nora tutti gli elementi convergono.",
+      "sq": "Fajtorja është Nora Weiss — personi që të gjithë e nënvlerësuan.\n\nGjatë gjithë rastit gjurmët dukej se tregonin profilet teknike. Distinktivi i Davides, patch-i i orës 00:17, telefoni i fikur, log-et e paplota dhe njohuritë e tij për sistemet e bënin të dyshuarin perfekt. Pikërisht kjo ishte kurthi: ishte tepër perfekt.\n\nVrasësi nuk kishte nevojë të manipulonte sistemin nga brenda. I duhej të dinte si të lëvizte mes eventeve, distinktivëve, furnitorëve dhe hyrjeve dytësore. Nora ishte e vetmja me njohuri të plota logjistike dhe me lidhje të drejtpërdrejtë me LuxEvent Secure.\n\nMotivi: Duka Émeric IV ishte gati të urdhëronte një rishikim të kontratës LuxEvent Secure, përfshirë pagesa drejtuar koordinatorëve jashtë procedurave standarde. Nora kishte miratuar rinovimet dhe përfitonte nga ai rregullim — rishikimi do ta ekspozonte personalisht.\n\nMetoda dhe hyrja fizike: distinktivët e përkohshëm mblidheshin, ruheshin dhe çaktivizoheshin vetëm përmes Operations, që drejtohej nga Nora. Distinktivi #0017 i Davides ishte raportuar i humbur, ishte dorëzuar te desku i Operations dhe nuk u çaktivizua kurrë, prandaj Nora mund ta merrte nga sirtari i distinktivëve rezervë. Gjatë fishekzjarrëve të mesnatës qyteti ishte perfekt për t'u zhdukur. Ajo përdori #0017 për të hyrë në dhomën anësore dhe goditi Dukën me një elektrik dore të rëndë teknik të marrë nga kiti i LuxEvent.\n\nAsgjësimi: arma nuk u gjet kurrë në vendngjarje. U hoq përmes qarkut logjistik të furnitorit, brenda një kontejneri pajisjesh LuxEvent ku ajo kishte qasje.\n\nProvat vendimtare ishin mozaiku:\n• distinktivi #0017 i Davides u përdor në 00:28 ndërsa ai dëgjohet në audion e Erionit te Glacis në 00:31 — nuk mund të jetë në dy vende;\n• distinktivi #0044 i vetë Norës në korridorin e LHoFT në 00:49, i papajtueshëm me pohimin e saj në chat «u ktheva në shtëpi» në 00:51 (20–25 minuta në këmbë);\n• fragmenti i mbajtëses së distinktivit që përputhet me një grumbull LuxEvent të trajtuar nga Operations;\n• pluhuri i artë i lidhur me materialin LuxEvent, jo me fishekzjarrët;\n• thirrja 41-sekondëshe te LuxEvent në 00:23 nga sektori i qytetit të poshtëm;\n• motivi i lidhur me rishikimin e kontratës së furnitorit.\n\nDavide u akuzua padrejtësisht. Vetëm te Nora çdo element bashkohet."
     },
     "wrongAnswerExplanation": {
       "en": "Your accusation is understandable, but it does not hold all the way.\n\nThe most visible clue was also the most dangerous: Davide's badge. It looked like objective technical proof, but a badge proves the use of an object, not the identity of the person using it. The 00:17 patch, the dead phone and the incomplete logs built a strong suspicion, but they explained neither the real motive nor the link to the external supplier.\n\nThe solution required connecting logistics, walking times, secondary accesses and an economic/reputational motive. The only person at the centre of all of these is Nora Weiss.",
-      "it": "La vostra accusa è comprensibile, ma non regge fino in fondo.\n\nLa prova più evidente era anche la più pericolosa: il badge di Davide. Sembrava una prova tecnica oggettiva, ma un badge prova l'uso di un oggetto, non l'identità di chi lo usa. La patch delle 00:17, il telefono scarico e i log incompleti creavano un sospetto forte, ma non spiegavano il movente reale né il legame col fornitore esterno.\n\nLa soluzione richiedeva di collegare logistica, tempi di percorrenza, accessi secondari e movente economico/reputazionale. L'unica persona al centro di tutto è Nora Weiss."
+      "it": "La vostra accusa è comprensibile, ma non regge fino in fondo.\n\nLa prova più evidente era anche la più pericolosa: il badge di Davide. Sembrava una prova tecnica oggettiva, ma un badge prova l'uso di un oggetto, non l'identità di chi lo usa. La patch delle 00:17, il telefono scarico e i log incompleti creavano un sospetto forte, ma non spiegavano il movente reale né il legame col fornitore esterno.\n\nLa soluzione richiedeva di collegare logistica, tempi di percorrenza, accessi secondari e movente economico/reputazionale. L'unica persona al centro di tutto è Nora Weiss.",
+      "sq": "Akuza juaj është e kuptueshme, por nuk qëndron deri në fund.\n\nProva më e dukshme ishte edhe më e rrezikshmja: distinktivi i Davides. Dukej si provë teknike objektive, por një distinktiv provon përdorimin e një objekti, jo identitetin e atij që e përdor. Patch-i i orës 00:17, telefoni i fikur dhe log-et e paplota krijonin një dyshim të fortë, por nuk shpjegonin as motivin e vërtetë as lidhjen me furnitorin e jashtëm.\n\nZgjidhja kërkonte të lidheshin logjistika, kohët në këmbë, hyrjet dytësore dhe një motiv ekonomik/reputacioni. I vetmi person në qendër të të gjithave është Nora Weiss."
     }
   }
 }

@@ -48,9 +48,6 @@ export type UIKey =
   | "openLinkNewTab"
   | "downloadFile"
   | "transcript"
-  | "assetMissingTitle"
-  | "assetMissing"
-  | "placeholderNotice"
   | "reliability"
   | "confirmed"
   | "probable"
@@ -103,7 +100,8 @@ export type UIKey =
   | "chapterLocked"
   | "chapterLockedHelp"
   | "attachments"
-  | "openAttachment";
+  | "openAttachment"
+  | "suspectDetailsLocked";
 
 type Dictionary = Record<UIKey, string>;
 
@@ -153,10 +151,6 @@ const en: Dictionary = {
   openLinkNewTab: "Open link in new tab",
   downloadFile: "Download file",
   transcript: "Transcript",
-  assetMissingTitle: "Attachment not available",
-  assetMissing: "The attached file is not available yet.",
-  placeholderNotice:
-    "This document is a placeholder. The text below contains the full content you need.",
   reliability: "Reliability",
   confirmed: "Confirmed",
   probable: "Probable",
@@ -214,6 +208,8 @@ const en: Dictionary = {
     "Answer the question from the previous chapter's evidence to unlock it.",
   attachments: "Attachments",
   openAttachment: "Open attachment",
+  suspectDetailsLocked:
+    "More points for and against this person become available as you unlock later chapters.",
 };
 
 const it: Partial<Dictionary> = {
@@ -262,10 +258,6 @@ const it: Partial<Dictionary> = {
   openLinkNewTab: "Apri il link in una nuova scheda",
   downloadFile: "Scarica il file",
   transcript: "Trascrizione",
-  assetMissingTitle: "Allegato non disponibile",
-  assetMissing: "Il file allegato non è ancora disponibile.",
-  placeholderNotice:
-    "Questo documento è un segnaposto. Il testo qui sotto contiene tutto il contenuto necessario.",
   reliability: "Affidabilità",
   confirmed: "Confermato",
   probable: "Probabile",
@@ -323,6 +315,8 @@ const it: Partial<Dictionary> = {
     "Rispondi alla domanda partendo dalle prove del capitolo precedente per sbloccarlo.",
   attachments: "Allegati",
   openAttachment: "Apri allegato",
+  suspectDetailsLocked:
+    "Altri elementi a favore e contro questa persona si sbloccano man mano che avanzi nei capitoli.",
 };
 
 const sq: Partial<Dictionary> = {
@@ -371,10 +365,6 @@ const sq: Partial<Dictionary> = {
   openLinkNewTab: "Hap lidhjen në skedë të re",
   downloadFile: "Shkarko skedarin",
   transcript: "Transkripti",
-  assetMissingTitle: "Bashkëngjitja nuk është e disponueshme",
-  assetMissing: "Skedari i bashkëngjitur ende nuk është i disponueshëm.",
-  placeholderNotice:
-    "Ky dokument është vendmbajtës. Teksti më poshtë përmban gjithë përmbajtjen që ju nevojitet.",
   reliability: "Besueshmëria",
   confirmed: "E konfirmuar",
   probable: "E mundshme",
@@ -432,6 +422,8 @@ const sq: Partial<Dictionary> = {
     "Përgjigju pyetjes duke u nisur nga provat e kapitullit të mëparshëm për ta shkyçur.",
   attachments: "Bashkëngjitjet",
   openAttachment: "Hap bashkëngjitjen",
+  suspectDetailsLocked:
+    "Më shumë pika në favor dhe kundër këtij personi shfaqen ndërsa shkyç kapitujt e mëvonshëm.",
 };
 
 const dictionaries: Record<Language, Partial<Dictionary>> = { en, it, sq };

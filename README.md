@@ -101,8 +101,26 @@ to locked evidence shows a lock screen instead of the content.
 
 ## Passwords (configurable in case.json)
 
-Chapter 2: `GELLEFRA` · Chapter 3: `ACIERIE86` · Chapter 4: `LAB9` · Final:
-`PATCHNOTES`. Matching is case-insensitive, trimmed, accent- and space-tolerant,
-with aliases. A host/facilitator code, entered into the **final** password
-field, jumps straight to the solution: `DETECTIVE2026` (`hostSolutionCode` in
-`case.json`; never shown to players).
+Each password requires combining at least two pieces of evidence — none is a
+visible string you can copy from a title or a single document:
+
+| Gate | Password | Accepted aliases | Derived from |
+|------|----------|------------------|--------------|
+| Ch.1 → Ch.2 | `PONTADOLPHE` | `PONT ADOLPHE`, `ADOLPHE`, `BRIDGE`, `ADOLPHE BRIDGE` | fireworks programme + event map (the launch point) |
+| Ch.2 → Ch.3 | `GLACIS` | `PLACE DE GLACIS`, `PLACEDEGLACIS` | statements + walking distances (the alibi place that makes the side-room access impossible) |
+| Ch.3 → Ch.4 | `0044` | `BADGE0044`, `BADGE 0044`, `NORA BADGE`, `NORA'S BADGE`, `#0044` | badge access log + badge note (the badge number that brackets the side room) |
+| Ch.4 → Final | `ROYALPREVIEW` | `ROYAL PREVIEW`, `ROYAL-PREVIEW`, `ROYAL_PREVIEW` | the **body** of the real patch notes (the hidden mode that was removed) |
+
+Matching is case-insensitive, trimmed, accent- and space/punctuation-tolerant,
+with aliases. The old passwords (`GELLEFRA`, `ACIERIE86`, `LAB9`, `PATCHNOTES`)
+are **no longer valid**. A host/facilitator code, entered into the **final**
+password field, jumps straight to the solution: `DETECTIVE2026`
+(`hostSolutionCode` in `case.json`; never shown to players).
+
+## Missing assets
+
+The case ships with full text for every clue and no asset files. When an
+evidence folder is empty, the player sees the title, description and full text
+content with **no** missing-file notice and **no** placeholder banner — the
+absence of a file is invisible. Drop a real PDF/image/audio into the folder and
+re-run `npm run assets:manifest` and the asset renders normally.

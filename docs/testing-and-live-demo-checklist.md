@@ -189,10 +189,10 @@
 - [ ] Test link actually works
 - [ ] Verify user can return to app (back button or tab switch)
 
-**Missing asset fallback:**
-- [ ] Simulate missing asset (rename file temporarily)
-- [ ] Verify "Attachment not available" notice appears
-- [ ] Verify text content still displays
+**Missing asset fallback (silent — no notice):**
+- [ ] Open an evidence item whose folder is empty (no file dropped in)
+- [ ] Verify **no** "file not available" / "allegato non disponibile" / placeholder message appears anywhere
+- [ ] Verify the title, description and full text content still display
 - [ ] Verify app doesn't crash
 - [ ] Verify user can still navigate away
 
@@ -279,42 +279,39 @@
 
 ## Password/Unlock Checklist
 
-**Chapter 1 password (GELLEFRA):**
+> Note: there is no "Show hint" button in the app (no hint feature is wired).
+> Ignore any older references to one.
+
+**Chapter 1 password (PONTADOLPHE):**
 - [ ] Navigate to Chapter 1 detail
-- [ ] Enter correct password: `GELLEFRA`
+- [ ] Enter correct password: `PONTADOLPHE`
 - [ ] Verify chapter unlocks
-- [ ] Verify "Unlock next chapter" button appears
-- [ ] Enter wrong password
-- [ ] Verify error message appears
-- [ ] Try variations: `gelle fra`, `GËLLE FRA`, `GOLDEN LADY`
-- [ ] Verify accepted answers work
-- [ ] Click "Show hint"
-- [ ] Verify hint appears
+- [ ] Verify "Unlock next chapter" gate appears
+- [ ] Enter wrong password → verify error message appears
+- [ ] Try aliases: `PONT ADOLPHE`, `ADOLPHE`, `BRIDGE`, `ADOLPHE BRIDGE`
+- [ ] Verify the OLD password `GELLEFRA` does **not** unlock anything
 
-**Chapter 2 password (ACIERIE86):**
-- [ ] Navigate to Chapter 2 detail (should be locked)
-- [ ] Enter correct password: `ACIERIE86`
+**Chapter 2 password (GLACIS):**
+- [ ] Navigate to Chapter 2 detail (should be locked until Ch.1 solved)
+- [ ] Enter correct password: `GLACIS`
 - [ ] Verify chapter unlocks
-- [ ] Try variations: `ACIERIE 86`, `RUE DE L ACIERIE 86`, `86`
-- [ ] Verify accepted answers work
-- [ ] Test hint functionality
+- [ ] Try aliases: `PLACE DE GLACIS`, `PLACEDEGLACIS`
+- [ ] Verify the OLD password `ACIERIE86` does **not** unlock anything
 
-**Chapter 3 password (LAB9):**
+**Chapter 3 password (0044):**
 - [ ] Navigate to Chapter 3 detail (should be locked)
-- [ ] Enter correct password: `LAB9`
+- [ ] Enter correct password: `0044`
 - [ ] Verify chapter unlocks
-- [ ] Try variations: `LABORATOIRE 9`, `LHOFT`
-- [ ] Verify accepted answers work
-- [ ] Test hint functionality
+- [ ] Try aliases: `BADGE 0044`, `#0044`, `NORA BADGE`
+- [ ] Verify the OLD password `LAB9` does **not** unlock anything
 
-**Final password (PATCHNOTES):**
+**Final password (ROYALPREVIEW):**
 - [ ] Navigate to Final Accusation screen
 - [ ] Verify password gate appears
-- [ ] Enter correct password: `PATCHNOTES`
+- [ ] Enter correct password: `ROYALPREVIEW`
 - [ ] Verify final form unlocks
-- [ ] Try variation: `PATCH NOTES`
-- [ ] Verify accepted answer works
-- [ ] Test hint functionality
+- [ ] Try aliases: `ROYAL PREVIEW`, `ROYAL-PREVIEW`, `ROYAL_PREVIEW`
+- [ ] Verify the OLD password `PATCHNOTES` does **not** unlock anything
 
 **Host code (DETECTIVE2026):**
 - [ ] Navigate to Final Accusation screen (locked)
@@ -329,9 +326,10 @@
 - [ ] Direct route `/game/lux-gelle-fra/chapter/chapter-3` does NOT reveal Chapter 3
 - [ ] Direct route to a chapter-3 evidence id shows a lock screen, not the content
 - [ ] Archive shows only unlocked-chapter evidence (count reflects this)
-- [ ] Enter `GELLEFRA` → Chapter 2 unlocks; refresh → still unlocked
-- [ ] Enter `ACIERIE86` → Chapter 3; `LAB9` → Chapter 4; `PATCHNOTES` → Final
-- [ ] Wrong answers unlock nothing; aliases still work (e.g. `GOLDEN LADY`)
+- [ ] Enter `PONTADOLPHE` → Chapter 2 unlocks; refresh → still unlocked
+- [ ] Enter `GLACIS` → Chapter 3; `0044` → Chapter 4; `ROYALPREVIEW` → Final
+- [ ] Wrong answers unlock nothing; aliases still work (e.g. `PONT ADOLPHE`, `#0044`)
+- [ ] The old passwords (`GELLEFRA`/`ACIERIE86`/`LAB9`/`PATCHNOTES`) unlock nothing
 
 **Evidence asset folders / manifest:**
 - [ ] Drop a PDF into one evidence folder under `assets/.../__ONE_FILE__pdf/`
@@ -342,16 +340,16 @@
 - [ ] `npm run build` then `npm run preview`: manifest + assets load in production
 
 **Password normalization:**
-- [ ] Test case insensitivity: `gellefra` vs `GELLEFRA`
-- [ ] Test accent insensitivity: `gëlle fra` vs `GELLEFRA`
-- [ ] Test space tolerance: `GELLE FRA` vs `GELLEFRA`
-- [ ] Test trimming: ` GELLEFRA ` vs `GELLEFRA`
+- [ ] Test case insensitivity: `pontadolphe` vs `PONTADOLPHE`
+- [ ] Test space tolerance: `PONT ADOLPHE` vs `PONTADOLPHE`
+- [ ] Test punctuation tolerance: `ROYAL-PREVIEW` / `ROYAL_PREVIEW` vs `ROYALPREVIEW`; `#0044` vs `0044`
+- [ ] Test trimming: ` GLACIS ` vs `GLACIS`
 - [ ] Verify all normalization works correctly
 
 ## Final Answer and Solution Checklist
 
 **Final answer form:**
-- [ ] Unlock final accusation with PATCHNOTES
+- [ ] Unlock final accusation with ROYALPREVIEW
 - [ ] Fill in all form fields
 - [ ] Select culprit from dropdown
 - [ ] Enter motive (text)
@@ -442,49 +440,37 @@
 
 ## Asset Missing/Fallback Checklist
 
-**Missing PDF:**
-- [ ] Temporarily remove a PDF file from assets
-- [ ] Open the corresponding evidence
-- [ ] Verify "Attachment not available" notice appears
-- [ ] Verify text content still displays
+> The app shows **no** missing-file notice and **no** placeholder banner. When a
+> folder is empty the evidence simply plays from its full text content. The only
+> graceful-degradation UI is the open/download fallback for a real file that
+> fails to render.
+
+**Empty folder (no file dropped in):**
+- [ ] Open an evidence item whose folder has only `.gitkeep`
+- [ ] Verify **no** "Attachment not available" / "allegato non disponibile" / placeholder message appears
+- [ ] Verify title, description and full text content still display
 - [ ] Verify app doesn't crash
-- [ ] Restore the file
 
-**Missing image:**
-- [ ] Temporarily remove an image file from assets
-- [ ] Open the corresponding evidence
-- [ ] Verify "Attachment not available" notice appears
+**Remove a previously present file:**
+- [ ] Remove a file from a folder, re-run `npm run assets:manifest`, reload
+- [ ] Verify the evidence silently falls back to text (no notice)
+- [ ] Verify a removed audio file leaves only the transcript (no notice)
+
+**Real file that fails to render (broken image/PDF):**
+- [ ] Replace a file with corrupted content
+- [ ] Verify the app does not crash and offers an open/download link instead
 - [ ] Verify text content still displays
-- [ ] Verify broken image icon doesn't appear (should show notice)
-- [ ] Restore the file
-
-**Missing audio:**
-- [ ] Temporarily remove an audio file from assets
-- [ ] Open the corresponding evidence
-- [ ] Verify audio player doesn't appear
-- [ ] Verify transcript still displays
-- [ ] Verify "Attachment not available" notice appears
-- [ ] Restore the file
-
-**Placeholder status:**
-- [ ] Open evidence with `assetStatus: "placeholder"`
-- [ ] Verify "This document is a placeholder" banner appears
-- [ ] Verify text content displays below banner
-- [ ] Verify no "missing file" notice appears
-
-**Missing file path:**
-- [ ] Temporarily break a file path in case.json
-- [ ] Open the corresponding evidence
-- [ ] Verify "Attachment not available" notice appears
-- [ ] Verify text content still displays
-- [ ] Restore the correct path
-
-**Corrupted file:**
-- [ ] Replace a valid file with corrupted content
-- [ ] Open the corresponding evidence
-- [ ] Verify error handling (may show notice or render error)
-- [ ] Verify text content still displays
+- [ ] Verify no large warning banner appears
 - [ ] Restore the valid file
+
+## Albanian (SQ) Evidence Preview Check
+
+- [ ] Switch language to SQ (header 🌐)
+- [ ] Open the Archive: every evidence card title and description is in Albanian (no English fallback)
+- [ ] Open each unlocked chapter detail: the chapter evidence-list cards show Albanian titles/descriptions
+- [ ] Open the Suspects screen: suspect role and profile (preview text) are in Albanian
+- [ ] Confirm SQ preview text contains no old password hints and no old spoiler wording
+- [ ] (Note: long evidence bodies/transcripts may still fall back to EN by design; previews must not)
 
 ## Live Session Checklist for 10–15 Users
 
@@ -492,8 +478,8 @@
 - [ ] Deploy app to production (Vercel/Netlify)
 - [ ] Verify production URL is accessible
 - [ ] Test production URL on mobile device
-- [ ] Prepare password codes for facilitator (GELLEFRA, ACIERIE86, LAB9, PATCHNOTES)
-- [ ] Prepare host code (DETECTIVE2026) if needed
+- [ ] Prepare password codes for facilitator (PONTADOLPHE, GLACIS, 0044, ROYALPREVIEW)
+- [ ] Prepare host code (DETECTIVE2026) if needed — never shown to players
 - [ ] Test on multiple device types if possible
 - [ ] Have backup plan if deployment fails (local dev server)
 

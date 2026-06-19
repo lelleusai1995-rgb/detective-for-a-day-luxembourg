@@ -1,11 +1,18 @@
 {
-  "generatedAt": "2026-06-19T14:47:19.899Z",
+  "generatedAt": "2026-06-19T16:17:53.860Z",
   "folders": {
     "chapter-0/00-police-engagement-email__ONE_FILE__pdf-or-png": [
       {
         "url": "/cases/lux-gelle-fra/assets/chapter-0/00-police-engagement-email__ONE_FILE__pdf-or-png/police-engagement-email.pdf",
         "name": "police-engagement-email.pdf",
         "ext": "pdf"
+      }
+    ],
+    "chapter-1/03-event-map__ONE_FILE__png-jpg": [
+      {
+        "url": "/cases/lux-gelle-fra/assets/chapter-1/03-event-map__ONE_FILE__png-jpg/event-map.png",
+        "name": "event-map.png",
+        "ext": "png"
       }
     ]
   }

@@ -726,4 +726,49 @@ ACCEPTANCE CHECKS (clean LocalStorage):
 
 ---
 
-*End of audit. Nothing in the application source was modified; this file is the sole change.*
+*End of original audit. Nothing in the application source was modified at the time this audit was written.*
+
+---
+
+## 15. Implementation Note (final live-demo pass)
+
+The MUST fixes from this audit were implemented in a later pass. Summary of what
+changed in the application (the audit text above is preserved as history):
+
+- **Passwords (I-01..I-04, I-14):** replaced with deduction-based answers, each
+  needing ≥2 evidence items — Ch1 `PONTADOLPHE` (programme + map), Ch2 `GLACIS`
+  (statements + walking distances), Ch3 `0044` (badge log + badge note), Final
+  `ROYALPREVIEW` (patch-notes body). Old passwords removed (not kept as aliases).
+  Chapter questions rewritten in EN/IT/SQ.
+- **Suspects screen (I-05):** implemented a generic `revealFromChapter` gate in
+  `SuspectCard`/`SuspectList`; pro/contra now hidden until Chapter 3. Davide's
+  `strong_suspect` status set to `suspect`. Nora's contra softened to neutral.
+- **Ch3 Nora-only pointers (I-06):** `relatedSuspects` emptied on
+  `ch3-badge-holder-fragment` and `ch3-golden-dust-report`.
+- **Event-map prompt leak (I-07):** street numbers removed from the prompt (and
+  the walking-distances / badge-log / reconstructed-timeline prompts).
+- **Over-tell (I-08):** Ch3 intro/objective neutralised; `ch4-final-reconstructed-timeline`
+  rewritten to logged facts only; `ch4-nora-luxevent-call-log` editorial removed;
+  `MOTIVE:` gloss removed from `ch4-grand-duke-supplier-review-email`; the
+  timeline `tl-22-murder` event neutralised to "estimated time of death".
+- **00:49/00:51 contradiction (I-09):** surfaced — `tl-22-return` now reflects the
+  "back at the house" chat claim (disputed); Ch4 objective asks players to compare
+  claimed locations against badge access times; the reconstructed timeline lists
+  the 00:49 badge and the 00:51 chat side by side.
+- **Badge-possession gap (I-11):** `ch2-first-badge-access-note` and
+  `ch4-temporary-badge-memo` now state #0017 was handed in to the Operations desk
+  and kept (un-deactivated) in the spare-badge drawer.
+- **Meta text (I-15):** `ch3-erion-audio-transcript` "Audio file may be added later"
+  replaced with a neutral in-world caption.
+- **Date label (I-13):** midnight fireworks relabelled 23 June 00:00–00:20.
+- **Missing-file UI:** the missing-file notice was removed entirely (no
+  player-facing message); the placeholder banner was already gone.
+- **Motive (I-10):** strengthened in-world to personal exposure (payments to
+  coordinators outside the standard schedule) in the supplier-review email and
+  the solution.
+
+Items left as **LATER** (not blocking the demo): elevating an alternative suspect
+(I-12), paying off Sofia's "L." / Luca's note threads, the documented-but-absent
+hint feature (I-16 — references removed from the checklist instead), and the
+architecture leak (I-18, out of scope — facilitator briefing).
+See `docs/final-live-demo-readiness-report.md` for the full change list and test results.

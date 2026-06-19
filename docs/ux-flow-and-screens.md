@@ -186,9 +186,8 @@ No nickname field, no login, no fiction disclaimer.
 **Main UI elements:**
 - Evidence title and description
 - Asset viewer (PDF embed, image, audio player, or link button)
-- Placeholder notice (if assetStatus is placeholder)
-- Missing file notice (if file unavailable)
-- Text content (always shown as fallback)
+- No placeholder notice and no missing-file notice (both removed) — a missing file is silent
+- Text content (always shown as the canonical fallback)
 - Transcript (for audio evidence)
 - Related suspects (if any)
 - Related timeline events (if any)
@@ -265,9 +264,10 @@ No nickname field, no login, no fiction disclaimer.
 
 **Main UI elements:**
 - List of 10 suspects
-- Each suspect shows: name, role, origin, status badge (witness/suspect/strong_suspect)
+- Each suspect shows: name, role, status badge (witness / person of interest — no "strong suspect" badge)
 - Avatar or initials
-- Click to expand details (profile, motive, alibi, evidence for/against)
+- Click to expand neutral details (profile, motive, alibi) — always available
+- Points for/against (proEvidence / contraEvidence) appear only once the suspect's `revealFromChapter` (Chapter 3) is unlocked; before that a short neutral note explains more becomes available later
 - Expandable/collapsible details (using HTML `<details>`)
 
 **Source components:** `src/components/SuspectList.tsx`, `src/components/SuspectCard.tsx`, `src/components/GameLayout.tsx`
@@ -300,7 +300,7 @@ No nickname field, no login, no fiction disclaimer.
 **User goal:** Submit final accusation (culprit, motive, method, decisive evidence, red herring)
 
 **Main UI elements:**
-- Password gate if not unlocked (requires "PATCHNOTES")
+- Password gate if not unlocked (requires "ROYALPREVIEW"; host code DETECTIVE2026 jumps to the solution)
 - Form with:
   - Culprit dropdown (all suspects)
   - Motive textarea

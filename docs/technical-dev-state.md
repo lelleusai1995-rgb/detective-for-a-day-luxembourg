@@ -211,12 +211,16 @@ by `src/hooks/useAssetManifest.ts`.
 - File paths are URLs relative to site root (start with `/cases/...`)
 
 **Degradation strategy:**
-- No immersion-breaking placeholder banner is shown (it was removed).
-- If a document was expected but no file is present yet: a small, neutral
-  "The attached file is not available yet." note is shown above the text.
-- If an image fails to load: a download link is offered instead.
-- `content` text is ALWAYS shown as fallback
-- App never crashes due to missing files
+- No placeholder banner and **no missing-file notice** are shown — both were
+  removed. The absence of an uploaded file is invisible to players.
+- If a folder is empty, the evidence simply renders its title, description and
+  full `content` text (and `transcript` where present).
+- If a real file fails to load (broken image/PDF): a download/open link is
+  offered instead — no large warning banner.
+- `content` text is ALWAYS shown as fallback.
+- App never crashes due to missing files.
+- The `assetMissing` / `assetMissingTitle` / `placeholderNotice` UI keys were
+  removed from `src/data/translations.ts` as dead code.
 
 ## Language/i18n Strategy
 

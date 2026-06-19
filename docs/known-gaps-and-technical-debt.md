@@ -2,8 +2,8 @@
 
 | ID | Area | Current Behavior | Why It May Be a Problem | Severity | Demo Impact | Suggested Direction | MUST / LATER |
 |----|------|------------------|------------------------|----------|-------------|-------------------|--------------|
-| G001 | Content | No actual PDF/image/audio files ship yet; evidence plays from text content | Game is fully playable via text fallback; immersion is lower without files. The immersion-breaking placeholder banner has been **removed**. | Low | Low - game is functional without assets | Drop files into the per-evidence folders and run `npm run assets:manifest` (see `docs/how-to-add-evidence-assets.md`). No JSON/code edit needed. | LATER |
-| G002 | Content | Only English has complete translations; Italian and Albanian are partial but functional via fallback | Non-English speakers may see mixed languages. Some UI labels or case content may appear in English unexpectedly. | Low | Low - English is default and complete | Complete IT/SQ translations in `src/data/translations.ts` and `case.json`. Use fallback chain to identify missing keys. | LATER |
+| G001 | Content | Two pre-generated assets ship (briefing email PDF, event-map PNG); all other folders are empty and play from text | Game is fully playable via text fallback. Both the placeholder banner AND the missing-file notice have been **removed** — a missing file is invisible. The two shipped assets predate the anti-spoiler pass (the map still prints street numbers — now harmless — and the briefing PDF may show older wording); regenerate with the updated prompts or remove them. | Low | Low | Drop files into the per-evidence folders and run `npm run assets:manifest` (see `docs/how-to-add-evidence-assets.md`). No JSON/code edit needed. | LATER |
+| G002 | Content | UI labels and case **preview** text (evidence/chapter/suspect titles, descriptions, profiles, category labels) are complete in EN/IT/SQ; long evidence bodies/transcripts may still fall back to EN | Non-English speakers see complete previews; some long bodies appear in English by design (fallback). | Low | Low - English is default and complete | Albanian evidence preview/card text is now complete. Complete remaining IT/SQ body translations in `case.json` if desired. | PARTLY DONE |
 | G003 | UX | ~~Language and contrast only on start screen~~ | **RESOLVED** — both controls are now in the header on every screen (`GameLayout`), changeable any time without losing progress. | — | — | Done. | DONE |
 | G004 | UX | ~~No way to change language after starting without resetting~~ | **RESOLVED** — the header language switcher updates the current page immediately and persists; progress is untouched. | — | — | Done. | DONE |
 | G005 | UX | Progress bar only tracks evidence viewed, not chapters unlocked or other milestones | Progress indicator doesn't reflect actual game progression (chapter passwords). Users may feel progress is incomplete even when chapters are unlocked. | Low | Low - visual feedback only | Add chapter progress to progress bar or add separate chapter progress indicator. Consider weighted progress (evidence + chapters). | LATER |
@@ -60,7 +60,17 @@
 
 **Critical for Live Demo:** None - All identified gaps are LATER priority or low severity. The app is functional for the live demo as-is.
 
-**Resolved in the live/demo pass:**
+**Resolved in the final live-demo pass (this iteration):**
+- Replaced all four leaked passwords with deduction-based ones (PONTADOLPHE / GLACIS / 0044 / ROYALPREVIEW); old ones no longer work
+- Removed the missing-file notice entirely (no player-facing "file not available" / "allegato non disponibile" message); silent text fallback
+- De-spoilered the Suspects screen: removed Davide's `strong_suspect` badge; gated pro/contra behind `revealFromChapter`
+- Removed Nora-only `relatedSuspects` from the two Chapter 3 forensic items
+- Rewrote Chapter 3/4 over-explicit text and the reconstructed timeline to facts-only (the solution screen still explains the full sequence)
+- Completed Albanian (and Italian) evidence/chapter/suspect **preview** translations
+- Updated the asset-generation prompts so generated files don't reintroduce street-number/title/meta spoilers
+- See `docs/final-live-demo-readiness-report.md`
+
+**Earlier resolved items:**
 - G003 / G004 / G036 — language & contrast on every screen
 - G006 — final accusation tile lock icon + enforced gate
 - G030 — host solution code implemented (hidden facilitator bypass)

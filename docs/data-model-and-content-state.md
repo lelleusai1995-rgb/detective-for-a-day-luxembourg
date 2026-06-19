@@ -65,12 +65,15 @@ Top-level object with the following properties:
 }
 ```
 
-**Current chapters:**
+**Current chapters** (each password requires combining ≥2 evidence items):
 - Chapter 0: Confidential Briefing (1 evidence)
-- Chapter 1: The Body Under the Fireworks (5 evidence, password: GELLEFRA)
-- Chapter 2: The Retreat Alibis (6 evidence, password: ACIERIE86)
-- Chapter 3: The Evidence Does Not Add Up (6 evidence, password: LAB9)
-- Chapter 4: The Traitor's Code (8 evidence, password: PATCHNOTES)
+- Chapter 1: The Body Under the Fireworks (5 evidence, password: PONTADOLPHE — fireworks programme + map)
+- Chapter 2: The Retreat Alibis (6 evidence, password: GLACIS — statements + walking distances)
+- Chapter 3: The Evidence Does Not Add Up (6 evidence, password: 0044 — badge access log + badge note)
+- Chapter 4: The Traitor's Code (8 evidence, password: ROYALPREVIEW — body of the real patch notes)
+
+The old passwords (GELLEFRA / ACIERIE86 / LAB9 / PATCHNOTES) are no longer valid
+and are not accepted as aliases.
 
 ### 3. Evidence
 
@@ -131,17 +134,18 @@ Whether a real file appears is determined purely by what is in the evidence's
   profile: LocalizedText;            // Character profile
   motive: LocalizedText;             // Possible motive
   declaredAlibi: LocalizedText;      // Stated alibi
-  proEvidence?: LocalizedText[];     // Evidence supporting innocence
-  contraEvidence?: LocalizedText[];  // Evidence suggesting guilt
+  proEvidence?: LocalizedText[];     // Evidence supporting innocence (hidden until revealFromChapter)
+  contraEvidence?: LocalizedText[];  // Evidence suggesting guilt (hidden until revealFromChapter)
   avatar?: string;                   // Path to avatar image
-  visibleFromChapter?: string;       // Chapter when becomes visible
+  visibleFromChapter?: string;       // Chapter when the whole card becomes visible
+  revealFromChapter?: string;        // Chapter from which pro/contra (deep analysis) is shown; profile/motive/alibi always visible
 }
 ```
 
 **Suspect breakdown:**
 - Witnesses: 2 (Giulia Ferri, Erion Dervishi)
-- Suspects: 7 (Marco Bellandi, Elira Kodra, Arben Leka, Sofia Martelli, Matteo Serra, Luca Moretti, Nora Weiss)
-- Strong suspects: 1 (Davide Rinaldi)
+- Persons of interest (`suspect`): 8 (Marco Bellandi, Elira Kodra, Davide Rinaldi, Arben Leka, Sofia Martelli, Matteo Serra, Luca Moretti, Nora Weiss)
+- Strong suspects: 0 — the `strong_suspect` status was removed from Davide so the screen no longer telegraphs the red herring. Each suspect carries `revealFromChapter: "chapter-3"` so for/against evidence is hidden until Chapter 3.
 
 **Avatar status:** None have avatar paths configured (show initials instead)
 
@@ -168,8 +172,8 @@ Whether a real file appears is determined purely by what is in the evidence's
 
 ```typescript
 {
-  unlockPassword: string;              // "PATCHNOTES"
-  acceptedUnlockAnswers?: string[];    // ["PATCH NOTES"]
+  unlockPassword: string;              // "ROYALPREVIEW"
+  acceptedUnlockAnswers?: string[];    // ["ROYAL PREVIEW", "ROYAL-PREVIEW", "ROYAL_PREVIEW"]
   culpritSuspectId: string;            // "nora-weiss"
   motiveKeywords?: string[];          // Keywords for motive matching
   questions: FinalQuestion[];         // 5 questions (culprit, motive, method, decisive, redHerring)
@@ -240,18 +244,17 @@ Whether a real file appears is determined purely by what is in the evidence's
    - One file renders directly; multiple files render as a list of attachments
    - Each is rendered by extension (pdf/image/audio) or offered as an Open/Download link
 
-2. **Folder empty / no file yet (but a document was expected):**
-   - Shows a small, neutral "The attached file is not available yet." note
-   - Still displays `content` text as fallback
-   - There is **no** immersion-breaking placeholder banner
+2. **Folder empty / no file yet:**
+   - Displays `content` text (and `transcript`) only — **no** notice and **no** banner
+   - The absence of an uploaded file is invisible to players
 
 3. **Asset load failure (e.g., broken image):**
    - Image component has `onError` handler
    - Falls back to a download link
-   - Still shows `content` text
+   - Still shows `content` text — no warning banner
 
 4. **No content and no file:**
-   - Shows the generic "The attached file is not available yet." note
+   - Renders nothing extra (no notice); this state does not occur in the shipped case, where every item has full `content`
 
 **Key principle:** The app never crashes or becomes unplayable due to missing files. All evidence has complete text content, so the game is fully playable without any asset files.
 
@@ -458,20 +461,20 @@ before being unlocked, and that the archive count reflects only unlocked evidenc
 **Risk assessment:** LOW for live demo
 
 **Current state:**
-- All 25 evidence items marked as `"placeholder"`
-- No actual asset files exist
+- Evidence items carry `assetStatus: "placeholder"` as authoring metadata only
+- Two pre-generated assets ship (the briefing email PDF and the event-map PNG); all other folders are empty
 - All evidence has complete text fallback
-- Placeholder banner clearly indicates this is intentional
+- There is **no** placeholder banner and **no** missing-file notice — a missing file is invisible
 
 **Impact:**
 - Game is fully playable without assets
 - Immersion may be reduced without visual/audio elements
-- Players may notice placeholder banners
+- Players never see any "placeholder" or "missing file" message
 
 **Mitigation:**
 - Text content is complete and engaging
-- Placeholder banner is clear and non-disruptive
-- Assets can be added incrementally
+- Assets can be added incrementally via the folder-drop + `assets:manifest` workflow
+- Note: the two pre-generated assets predate the anti-spoiler text/prompt pass; the event-map PNG still prints street numbers (now harmless — no longer a password) and the briefing PDF may carry the older briefing wording. Regenerate with the updated prompts for full consistency, or remove them to play from the updated text.
 
 **To verify:** Test with actual players to assess whether lack of assets affects engagement
 
