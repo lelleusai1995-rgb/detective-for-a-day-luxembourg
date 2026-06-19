@@ -1,5 +1,4 @@
 import { useState } from "react";
-import type { LocalizedText } from "../types/caseTypes";
 import { useLanguage } from "../hooks/useLanguage";
 import { matchesPassword } from "../utils/normalizeAnswer";
 
