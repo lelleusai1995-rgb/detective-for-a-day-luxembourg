@@ -1,0 +1,974 @@
+# DETECTIVE FOR A DAY — SPECIFICHE TECNICHE E FUNZIONALI APP MVP
+
+## 1. Obiettivo del progetto
+
+Creare una web app / PWA mobile-first per una sessione di murder mystery investigativo chiamata **Detective for a Day**, utilizzabile da circa 10–15 persone durante un retreat aziendale di Armundia Luxembourg.
+
+L’app deve essere usata tramite link, senza installazione da app store, senza login pesante e senza infrastruttura complessa. La sessione prevista dura circa 2,5–3,5 ore. Il caso sarà giocato il 20 giugno, ma la storia sarà ambientata nei giorni successivi, durante il weekend della festa nazionale del Lussemburgo e degli eventi cittadini del 21–23 giugno.
+
+L’obiettivo non è creare un gestionale completo per murder mystery, ma un MVP robusto e riciclabile, dove la storia sia modificabile sostituendo documenti, password, testi e soluzione finale.
+
+## 2. Principio fondamentale
+
+Separare nettamente:
+
+1. **App generica riusabile**
+
+   * gestione capitoli
+   * sblocco tramite password
+   * archivio prove
+   * visualizzazione documenti
+   * tracking locale
+   * schermata risposta finale
+   * verdetto
+
+2. **Contenuto narrativo specifico**
+
+   * storia
+   * personaggi
+   * prove
+   * documenti
+   * password
+   * colpevole
+   * spiegazione finale
+
+L’app non deve contenere logica hardcoded della storia. Tutto ciò che riguarda il caso deve stare in file configurabili, idealmente JSON/TypeScript config + assets statici.
+
+## 3. Contesto reale di utilizzo
+
+Il gioco sarà usato da colleghi di Armundia Luxembourg, inclusi colleghi provenienti da Italia e Tirana, durante un weekend tutti insieme in Lussemburgo.
+
+Numero previsto partecipanti: circa 10–15.
+
+Dispositivo principale: smartphone.
+
+Uso previsto: una singola sessione di gruppo, con persone che leggono prove, discutono, si dividono compiti e cercano password per sbloccare i capitoli successivi.
+
+Durata target:
+
+* gruppo bravo: circa 2 ore e 30 minuti
+* gruppo medio: circa 3 ore
+* gruppo lento: circa 3 ore e 30 minuti
+
+Struttura narrativa:
+
+* 4 capitoli / atti
+* circa 45 minuti per capitolo
+* ogni capitolo contiene diverse prove
+* alla fine di ogni capitolo serve una password per sbloccare il successivo
+* alla fine del quarto capitolo serve una password finale per accedere al box delle risposte
+* il giocatore/team indica il colpevole e la motivazione
+* l’app mostra se ha vinto e la spiegazione finale
+
+## 4. Stack consigliato
+
+### MUST per MVP
+
+Usare:
+
+* React
+* Vite
+* TypeScript
+* CSS semplice oppure Tailwind
+* LocalStorage
+* assets statici nella cartella `/public`
+* configurazione caso tramite file TypeScript o JSON
+
+Non serve database per il primo evento.
+
+### LATER
+
+Eventuale evoluzione:
+
+* Supabase per persistenza reale
+* Supabase Storage per upload prove
+* backoffice host/admin
+* gestione sessioni multiple
+* tracking giocatori
+* risposte salvate per team
+* dashboard host
+* gestione lingua completa via database
+
+## 5. Perché evitare il database nel primo MVP
+
+Per questa specifica sessione il database non è indispensabile.
+
+Motivi:
+
+* pochi utenti
+* uso privato
+* durata breve
+* nessun dato sensibile
+* la progressione può essere gestita localmente
+* se si perde il LocalStorage, il gruppo può reinserire le password già scoperte
+* meno rischio tecnico
+* meno tempo di sviluppo
+* app più facile da deployare
+
+Decisione consigliata per MVP: **no database**.
+
+Usare LocalStorage per:
+
+* nickname
+* capitoli sbloccati
+* prove viste
+* risposta finale inserita
+* stato completamento
+
+## 6. Funzionalità principali MVP
+
+### 6.1 Accesso tramite link
+
+L’utente apre un link pubblico, ad esempio:
+
+`https://detective-for-a-day.vercel.app`
+
+Nessun login.
+
+Schermata iniziale:
+
+* titolo esperienza
+* breve intro
+* campo nickname
+* scelta lingua: IT / EN / SQ
+* bottone “Inizia indagine”
+
+Il nickname serve solo per immersione e tracking locale, non per autenticazione.
+
+### 6.2 Homepage indagine
+
+Dopo l’ingresso, l’utente vede:
+
+* titolo caso
+* stato avanzamento
+* capitoli disponibili
+* capitoli bloccati
+* numero prove viste
+* pulsante per continuare dal capitolo corrente
+* pulsante “Archivio prove”
+* pulsante “Timeline”
+* pulsante “Sospetti”
+* pulsante “Risposta finale” bloccato fino alla fine
+
+Mobile-first: tutto deve funzionare bene su iPhone e Android.
+
+### 6.3 Capitoli / atti
+
+La storia è divisa in 4 capitoli:
+
+1. Capitolo 1 — Il corpo sotto i fuochi
+2. Capitolo 2 — Gli alibi del retreat
+3. Capitolo 3 — Le prove non tornano
+4. Capitolo 4 — Il codice del traditore
+
+Ogni capitolo ha:
+
+* titolo
+* descrizione narrativa
+* obiettivo investigativo
+* lista prove
+* box per inserimento password capitolo successivo
+
+Il Capitolo 1 è già sbloccato.
+
+Capitolo 2, 3, 4 e risposta finale sono bloccati.
+
+### 6.4 Sblocco tramite password
+
+Alla fine di ogni capitolo, il gruppo deve rispondere a un enigma.
+
+Esempi:
+
+* indicare il sospetto senza alibi valido
+* ricostruire un orario
+* dedurre una parola da più documenti
+* individuare una sigla interna
+* trovare un codice nascosto in prove diverse
+
+La password deve essere configurabile nel file caso.
+
+Le password devono essere:
+
+* case-insensitive
+* tolleranti rispetto a spazi iniziali/finali
+* eventualmente con alias accettati
+
+Esempio struttura:
+
+```ts
+unlock: {
+  password: "GLACIS",
+  acceptedAnswers: ["GLACIS", "PLACEDEGLACIS", "PLACE DE GLACIS"],
+  hint: "Cerca il luogo dove la folla era più rumorosa."
+}
+```
+
+### 6.5 Archivio prove
+
+L’app deve mostrare le prove ordinate per:
+
+* capitolo
+* categoria
+* stato visto/non visto
+* livello difficoltà
+* importanza
+
+Categorie consigliate:
+
+* Verbali di polizia
+* Testimonianze
+* Chat e messaggi
+* Cronologie chiamate
+* Mappe e luoghi
+* Referti medici/forensi
+* Log tecnici
+* Foto / immagini
+* Articoli di giornale
+* Audio / registrazioni
+* Documenti interni Armundia
+* Atti ufficiali
+
+Ogni prova può essere:
+
+* testo interno HTML/Markdown
+* PDF
+* PNG/JPG
+* MP3
+* link esterno
+* documento simulato
+
+Ogni prova deve avere:
+
+* titolo
+* categoria
+* capitolo
+* descrizione breve
+* file o contenuto
+* lingua
+* livello difficoltà
+* tag
+* flag “vista”
+
+### 6.6 Visualizzatore prove
+
+Per ogni prova, l’utente deve poter:
+
+* aprire il documento
+* leggere testo introduttivo
+* scaricare il file se il browser non lo visualizza bene
+* segnare automaticamente la prova come vista
+* tornare al capitolo o archivio
+* vedere categoria e capitolo di appartenenza
+
+Per i PDF:
+
+* usare embed iframe/object oppure link diretto
+* fornire sempre fallback “Scarica PDF”
+
+Per immagini:
+
+* visualizzazione responsive
+* pinch zoom se possibile tramite browser
+
+Per MP3:
+
+* player HTML audio
+* trascrizione testuale opzionale sotto il player
+
+### 6.7 Timeline
+
+Timeline semplice, non interattiva complessa.
+
+Deve mostrare gli eventi principali ordinati per data/ora:
+
+* 20 giugno: giornata del gioco reale / briefing fittizio
+* 21 giugno: concerti cittadini fino alle 4
+* 22 giugno: maxi concerto al Glacis fino alle 2
+* 22 giugno mezzanotte: fuochi d’artificio dal Pont Adolphe / città vecchia
+* 23 giugno: festa nazionale / omicidio / ritrovamento
+
+La timeline deve aiutare i giocatori a confrontare:
+
+* orari dei sospetti
+* distanze tra luoghi
+* momenti di folla
+* finestre temporali compatibili
+
+### 6.8 Sospetti
+
+Schermata con 8–10 personaggi.
+
+Per ogni personaggio:
+
+* nome fittizio
+* ruolo
+* provenienza
+* relazione con Armundia
+* possibile movente
+* alibi dichiarato
+* prove a favore
+* prove contro
+* stato: testimone / sospetto / sospetto forte
+
+Questa schermata può essere statica e aggiornata per capitolo. Nell’MVP si può mostrare tutto subito o filtrare in base al capitolo sbloccato.
+
+Preferenza: mostrare progressivamente dettagli, così i capitoli successivi aggiungono elementi.
+
+### 6.9 Risposta finale
+
+Dopo il Capitolo 4, i giocatori trovano una password finale.
+
+Inserita la password, si sblocca il box finale.
+
+Il box finale chiede:
+
+1. Chi è il colpevole?
+2. Qual è il movente?
+3. Come ha fatto?
+4. Quale prova è decisiva?
+5. Quale falsa pista andava scartata?
+
+Per MVP basta una risposta per dispositivo/team.
+
+Non è necessario inviare dati a server.
+
+Alla conferma:
+
+* se il colpevole è corretto, mostra “Caso risolto”
+* se è sbagliato, mostra “Accusa errata”
+* in ogni caso mostra la spiegazione finale
+
+Per evitare frustrazione, la spiegazione finale deve essere accessibile dopo il tentativo.
+
+### 6.10 Multilingua
+
+Lingue:
+
+* italiano
+* inglese
+* albanese
+
+MVP pragmatico:
+
+* UI tradotta in IT/EN/SQ con dizionario statico
+* prove inizialmente disponibili almeno in italiano
+* per demo migliore, fornire prove chiave tradotte nelle tre lingue
+* se manca una traduzione, fallback all’italiano
+
+Struttura consigliata:
+
+```ts
+text: {
+  it: "Testo italiano",
+  en: "English text",
+  sq: "Teksti në shqip"
+}
+```
+
+Per file:
+
+```ts
+file: {
+  it: "/assets/case/ch1/verbale-it.pdf",
+  en: "/assets/case/ch1/report-en.pdf",
+  sq: "/assets/case/ch1/raport-sq.pdf"
+}
+```
+
+## 7. Architettura app consigliata
+
+### 7.1 Struttura cartelle
+
+```txt
+src/
+  app/
+    App.tsx
+    routes.tsx
+  components/
+    Layout.tsx
+    Header.tsx
+    ChapterCard.tsx
+    EvidenceCard.tsx
+    EvidenceViewer.tsx
+    PasswordGate.tsx
+    Timeline.tsx
+    SuspectCard.tsx
+    FinalAnswerBox.tsx
+    LanguageSelector.tsx
+  data/
+    caseConfig.ts
+    i18n.ts
+  hooks/
+    useLocalProgress.ts
+    useLanguage.ts
+  utils/
+    normalizeAnswer.ts
+    storage.ts
+  styles/
+    global.css
+
+public/
+  assets/
+    case-luxembourg/
+      chapter-1/
+      chapter-2/
+      chapter-3/
+      chapter-4/
+      audio/
+      images/
+      pdf/
+```
+
+### 7.2 Routing
+
+Rotte consigliate:
+
+```txt
+/
+  landing / nickname / lingua
+
+/home
+  dashboard indagine
+
+/chapter/:chapterId
+  dettaglio capitolo
+
+/evidence/:evidenceId
+  visualizzatore prova
+
+/archive
+  archivio prove
+
+/timeline
+  timeline
+
+/suspects
+  sospetti
+
+/final
+  risposta finale
+```
+
+Con React Router oppure routing semplice via stato. Per MVP, React Router è comodo ma non obbligatorio.
+
+## 8. Modello dati app
+
+### 8.1 CaseConfig
+
+```ts
+export type CaseConfig = {
+  id: string;
+  title: LocalizedText;
+  subtitle: LocalizedText;
+  languageDefault: "it" | "en" | "sq";
+  chapters: Chapter[];
+  evidences: Evidence[];
+  suspects: Suspect[];
+  timeline: TimelineEvent[];
+  final: FinalConfig;
+};
+```
+
+### 8.2 LocalizedText
+
+```ts
+export type LocalizedText = {
+  it: string;
+  en?: string;
+  sq?: string;
+};
+```
+
+### 8.3 Chapter
+
+```ts
+export type Chapter = {
+  id: string;
+  order: number;
+  title: LocalizedText;
+  intro: LocalizedText;
+  objective: LocalizedText;
+  evidenceIds: string[];
+  unlock?: {
+    nextChapterId?: string;
+    password: string;
+    acceptedAnswers?: string[];
+    hint?: LocalizedText;
+  };
+};
+```
+
+### 8.4 Evidence
+
+```ts
+export type Evidence = {
+  id: string;
+  chapterId: string;
+  title: LocalizedText;
+  category: EvidenceCategory;
+  description: LocalizedText;
+  type: "text" | "pdf" | "image" | "audio" | "link";
+  difficulty: "base" | "intermediate" | "advanced";
+  importance: "low" | "medium" | "high" | "critical";
+  tags: string[];
+  content?: LocalizedText;
+  file?: {
+    it?: string;
+    en?: string;
+    sq?: string;
+  };
+  transcript?: LocalizedText;
+};
+```
+
+### 8.5 EvidenceCategory
+
+```ts
+export type EvidenceCategory =
+  | "police_report"
+  | "witness_statement"
+  | "chat"
+  | "call_log"
+  | "map"
+  | "forensic"
+  | "technical_log"
+  | "photo"
+  | "newspaper"
+  | "audio"
+  | "internal_document"
+  | "official_act";
+```
+
+### 8.6 Suspect
+
+```ts
+export type Suspect = {
+  id: string;
+  name: string;
+  role: LocalizedText;
+  origin?: LocalizedText;
+  profile: LocalizedText;
+  motive: LocalizedText;
+  declaredAlibi: LocalizedText;
+  proEvidence: LocalizedText[];
+  contraEvidence: LocalizedText[];
+  visibleFromChapter: string;
+};
+```
+
+### 8.7 TimelineEvent
+
+```ts
+export type TimelineEvent = {
+  id: string;
+  date: string;
+  time?: string;
+  title: LocalizedText;
+  description: LocalizedText;
+  location?: string;
+  involvedSuspects?: string[];
+  reliability: "certain" | "probable" | "disputed";
+};
+```
+
+### 8.8 FinalConfig
+
+```ts
+export type FinalConfig = {
+  unlockPassword: string;
+  acceptedUnlockAnswers?: string[];
+  culpritSuspectId: string;
+  motiveKeywords: string[];
+  solutionTitle: LocalizedText;
+  solutionExplanation: LocalizedText;
+  wrongAnswerExplanation: LocalizedText;
+};
+```
+
+## 9. LocalStorage
+
+### 9.1 Chiavi
+
+```txt
+dfad.nickname
+dfad.language
+dfad.unlockedChapters
+dfad.viewedEvidence
+dfad.finalUnlocked
+dfad.finalAnswer
+dfad.completed
+```
+
+### 9.2 Struttura progress
+
+```ts
+type LocalProgress = {
+  nickname: string;
+  language: "it" | "en" | "sq";
+  unlockedChapters: string[];
+  viewedEvidenceIds: string[];
+  finalUnlocked: boolean;
+  finalAnswer?: {
+    culpritSuspectId: string;
+    motive: string;
+    method: string;
+    decisiveEvidence: string;
+    redHerring: string;
+    submittedAt: string;
+  };
+  completed: boolean;
+};
+```
+
+## 10. UX mobile-first
+
+### 10.1 Regole generali
+
+* Font leggibile
+* pulsanti grandi
+* niente tabelle troppo larghe se non scrollabili
+* cards verticali
+* documenti apribili in nuova schermata
+* colori scuri / atmosfera investigativa
+* contrasto alto
+* barra progresso evidente
+* uso ottimale con una mano
+
+### 10.2 Mood visivo
+
+Tema consigliato:
+
+* dark mode
+* accenti oro/rosso scuro per richiamare Gëlle Fra, fuochi e mistero
+* background con texture leggera tipo dossier investigativo
+* cards con bordo sottile
+* icone per categorie prove
+* badge per visto/non visto/bloccato
+
+### 10.3 Homepage
+
+Elementi:
+
+* titolo caso
+* sottotitolo
+* “Capitolo attuale”
+* progress bar 1/4
+* prove viste: X/Y
+* pulsante “Continua”
+* cards capitoli
+* accesso veloce ad Archivio, Timeline, Sospetti
+
+### 10.4 Capitolo
+
+Ogni capitolo deve avere:
+
+* titolo
+* intro narrativa breve
+* obiettivo operativo
+* lista prove
+* sezione “Cosa dovete capire”
+* box password a fondo pagina
+* hint opzionale
+
+### 10.5 Archivio
+
+Filtri:
+
+* capitolo
+* categoria
+* viste/non viste
+* importanza
+
+Per MVP bastano chips/filtro semplice.
+
+## 11. Meccaniche per forzare il lavoro di gruppo
+
+L’app non deve essere multiplayer avanzata, ma il design deve obbligare collaborazione.
+
+### 11.1 Capitoli con prove distribuite
+
+Ogni capitolo deve contenere prove abbastanza diverse da spingere il gruppo a dividersi:
+
+* una persona legge i verbali
+* una persona guarda la mappa
+* una persona ascolta audio
+* una persona controlla chat/tabulati
+* una persona confronta timeline e distanze
+
+### 11.2 Password dedotte da più prove
+
+Le password non devono essere trovabili in una singola prova ovvia.
+
+Esempio:
+
+* una prova dà un orario
+* una mappa dà un luogo
+* una chat dà un nome
+* solo combinando i tre elementi si trova la password
+
+### 11.3 Domande di capitolo
+
+Ogni capitolo deve chiudersi con una domanda da discutere:
+
+Capitolo 1:
+
+* “Quale luogo non può essere quello dichiarato dal testimone?”
+
+Capitolo 2:
+
+* “Chi ha l’alibi più debole tra le 00:05 e le 00:28?”
+
+Capitolo 3:
+
+* “Quale prova sembra forte ma in realtà è contaminata?”
+
+Capitolo 4:
+
+* “Quale codice interno collega accesso, arma e movente?”
+
+### 11.4 Evidenze con lingue miste
+
+Dato il gruppo italiano/albanese/internazionale, alcune prove possono essere in inglese o albanese per stimolare cooperazione. Attenzione: non deve bloccare il gioco se una persona specifica non partecipa.
+
+## 12. Password consigliate per questa storia
+
+Queste password sono narrative e configurabili:
+
+* Sblocco Capitolo 2: `GELLEFRA`
+* Sblocco Capitolo 3: `ACIERIE86`
+* Sblocco Capitolo 4: `LAB9`
+* Sblocco risposta finale: `PATCHNOTES`
+
+Alias consigliati:
+
+* `GELLE FRA`
+* `GËLLE FRA`
+* `RUE DE L ACIERIE 86`
+* `86`
+* `RUE DU LABORATOIRE 9`
+* `LABORATOIRE9`
+
+## 13. Asset statici
+
+### 13.1 Tipi asset
+
+Per capitolo:
+
+* PDF verbale
+* PNG mappa
+* JPG foto luogo
+* MP3 registrazione
+* PDF articolo
+* PNG screenshot chat
+* PDF referto
+* TXT/HTML log tecnico
+
+### 13.2 Naming convention
+
+```txt
+ch1-police-report-it.pdf
+ch1-map-city-center.png
+ch1-call-transcript-it.pdf
+ch2-chat-screenshot-01.png
+ch2-call-log.pdf
+ch3-forensic-report.pdf
+ch3-access-log.csv
+ch4-internal-memo.pdf
+ch4-audio-transcript-it.pdf
+```
+
+### 13.3 Cartelle
+
+```txt
+public/assets/case-luxembourg/chapter-1/
+public/assets/case-luxembourg/chapter-2/
+public/assets/case-luxembourg/chapter-3/
+public/assets/case-luxembourg/chapter-4/
+public/assets/case-luxembourg/shared/
+```
+
+## 14. Distanze e luoghi per il gioco
+
+Le distanze devono essere trattate come stime narrative, non come dati legali assoluti. Vanno comunque usate per rendere gli alibi plausibili.
+
+Luoghi principali:
+
+* Casa Armundia — Rue de l’Aciérie 86
+* LHoFT — Rue du Laboratoire 9
+* Place de Glacis — area maxi concerto
+* Pont Adolphe — punto fuochi / base visiva
+* Place de la Constitution / Gëlle Fra — folla che guarda i fuochi
+* città vecchia / valle sottostante — area da cui i fuochi sembrano salire
+
+Stime pedonali da usare nel gioco:
+
+| Da                                   |               A | Stima a piedi | Uso narrativo                              |
+| ------------------------------------ | --------------: | ------------: | ------------------------------------------ |
+| Gëlle Fra / Place de la Constitution |    Pont Adolphe |       3–5 min | spostamento rapido durante i fuochi        |
+| Gëlle Fra                            | Place de Glacis |     15–20 min | verificare chi poteva arrivare al concerto |
+| LHoFT                                |       Gëlle Fra |     15–20 min | utile per alibi da ufficio a folla         |
+| LHoFT                                | Place de Glacis |     25–30 min | alibi contestabile se tempi stretti        |
+| Casa Armundia                        |       Gëlle Fra |     18–25 min | percorso possibile ma non immediato        |
+| Casa Armundia                        |           LHoFT |     20–25 min | legame operativo tra casa e ufficio        |
+| Casa Armundia                        | Place de Glacis |     30–35 min | difficile ma possibile con anticipo        |
+| Pont Adolphe                         |           LHoFT |     15–20 min | utile per fuga post evento                 |
+
+Per il gioco, arrotondare sempre i tempi a blocchi da 5 minuti.
+
+## 15. Capitoli e prove: struttura configurabile
+
+Ogni capitolo deve contenere circa 5 tipologie di evidenze, ma il numero totale di documenti può variare.
+
+Esempio:
+
+Capitolo 1:
+
+* verbale polizia
+* articolo giornale
+* mappa città
+* foto luogo
+* registrazione emergenza
+
+Capitolo 2:
+
+* dichiarazioni sospetti
+* cronologia chiamate
+* screenshot chat
+* mappa distanze
+* programma eventi
+
+Capitolo 3:
+
+* referto medico
+* report DNA
+* log badge/accessi
+* perizia audio
+* documento interno Armundia
+
+Capitolo 4:
+
+* report finale investigativo
+* memo tecnico
+* confessione parziale / audio
+* timeline ricostruita
+* prova decisiva
+
+## 16. Requisiti tecnici MUST
+
+* App avviabile in locale con `npm install` e `npm run dev`
+* Build con `npm run build`
+* Deployabile su Vercel/Netlify
+* UI responsive mobile-first
+* Nessun database richiesto
+* Dati caso in config
+* Prove statiche in assets
+* LocalStorage funzionante
+* Capitoli bloccati/sbloccati
+* Password configurabili
+* Archivio prove
+* Visualizzatore PDF/immagini/audio/testi
+* Sospetti
+* Timeline
+* Risposta finale
+* Verdetto
+
+## 17. Requisiti LATER
+
+* Supabase
+* backoffice admin
+* upload documenti
+* generatore casi
+* sessioni multiple
+* team multipli
+* tracking centralizzato
+* classifica
+* voti intermedi
+* QR code prove fisiche
+* ruoli personaggio assegnati ai partecipanti
+* chat interna
+* audio/video professionali
+* modalità host live
+* timer capitoli
+* indizi sbloccabili dall’host
+
+## 18. Cosa non fare nell’MVP
+
+Non implementare:
+
+* login completo
+* gestione utenti
+* ruoli complessi
+* pagamenti
+* notifiche push
+* chat multiplayer
+* real-time database
+* AI in runtime
+* upload documenti da UI
+* editing storia da backoffice
+* permessi granulari
+* app store
+* backend custom
+
+## 19. Test checklist
+
+### 19.1 Funzionale
+
+* L’utente apre l’app da smartphone
+* Inserisce nickname
+* Sceglie lingua
+* Vede Capitolo 1 sbloccato
+* Capitolo 2/3/4 sono bloccati
+* Apre una prova PDF
+* Apre una prova immagine
+* Apre una prova audio
+* Una prova vista viene segnata come vista
+* Inserisce password corretta Capitolo 1
+* Capitolo 2 si sblocca
+* Password errata mostra errore non bloccante
+* Refresh pagina mantiene stato
+* Cambio lingua non rompe lo stato
+* Reset progress funziona
+* Box finale resta bloccato fino a password finale
+* Risposta finale corretta mostra vittoria
+* Risposta finale errata mostra spiegazione
+
+### 19.2 Mobile
+
+* iPhone Safari
+* Android Chrome
+* schermo piccolo
+* scroll documenti
+* pulsanti grandi
+* PDF fallback scaricabile
+* audio player funzionante
+* nessuna tabella illeggibile
+
+### 19.3 Contenuto
+
+* Tutte le prove sono raggiungibili
+* Tutti i link file sono corretti
+* Le password sono coerenti con gli indizi
+* La soluzione finale non è visibile prima del finale
+* Nessun documento rivela per errore il colpevole troppo presto
+* Ogni capitolo ha almeno una prova utile e una falsa pista
+* Ogni capitolo obbliga a discutere almeno un punto
+
+## 20. Prompt per AI developer
+
+Usa questo prompt operativo:
+
+“Devi sviluppare una PWA mobile-first in React/Vite/TypeScript per una murder mystery experience chiamata Detective for a Day. L’app deve essere generica e riusabile: la storia, le prove, i capitoli, le password, i sospetti e la soluzione devono stare in un file di configurazione, non hardcoded nei componenti. Non usare database per l’MVP: usa LocalStorage per nickname, lingua, capitoli sbloccati, prove viste e risposta finale. Implementa landing, home, capitoli bloccati/sbloccati, archivio prove, visualizzatore prove PDF/immagini/audio/testo, timeline, sospetti, password gate e final answer box. Design mobile-first, dark, investigativo, semplice da usare durante una sessione live da 10–15 persone. Evita feature complesse: niente login, niente backend, niente admin, niente multiplayer real-time. La priorità è avere un MVP stabile, configurabile e deployabile in 1 giorno.”
+
+## 21. Definizione di completamento MVP
+
+L’MVP è completato quando:
+
+* un gruppo può aprire il link
+* entrare con nickname
+* leggere le prove del Capitolo 1
+* sbloccare progressivamente Capitoli 2, 3, 4
+* consultare archivio, timeline e sospetti
+* sbloccare la risposta finale
+* indicare il colpevole
+* ricevere verdetto e spiegazione
+* tutto funziona da mobile senza database

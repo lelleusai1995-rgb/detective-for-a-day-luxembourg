@@ -1,0 +1,552 @@
+MASTER CONTEXT - DETECTIVE FOR A DAY
+Versione: MVP demo rapida
+Data contesto: 18/06/2026
+Obiettivo operativo: avere un primo caso giocabile entro 1 giorno, quindi entro il 19/06/2026, senza lavorarci troppo e senza costruire architetture inutili.
+
+1. COSA STIAMO COSTRUENDO
+
+Stiamo costruendo una web app / PWA mobile-first chiamata “Detective for a Day”.
+
+L’app deve permettere a un gruppo privato di circa 10-12 persone, massimo 15, di partecipare a una sessione murder mystery di 2-3 ore usando un link condiviso.
+
+I partecipanti devono aprire l’app dal telefono, inserire un nickname e accedere a un archivio investigativo composto da prove, documenti, foto, registrazioni, planimetrie, organigrammi familiari, reperti della polizia, reperti del mortuario, testimonianze e indizi.
+
+La logica principale NON deve essere un percorso guidato lineare. Tutte le informazioni devono essere disponibili contemporaneamente dentro l’app. I giocatori devono decidere da soli l’ordine con cui analizzarle, discutere tra loro, collegare gli indizi e arrivare a una teoria finale.
+
+L’obiettivo non è creare un gioco perfetto o una piattaforma complessa. L’obiettivo è avere una prima versione funzionante, stabile e usabile per una serata.
+
+2. VINCOLO PRINCIPALE
+
+Tempo massimo: 1 giorno.
+
+Quindi bisogna scegliere sempre la soluzione più semplice, rapida e robusta.
+
+Evitare:
+
+* login complesso;
+* ruoli enterprise;
+* multiplayer real-time;
+* chat interna;
+* notifiche push;
+* pagamenti;
+* dashboard admin avanzate;
+* editor visuale del caso;
+* AI integrata nell’app;
+* gestione permessi complessa;
+* app store;
+* backend complessi se non strettamente necessari.
+
+La priorità è: aprire il link, leggere il caso, consultare prove, inviare una risposta finale.
+
+3. STACK PREFERITO
+
+Stack preferito:
+
+* React
+* Vite
+* TypeScript
+* Tailwind CSS o CSS semplice
+* Supabase solo se serve davvero per persistenza minima
+
+Per la prima demo, la soluzione migliore potrebbe essere anche una versione quasi statica:
+
+* contenuti del caso in file JSON;
+* asset in /public;
+* tracking “prove viste” salvato in localStorage;
+* risposta finale salvata in Supabase solo se configurarlo è veloce;
+* in alternativa, risposta finale salvata localmente o mostrata a video, senza bloccare l’MVP.
+
+Non bisogna perdere tempo a costruire un pannello admin completo. Per la prima versione, il caso può essere censito modificando direttamente file JSON.
+
+4. TARGET DI UTILIZZO
+
+Scenario reale:
+
+* 10-12 persone aprono contemporaneamente lo stesso link;
+* probabilmente sono nella stessa stanza o nello stesso evento;
+* usano soprattutto smartphone;
+* devono poter consultare tutte le prove senza intoppi;
+* la sessione dura circa 2-3 ore;
+* non ci sono dati sensibili reali;
+* il gioco è privato;
+* serve stabilità sufficiente per una serata.
+
+L’app deve reggere il carico di 10-15 utenti senza problemi. Una web app statica deployata su Vercel/Netlify + eventuale Supabase per poche righe di dati è più che sufficiente.
+
+5. FUNZIONI MUST PER LA DEMO
+
+5.1 Accesso tramite link
+
+Deve esistere un link condivisibile, ad esempio:
+/game/first-case
+
+Chi apre il link entra nella partita.
+
+Non serve login vero. Basta una schermata iniziale con:
+
+* titolo del caso;
+* breve intro;
+* campo nickname;
+* pulsante “Entra nell’indagine”.
+
+Il nickname può essere salvato in localStorage.
+
+5.2 Home investigativa
+
+Dopo l’ingresso, il giocatore vede una home con:
+
+* titolo del caso;
+* obiettivo: scoprire assassino, movente e ricostruzione;
+* timer informativo opzionale, non obbligatorio;
+* pulsanti verso le sezioni principali;
+* progresso locale delle prove viste, se facile.
+
+5.3 Archivio prove
+
+Questa è la parte più importante.
+
+Tutte le prove devono essere disponibili insieme, fin dall’inizio, senza blocchi artificiali.
+
+Le prove devono essere organizzate per categorie, ad esempio:
+
+* Briefing iniziale
+* Timeline degli eventi
+* Sospettati
+* Testimonianze
+* Reperti della polizia
+* Reperti del mortuario
+* Fotografie
+* Planimetrie
+* Registrazioni / trascrizioni
+* Documenti personali
+* Organigramma familiare / relazionale
+* Indizi contraddittori
+* Falsi indizi / elementi ambigui
+
+Ogni prova deve avere:
+
+* id
+* titolo
+* categoria
+* descrizione breve
+* contenuto testuale
+* eventuale immagine
+* eventuale PDF/link
+* lingua o contenuti multilingua
+* tag
+* livello di importanza opzionale, da non mostrare per forza al giocatore
+* flag “red herring” opzionale solo nel JSON, non visibile al giocatore
+
+La UX deve permettere:
+
+* lista prove per categoria;
+* ricerca testuale;
+* filtro per categoria;
+* apertura dettaglio prova;
+* segnare automaticamente una prova come vista;
+* tornare facilmente all’archivio.
+
+5.4 Multi-lingua
+
+La app deve supportare:
+
+* italiano
+* inglese
+* albanese
+
+Per l’MVP va bene una soluzione semplice:
+
+* selettore lingua in alto;
+* testi UI tradotti tramite oggetto i18n locale;
+* contenuti del caso disponibili in tre lingue dentro il JSON, se già preparati;
+* se una traduzione manca, mostrare italiano come fallback.
+
+Non costruire un sistema i18n pesante se rallenta.
+
+5.5 Dettaglio sospettati
+
+Serve una sezione “Sospettati” con card/personaggi.
+
+Ogni sospettato deve avere:
+
+* nome fittizio;
+* ruolo nella storia;
+* relazione con la vittima;
+* possibile movente;
+* alibi dichiarato;
+* elementi sospetti;
+* eventuale foto/avatar;
+* collegamenti alle prove correlate.
+
+I nomi devono essere fittizi. Il caso può essere ispirato a logiche narrative reali, ma l’app deve lavorare su un caso fictionalizzato.
+
+5.6 Timeline
+
+Serve una timeline visuale o testuale degli eventi.
+
+Ogni evento deve avere:
+
+* ora/data;
+* descrizione;
+* fonte;
+* eventuali contraddizioni;
+* prove collegate.
+
+La timeline deve aiutare i giocatori a ragionare, ma non deve dare la soluzione.
+
+5.7 Fase finale
+
+Deve esserci una schermata “Verdetto finale” o “Accusa finale”.
+
+Ogni giocatore/team deve poter indicare:
+
+* chi è secondo lui/lei l’assassino;
+* motivazione;
+* ricostruzione sintetica;
+* livello di confidenza opzionale.
+
+Soluzione più rapida:
+
+* form finale;
+* salvataggio in Supabase se configurato;
+* fallback in localStorage se non configurato;
+* dopo submit mostra “Risposta registrata” e blocca/modifica opzionale.
+
+Per la prima demo NON è obbligatorio creare una vera sincronizzazione “quando tutti hanno risposto”. Se Supabase è attivo, si può mostrare al host una lista delle risposte. Se non è attivo, si può prevedere un pulsante manuale “Mostra soluzione” che l’host fa aprire a fine gioco.
+
+5.8 Soluzione finale
+
+Dopo la fase finale deve essere possibile mostrare:
+
+* assassino corretto;
+* movente;
+* ricostruzione degli eventi;
+* indizi chiave;
+* indizi falsi;
+* perché gli altri sospettati non sono colpevoli.
+
+Per MVP, la soluzione può essere nascosta dietro un pulsante:
+“Mostra soluzione finale”
+con avviso:
+“Da aprire solo quando il gruppo ha terminato l’indagine.”
+
+Se si vuole una protezione minima, usare un codice host statico nel JSON, ad esempio “DETECTIVE2026”, ma non costruire autenticazione vera.
+
+6. PERSISTENZA DATI: SCELTA PRAGMATICA
+
+Non bloccare lo sviluppo sulla persistenza.
+
+Opzione A - consigliata per primo giorno, più semplice:
+
+* app statica;
+* dati del caso in JSON;
+* prove viste in localStorage per ogni dispositivo;
+* risposta finale in localStorage;
+* soluzione finale aperta manualmente dall’host.
+
+Pro:
+
+* sviluppo molto più veloce;
+* meno rischi;
+* nessun problema di configurazione DB;
+* regge tranquillamente 10-12 persone.
+
+Contro:
+
+* il host non vede automaticamente tutte le risposte;
+* ogni device salva localmente.
+
+Opzione B - persistenza minima con Supabase:
+Usare Supabase solo per:
+
+* players
+* viewed_evidence
+* final_answers
+
+Non creare tabelle inutili per l’MVP se il caso resta in JSON.
+
+Schema minimo:
+
+* players: id, game_id, nickname, created_at
+* viewed_evidence: id, game_id, player_id, evidence_id, viewed_at
+* final_answers: id, game_id, player_id, suspect_id, motivation, reconstruction, confidence, created_at
+
+Pro:
+
+* il host può vedere risposte e progresso;
+* esperienza più “vera”.
+
+Contro:
+
+* richiede configurazione;
+* aumenta rischio di perdere tempo.
+
+Decisione pratica:
+
+* implementare prima Opzione A;
+* se resta tempo, aggiungere Supabase solo per final_answers;
+* non costruire backend custom.
+
+7. STRUTTURA CONTENUTI DEL CASO
+
+Per la demo, usare file statici.
+
+Esempio struttura:
+
+/public/cases/first-case/case.json
+/public/cases/first-case/images/
+/public/cases/first-case/pdfs/
+/public/cases/first-case/audio/
+/public/cases/first-case/maps/
+
+Il case.json deve contenere almeno:
+
+* metadata
+* languages
+* intro
+* rules
+* characters
+* suspects
+* timeline
+* evidence
+* finalSolution
+
+8. UI / UX PRINCIPI
+
+Mobile-first.
+
+La maggior parte degli utenti userà il telefono.
+
+Principi:
+
+* card grandi;
+* testi leggibili;
+* navigazione semplice;
+* categorie chiare;
+* pulsante “torna all’archivio” sempre disponibile;
+* nessuna UI troppo sofisticata;
+* evitare schermate piene di bottoni;
+* ricerca e filtri sempre visibili o facilmente accessibili;
+* supportare immagini/PDF/link in modo semplice;
+* se un asset non carica, mostrare comunque il testo.
+
+Layout minimo:
+
+* Start screen
+* Investigation Home
+* Evidence Archive
+* Evidence Detail
+* Suspects
+* Timeline
+* Final Answer
+* Final Solution
+* Host Results, solo se Supabase viene implementato
+
+9. COMPONENTI REACT SUGGERITI
+
+Componenti principali:
+
+* App
+* LanguageProvider
+* CaseLoader
+* StartScreen
+* GameLayout
+* BottomNav
+* HomeScreen
+* EvidenceArchive
+* EvidenceCategoryList
+* EvidenceCard
+* EvidenceDetail
+* SuspectList
+* SuspectCard
+* TimelineView
+* FinalAnswerForm
+* FinalSolutionScreen
+* HostResultsScreen, opzionale
+* AssetViewer
+
+Utility:
+
+* useLocalStorage
+* useCaseData
+* useLanguage
+* useViewedEvidence
+* translations.ts
+* caseTypes.ts
+
+10. ROUTING SEMPLICE
+
+Usare React Router o routing interno semplice.
+
+Route possibili:
+
+* /game/:caseId
+* /game/:caseId/home
+* /game/:caseId/evidence
+* /game/:caseId/evidence/:evidenceId
+* /game/:caseId/suspects
+* /game/:caseId/timeline
+* /game/:caseId/final-answer
+* /game/:caseId/solution
+* /host/:caseId, opzionale
+
+Se il routing fa perdere tempo, usare stato interno e query/hash routes.
+
+11. COSA NON SERVE PER LA PRIMA DEMO
+
+Non serve:
+
+* editor admin;
+* creazione partita da UI;
+* upload documenti da UI;
+* gestione utenti vera;
+* password personali;
+* chat;
+* notifiche;
+* scoring automatico complesso;
+* multiplayer live;
+* blocco automatico della soluzione;
+* statistiche avanzate;
+* database completo per tutte le prove;
+* generazione AI dei contenuti dentro l’app;
+* deploy mobile sugli store.
+
+12. DEFINIZIONE DI “PRONTO PER LA SERATA”
+
+L’app è pronta se:
+
+* si apre da link pubblico;
+* 10-12 persone possono entrare dal telefono;
+* ogni persona può inserire nickname;
+* l’archivio prove è consultabile;
+* le prove sono divise per categorie;
+* immagini/PDF/link principali si aprono;
+* si può cambiare lingua IT/EN/SQ;
+* si può leggere la timeline;
+* si possono vedere i sospettati;
+* si può inviare o almeno compilare una risposta finale;
+* la soluzione finale è accessibile a fine gioco;
+* il caso è giocabile per 2-3 ore perché contiene abbastanza materiali e ambiguità;
+* non ci sono crash evidenti su mobile.
+
+13. PRIORITÀ DI SVILUPPO
+
+Ordine consigliato:
+
+1. Creare progetto React/Vite/TypeScript.
+
+2. Creare struttura case.json e caricare un caso demo.
+
+3. Creare loader del caso statico.
+
+4. Creare schermata nickname.
+
+5. Creare layout mobile-first.
+
+6. Creare archivio prove con categorie.
+
+7. Creare dettaglio prova con testo + asset.
+
+8. Creare sospettati.
+
+9. Creare timeline.
+
+10. Creare form risposta finale con localStorage.
+
+11. Creare soluzione finale.
+
+12. Aggiungere lingua IT/EN/SQ.
+
+13. Testare da smartphone.
+
+14. Deploy su Vercel/Netlify.
+
+15. Solo se resta tempo: Supabase per final_answers.
+
+16. APPROCCIO AI CONTENUTI
+
+Il contenuto investigativo deve essere ricco, ma la app non deve dipendere da logiche complesse.
+
+Le prove possono includere:
+
+* briefing del caso;
+* scheda vittima;
+* schede sospettati;
+* timeline ufficiale;
+* timeline alternativa;
+* verbale polizia;
+* referto medico-legale;
+* fotografie scena del crimine;
+* planimetria casa/luogo;
+* mappa movimenti;
+* tabulati telefonici;
+* messaggi/chat;
+* email;
+* documenti bancari o ereditari;
+* lettere personali;
+* testimonianze contraddittorie;
+* registrazioni trascritte;
+* oggetti/reperti;
+* alibi;
+* indizi falsi;
+* indizi chiave.
+
+L’app deve semplicemente presentarli bene. Il lavoro investigativo lo fanno i giocatori.
+
+15. REGOLA IMPORTANTE PER L’AI CHE SVILUPPA
+
+Non cercare la soluzione “perfetta”.
+Non proporre architetture più complesse.
+Non chiedere di implementare cose LATER prima dei MUST.
+Non bloccare lo sviluppo su Supabase se non è già pronto.
+Non costruire admin UI per il primo caso.
+Non costruire un CMS.
+Non costruire un sistema real-time.
+
+Costruisci prima una web app leggibile, veloce, mobile-first e deployabile.
+
+16. OUTPUT ATTESO DALLO SVILUPPO
+
+Alla fine servono:
+
+* repository React/Vite funzionante;
+* istruzioni npm install / npm run dev / npm run build;
+* struttura chiara per inserire nuovi casi;
+* primo case.json funzionante;
+* asset caricabili da public;
+* app deployabile;
+* eventuale SQL Supabase solo se è stata scelta Opzione B;
+* checklist test mobile.
+
+17. CHECKLIST TEST RAPIDA
+
+Testare:
+
+* apertura link da smartphone;
+* inserimento nickname;
+* cambio lingua;
+* apertura tutte le categorie;
+* apertura almeno 10 prove;
+* apertura immagini;
+* apertura PDF/link;
+* ricerca prova;
+* filtro categoria;
+* visualizzazione sospettati;
+* visualizzazione timeline;
+* compilazione risposta finale;
+* riapertura pagina e mantenimento nickname/prove viste via localStorage;
+* apertura soluzione finale;
+* test contemporaneo con almeno 3-4 device prima della serata;
+* verifica che l’app non richieda login o configurazioni strane agli utenti.
+
+18. MESSAGGIO FINALE PER L’AI DI SVILUPPO
+
+Sviluppa questo MVP come se dovesse essere usato domani sera da 10-12 persone reali.
+
+La scelta migliore è una soluzione semplice, statica o quasi statica, con contenuti in JSON e asset in public. Aggiungi Supabase solo se non rallenta e solo per persistenza minima delle risposte finali.
+
+Tutte le prove devono essere accessibili contemporaneamente. I giocatori devono decidere da soli l’ordine di analisi.
+
+La qualità percepita dipende più da chiarezza, navigazione mobile e organizzazione dei materiali investigativi che da funzionalità avanzate.
+
+Prima fai funzionare il flusso end-to-end. Poi migliora grafica e persistenza solo se resta tempo.

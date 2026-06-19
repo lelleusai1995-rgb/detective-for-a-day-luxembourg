@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npm install 2>&1)",
+      "PowerShell($env:PORT=4173; Start-Process -FilePath \"npm\" -ArgumentList \"run\",\"preview\",\"--\",\"--port\",\"4173\" -WindowStyle Hidden; Start-Sleep -Seconds 4; \\(Invoke-WebRequest -UseBasicParsing http://localhost:4173/game/lux-gelle-fra\\).StatusCode)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:4173/game/lux-gelle-fra)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:4173/cases/lux-gelle-fra/case.json)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "mcp__plugin_playwright_playwright__browser_select_option",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "Bash(node scripts/_transform-case.mjs)",
+      "Bash(node -e \"const d=require\\('./public/cases/lux-gelle-fra/case.json'\\); console.log\\('mode:',d.evidenceUnlockMode\\); console.log\\('obj.en:',d.objective.en.slice\\(0,60\\)\\); const e=d.evidence[0]; console.log\\('ch0 folder:',e.assetFolder\\); console.log\\('ch0 file present?', 'file' in e\\); console.log\\('--- ch0 content.en ---'\\); console.log\\(e.content.en.slice\\(0,340\\)\\);\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:4173/cases/lux-gelle-fra/assets-manifest.json)",
+      "Bash(curl -s http://localhost:4173/cases/lux-gelle-fra/case.json)",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\).on\\('end',\\(\\)=>{const j=JSON.parse\\(d\\);console.log\\('mode',j.evidenceUnlockMode,'| ch0 folder',j.evidence[0].assetFolder\\)}\\)\")",
+      "Bash(kill %1)",
+      "Bash(node --input-type=module -e ' *)"
+    ]
+  }
+}

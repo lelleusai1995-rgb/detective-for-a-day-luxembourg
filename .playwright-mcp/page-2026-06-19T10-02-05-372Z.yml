@@ -1,0 +1,64 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Back" [ref=e27] [cursor=pointer]: ←
+    - generic [ref=e5]: Final Accusation
+    - 'button "Contrast: Normal" [ref=e6] [cursor=pointer]':
+      - generic [ref=e7]: ◐
+  - main [ref=e8]:
+    - heading "Final Accusation" [level=1] [ref=e34]
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: Who is the culprit?
+        - combobox "Who is the culprit?" [ref=e38]:
+          - option "Select a suspect…" [selected]
+          - option "Marco Bellandi"
+          - option "Elira Kodra"
+          - option "Davide Rinaldi"
+          - option "Arben Leka"
+          - option "Sofia Martelli"
+          - option "Matteo Serra"
+          - option "Giulia Ferri"
+          - option "Erion Dervishi"
+          - option "Nora Weiss"
+          - option "Luca Moretti"
+      - generic [ref=e39]:
+        - generic [ref=e40]: What is the motive?
+        - textbox "What is the motive?" [ref=e41]
+      - generic [ref=e42]:
+        - generic [ref=e43]: How was it done (the method/weapon)?
+        - textbox "How was it done (the method/weapon)?" [ref=e44]
+      - generic [ref=e45]:
+        - generic [ref=e46]: Which evidence is decisive?
+        - textbox "Which evidence is decisive?" [ref=e47]
+      - generic [ref=e48]:
+        - generic [ref=e49]: Which red herring had to be discarded?
+        - textbox "Which red herring had to be discarded?" [ref=e50]
+      - generic [ref=e51]:
+        - generic [ref=e52]: Confidence
+        - combobox "Confidence" [ref=e53]:
+          - option "Low"
+          - option "Medium" [selected]
+          - option "High"
+      - button "Submit accusation" [disabled] [ref=e54]
+  - navigation "Primary" [ref=e10]:
+    - generic [ref=e11]:
+      - link "Home" [ref=e12] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/home
+        - generic [ref=e13]: 🏠
+        - generic [ref=e14]: Home
+      - link "Evidence" [ref=e15] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/archive
+        - generic [ref=e16]: 🗂️
+        - generic [ref=e17]: Evidence
+      - link "Chapters" [ref=e18] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/chapters
+        - generic [ref=e19]: 📖
+        - generic [ref=e20]: Chapters
+      - link "Timeline" [ref=e21] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/timeline
+        - generic [ref=e22]: 🕒
+        - generic [ref=e23]: Timeline
+      - link "Suspects" [ref=e24] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/suspects
+        - generic [ref=e25]: 👥
+        - generic [ref=e26]: Suspects

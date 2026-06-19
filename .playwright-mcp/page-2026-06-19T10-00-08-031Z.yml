@@ -1,0 +1,25 @@
+- main [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]: 🔎
+    - paragraph [ref=e7]: Detective for a Day
+    - heading "The Gëlle Fra Case" [level=1] [ref=e8]
+    - paragraph [ref=e9]: Murder Under the Grand Ducal Fireworks
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: Nickname
+      - textbox "Nickname" [ref=e13]:
+        - /placeholder: e.g. Inspector Lux
+    - generic [ref=e14]:
+      - generic [ref=e15]: Language
+      - group "Language" [ref=e16]:
+        - button "EN" [pressed] [ref=e17] [cursor=pointer]
+        - button "IT" [ref=e18] [cursor=pointer]
+        - button "SQ" [ref=e19] [cursor=pointer]
+    - button "Start the investigation" [disabled] [ref=e20]
+  - generic [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]: Contrast
+      - 'button "Contrast: Normal" [ref=e24] [cursor=pointer]':
+        - generic [ref=e25]: ◐
+        - generic [ref=e26]: Normal
+    - paragraph [ref=e27]: This is a fictional case. All characters and institutions are invented for the game.

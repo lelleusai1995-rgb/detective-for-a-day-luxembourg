@@ -1,0 +1,39 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Back" [ref=e27] [cursor=pointer]: ←
+    - generic [ref=e5]: Final Accusation
+    - 'button "Contrast: Normal" [ref=e6] [cursor=pointer]':
+      - generic [ref=e7]: ◐
+  - main [ref=e8]:
+    - generic [ref=e55]: Your accusation has been recorded on this device.
+    - generic [ref=e56]:
+      - paragraph [ref=e57]: Your accusation
+      - paragraph [ref=e58]:
+        - strong [ref=e59]: Nora Weiss
+      - paragraph
+    - generic [ref=e60]:
+      - button "Edit my answer" [ref=e61] [cursor=pointer]
+      - link "Reveal the solution →" [ref=e62] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/solution
+  - navigation "Primary" [ref=e10]:
+    - generic [ref=e11]:
+      - link "Home" [ref=e12] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/home
+        - generic [ref=e13]: 🏠
+        - generic [ref=e14]: Home
+      - link "Evidence" [ref=e15] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/archive
+        - generic [ref=e16]: 🗂️
+        - generic [ref=e17]: Evidence
+      - link "Chapters" [ref=e18] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/chapters
+        - generic [ref=e19]: 📖
+        - generic [ref=e20]: Chapters
+      - link "Timeline" [ref=e21] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/timeline
+        - generic [ref=e22]: 🕒
+        - generic [ref=e23]: Timeline
+      - link "Suspects" [ref=e24] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/suspects
+        - generic [ref=e25]: 👥
+        - generic [ref=e26]: Suspects

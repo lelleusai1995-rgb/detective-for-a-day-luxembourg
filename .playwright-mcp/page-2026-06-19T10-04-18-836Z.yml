@@ -1,0 +1,39 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - button "Back" [ref=e5] [cursor=pointer]: ←
+    - generic [ref=e6]: Final Accusation
+    - 'button "Contrast: Normal" [ref=e7] [cursor=pointer]':
+      - generic [ref=e8]: ◐
+  - main [ref=e9]:
+    - generic [ref=e29]: ✓ Case solved
+    - heading "Case solved — Logistics beat technology" [level=2] [ref=e30]
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Suspects
+      - paragraph [ref=e33]:
+        - strong [ref=e34]: Nora Weiss
+        - text: — Operations Coordinator
+    - generic [ref=e35]: "The culprit is Nora Weiss — the person everyone underestimated. Throughout the case, the clues seemed to point at the technical profiles. Davide's badge, the 00:17 patch, the dead phone, the incomplete logs and his knowledge of the systems made him the perfect suspect. That was exactly the trap: it was too perfect. The killer did not need to manipulate the system from the inside. They needed to know how to move between events, badges, suppliers and secondary accesses. Nora was the only one with complete logistical knowledge and a direct link to LuxEvent Secure. Grand Duke Émeric IV was about to order a review of the supplier contract after receiving an internal flag. Nora, embedded in the system of favours that had benefited LuxEvent Secure, was about to be exposed. During the midnight fireworks the city was perfect for disappearing: crowds, noise, music, unusable phones, confused movements. Nora used Davide's lost temporary badge (#0017), lured the Grand Duke into a side room with a false operational message and struck him with a heavy technical flashlight. She then removed the weapon through the supplier's logistics circuit. The decisive evidence was not one item but the mosaic: • Davide's badge used at a time incompatible with his real position (he is on Erion's audio at the Glacis at 00:31); • the badge-holder fragment matching a LuxEvent batch handled by Operations; • the golden dust linked to LuxEvent material, not the fireworks; • Nora's 41-second call to LuxEvent at 00:23 from the lower-town sector; • the side-room access reachable via the LHoFT service corridor her badge used; • the motive tied to the supplier contract review. Davide was framed. Marco protected the reputation. Elira feared a bug. Matteo's patch was a scheduled deploy. Arben had glimpsed a fragment of the truth. Sofia hid a personal chat. But Nora is the only one for whom every element converges."
+    - link "Back to home" [ref=e37] [cursor=pointer]:
+      - /url: /game/lux-gelle-fra/home
+  - navigation "Primary" [ref=e11]:
+    - generic [ref=e12]:
+      - link "Home" [ref=e13] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/home
+        - generic [ref=e14]: 🏠
+        - generic [ref=e15]: Home
+      - link "Evidence" [ref=e16] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/archive
+        - generic [ref=e17]: 🗂️
+        - generic [ref=e18]: Evidence
+      - link "Chapters" [ref=e19] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/chapters
+        - generic [ref=e20]: 📖
+        - generic [ref=e21]: Chapters
+      - link "Timeline" [ref=e22] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/timeline
+        - generic [ref=e23]: 🕒
+        - generic [ref=e24]: Timeline
+      - link "Suspects" [ref=e25] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/suspects
+        - generic [ref=e26]: 👥
+        - generic [ref=e27]: Suspects

@@ -1,0 +1,1232 @@
+# DETECTIVE FOR A DAY — LUXEMBOURG STORY BIBLE
+
+## 1. Titolo provvisorio
+
+**Il Caso Gëlle Fra**
+
+Sottotitolo:
+
+**Omicidio sotto i fuochi del Granducato**
+
+Alternativa più aziendale:
+
+**Detective for a Day: The Luxembourg Incident**
+
+Alternativa più misteriosa:
+
+**La Notte dei Venti Minuti**
+
+## 2. Nota importante sulla finzione narrativa
+
+Questa storia è completamente fittizia.
+
+È ambientata in un Lussemburgo romanzato, durante il weekend della festa nazionale, ma non deve accusare né rappresentare persone reali. Il Granduca della storia deve essere un personaggio inventato, in una versione alternativa e narrativa del Granducato.
+
+Tutti i colleghi Armundia citati nella storia sono personaggi inventati. Non usare nomi reali di dipendenti, dirigenti o colleghi.
+
+La storia deve sembrare vicina al retreat Armundia Luxembourg per aumentare immersione e divertimento, ma non deve permettere associazioni personali offensive.
+
+## 3. Premessa narrativa
+
+Il 20 giugno, un gruppo di circa 15 colleghi Armundia Luxembourg si riunisce in Lussemburgo per un weekend aziendale informale. Alcuni arrivano dall’Italia, altri da Tirana, altri vivono già in Lussemburgo.
+
+Il weekend coincide con i giorni più intensi della città:
+
+* il 21 giugno sera concerti diffusi in vari quartieri, con musica fino alle 4 del mattino;
+* il 22 giugno maxi concerto in Place de Glacis fino alle 2 di notte;
+* alla mezzanotte del 22 giugno, venti minuti di fuochi d’artificio spettacolari sparati dalla zona bassa della città, ai piedi del Pont Adolphe e della città vecchia;
+* migliaia di persone si concentrano in Place de la Constitution, sotto la statua dorata della Gëlle Fra, per vedere i fuochi salire apparentemente dal sottosuolo;
+* il 23 giugno si celebra la festa nazionale del Granducato.
+
+Nel gioco, la giornata reale del 20 giugno diventa il “prologo” della storia. I giocatori sono invitati a immaginare che nei giorni successivi il retreat continui e che il gruppo Armundia venga coinvolto in un caso clamoroso: l’omicidio del Granduca fittizio **Émeric IV di Luxembourg-Vallée**.
+
+Il Granduca viene trovato morto la mattina del 23 giugno, dopo una notte di eventi pubblici, folla, musica, alibi fragili e spostamenti difficili da ricostruire.
+
+Uno dei membri del gruppo Armundia è l’assassino.
+
+## 4. Tono desiderato
+
+Il tono deve essere:
+
+* investigativo
+* aziendale ma divertente
+* realistico quanto basta
+* non splatter
+* non offensivo
+* adatto a colleghi
+* con tensione, ma anche ironia leggera
+* stimolante per business analyst e developer
+
+La storia deve farli ragionare su:
+
+* timeline
+* alibi
+* distanze a piedi
+* log tecnici
+* accessi
+* badge
+* chat
+* prove fisiche
+* contraddizioni
+* false piste
+* motivazioni personali e professionali
+
+## 5. Luoghi principali
+
+### 5.1 Casa Armundia
+
+Indirizzo narrativo: **Rue de l’Aciérie 86**
+
+Funzione nella storia:
+
+* base informale del gruppo
+* luogo di ritrovo
+* luogo dove vengono lasciati zaini, laptop e materiali
+* possibile luogo di preparazione del piano
+* punto di partenza o ritorno di alcuni sospetti
+* luogo associato alla password `ACIERIE86`
+
+### 5.2 Ufficio LHoFT
+
+Indirizzo narrativo: **Rue du Laboratoire 9**
+
+Funzione nella storia:
+
+* ufficio operativo
+* luogo dove alcuni colleghi lavorano a una demo riservata
+* luogo di accessi badge
+* luogo da cui sparisce un dispositivo
+* luogo associato alla password `LAB9`
+
+### 5.3 Place de Glacis
+
+Funzione nella storia:
+
+* maxi concerto del 22 giugno
+* luogo affollato fino alle 2 di notte
+* alibi perfetto e imperfetto allo stesso tempo
+* alcuni sospetti dichiarano di essere stati lì
+* impossibile verificare tutto perché c’è troppa gente
+
+### 5.4 Pont Adolphe
+
+Funzione nella storia:
+
+* punto iconico vicino ai fuochi
+* zona di passaggio
+* luogo collegato a una registrazione audio disturbata
+* possibile punto di consegna di un oggetto
+
+### 5.5 Place de la Constitution / Gëlle Fra
+
+Funzione nella storia:
+
+* luogo dove migliaia di persone guardano i fuochi
+* punto chiave della timeline di mezzanotte
+* luogo della prima password `GELLEFRA`
+* simbolo del caso
+
+### 5.6 Città vecchia / valle sottostante
+
+Funzione nella storia:
+
+* area da cui i fuochi sembrano provenire dal basso
+* luogo scenografico e confuso
+* possibile via di fuga
+* area dove un testimone vede una figura con badge Armundia
+
+## 6. Distanze narrative
+
+Le distanze devono essere usate come variabili investigative. Non serve precisione assoluta: bastano tempi coerenti.
+
+| Percorso                        | Tempo a piedi stimato | Uso investigativo                                              |
+| ------------------------------- | --------------------: | -------------------------------------------------------------- |
+| Gëlle Fra → Pont Adolphe        |               3–5 min | spostamento possibile durante i fuochi                         |
+| Gëlle Fra → Place de Glacis     |             15–20 min | qualcuno può lasciare i fuochi e arrivare al concerto          |
+| LHoFT → Gëlle Fra               |             15–20 min | un accesso badge può essere compatibile con presenza ai fuochi |
+| LHoFT → Place de Glacis         |             25–30 min | difficile sostenere entrambi gli alibi in tempi stretti        |
+| Casa Armundia → Gëlle Fra       |             18–25 min | possibile rientro o uscita sospetta                            |
+| Casa Armundia → LHoFT           |             20–25 min | collega casa e ufficio                                         |
+| Casa Armundia → Place de Glacis |             30–35 min | utile per contestare alibi deboli                              |
+| Pont Adolphe → LHoFT            |             15–20 min | possibile fuga verso ufficio                                   |
+
+Nel gioco, i tempi di percorrenza diventano uno degli strumenti principali per verificare gli alibi.
+
+## 7. Ispirazione investigativa da Garlasco
+
+La struttura prende spunto da alcuni meccanismi investigativi:
+
+* persona conosciuta che può avvicinarsi alla vittima senza destare sospetti
+* finestra temporale ristretta
+* alibi digitale parziale
+* prova fisica apparentemente forte ma discutibile
+* gestione confusa della scena
+* oggetto/arma mai ritrovato o ritrovato troppo tardi
+* nuovo sospetto che emerge progressivamente
+* falsa pista tecnica
+* importanza di non guardare una singola prova, ma il mosaico complessivo
+
+Questi elementi sono adattati a un contesto corporate/retreat, non copiati.
+
+## 8. Vittima
+
+### Nome
+
+**Granduca Émeric IV di Luxembourg-Vallée**
+
+Personaggio fittizio.
+
+### Profilo pubblico
+
+* 58 anni
+* figura istituzionale amatissima ma divisiva
+* simbolo di continuità del Granducato
+* molto attento alla modernizzazione digitale del paese
+* promotore di una fondazione per tecnologia, finanza sostenibile e cybersecurity
+* previsto un suo discorso pubblico il 23 giugno
+
+### Collegamento con Armundia
+
+Il Granduca fittizio aveva in programma un incontro riservato con una delegazione tech-finance durante il weekend. Armundia era coinvolta indirettamente in una demo su governance, auditabilità e tracciabilità di dati finanziari.
+
+Il gruppo Armundia non era formalmente responsabile della sicurezza del Granduca, ma alcuni colleghi avevano accesso a documenti, badge temporanei, demo laptop e informazioni logistiche riservate.
+
+### Morte
+
+Il Granduca viene trovato morto la mattina del 23 giugno in una sala secondaria di un edificio istituzionale vicino alla zona del percorso ufficiale.
+
+Per MVP, non serve rappresentare graficamente il cadavere. Basta un verbale descrittivo.
+
+Causa della morte:
+
+* colpo alla testa con oggetto contundente
+* successiva caduta o posizionamento scenico
+* arma non trovata all’inizio
+
+Elemento scenico:
+
+* sul polsino della vittima viene trovato un minuscolo frammento di plastica nera, compatibile con un access badge holder
+* vicino al corpo viene trovata una piccola traccia di polvere dorata, inizialmente collegata ai fuochi/Gëlle Fra, poi reinterpretata
+
+## 9. Gruppo personaggi Armundia
+
+Totale personaggi principali: 10.
+
+Distribuzione:
+
+* 1 direttore
+* 4 business analyst
+* 4 developer
+* 1 office/operations coordinator
+
+Tra questi, 4 sospetti forti.
+
+Nessun intreccio amoroso interno al gruppo. Eventuali tensioni sentimentali possono riguardare persone esterne, ma non devono essere il motore principale.
+
+## 10. Personaggi
+
+### 10.1 Marco Bellandi — Direttore Armundia Luxembourg
+
+Ruolo: Director / Country Lead.
+
+Profilo:
+
+* italiano
+* carismatico
+* orientato al cliente
+* molto attento alla reputazione
+* sotto pressione per chiudere una partnership istituzionale
+
+Relazione con la vittima:
+
+* aveva incontrato il Granduca in un evento fintech
+* voleva ottenere visibilità per Armundia
+* aveva accesso all’agenda del meeting riservato
+
+Movente possibile:
+
+* proteggere l’azienda da uno scandalo
+* evitare che emergesse una demo fallita o un errore grave
+
+Alibi dichiarato:
+
+* durante i fuochi era con parte del gruppo a Gëlle Fra
+* dopo mezzanotte dice di essere rientrato a Casa Armundia
+
+Elementi contro:
+
+* conosceva dettagli logistici riservati
+* ha chiesto di non parlare con la stampa
+* ha cancellato una bozza di email
+
+Elementi a favore:
+
+* troppo esposto pubblicamente
+* diversi testimoni lo vedono durante i fuochi
+* non ha competenze tecniche sufficienti per manipolare i log
+
+Stato narrativo:
+
+* falso sospetto forte
+* non colpevole
+
+### 10.2 Elira Kodra — Business Analyst senior
+
+Ruolo: Senior BA.
+
+Profilo:
+
+* albanese
+* precisa
+* molto brava a raccogliere requisiti
+* ponte naturale tra colleghi italiani e albanesi
+* conosce bene i flussi funzionali della demo
+
+Relazione con la vittima:
+
+* aveva preparato parte del materiale usato per il briefing istituzionale
+* aveva scoperto un’anomalia in un documento di compliance
+
+Movente possibile:
+
+* paura di essere accusata per un errore documentale
+* pressione professionale
+
+Alibi dichiarato:
+
+* dice di essere stata al concerto techno il 21
+* il 22 sera dice di essere passata da Glacis, poi rientrata presto
+
+Elementi contro:
+
+* compare in una chat in cui scrive “se esce fuori, siamo finiti”
+* aveva accesso a una cartella riservata
+* il suo badge viene rilevato vicino al LHoFT in un orario ambiguo
+
+Elementi a favore:
+
+* la frase in chat si riferiva a un bug, non al Granduca
+* il badge potrebbe essere stato clonato o preso da altri
+
+Stato narrativo:
+
+* sospetta intermedia
+* non colpevole
+
+### 10.3 Davide Rinaldi — Developer backend
+
+Ruolo: Backend Developer.
+
+Profilo:
+
+* italiano
+* molto competente
+* introverso
+* conosce API, log, audit trail e sistemi di accesso
+* tende a correggere gli altri in modo brusco
+
+Relazione con la vittima:
+
+* nessuna relazione diretta pubblica
+* aveva lavorato su una demo tecnica che il Granduca avrebbe dovuto vedere
+
+Movente possibile:
+
+* coprire una manipolazione tecnica
+* vendetta verso chi voleva attribuirgli un errore
+* proteggere una persona esterna
+
+Alibi dichiarato:
+
+* dice di essere stato al Glacis durante il maxi concerto
+* sostiene che il suo telefono fosse scarico tra le 23:50 e le 00:40
+* dice di aver perso il badge temporaneo
+
+Elementi contro:
+
+* ha competenze per alterare log
+* il suo badge risulta usato al LHoFT in un orario chiave
+* un frammento di badge holder compatibile viene trovato vicino alla vittima
+* conosceva una vulnerabilità nei log degli accessi
+* in una chat privata scrive “non devono vedere le patch notes”
+
+Elementi a favore:
+
+* il badge potrebbe essere stato rubato
+* la presenza al Glacis è confermata da una foto, ma l’orario della foto è dubbio
+
+Stato narrativo:
+
+* sospetto fortissimo
+* falso colpevole tecnico
+* non colpevole
+
+### 10.4 Arben Leka — Developer frontend
+
+Ruolo: Frontend Developer.
+
+Profilo:
+
+* albanese
+* brillante
+* creativo
+* molto bravo a preparare interfacce demo
+* spesso sottovalutato dai colleghi senior
+
+Relazione con la vittima:
+
+* aveva creato la dashboard che il Granduca avrebbe visto
+* aveva nascosto nell’interfaccia una modalità demo non documentata
+
+Movente possibile:
+
+* evitare che il Granduca scoprisse che la demo mostrava dati non autorizzati
+* proteggere una relazione esterna con una giornalista investigativa
+
+Alibi dichiarato:
+
+* alle 23:55 dice di essere sotto Gëlle Fra per vedere i fuochi
+* alle 00:20 dice di essere in direzione Pont Adolphe
+* alle 00:45 dice di essere rientrato verso Casa Armundia
+
+Elementi contro:
+
+* conosceva il percorso tra Gëlle Fra, Pont Adolphe e LHoFT
+* una registrazione audio contiene una voce simile alla sua
+* una mappa sul suo telefono mostra un percorso cancellato
+* è l’unico che sapeva del bottone nascosto “royal-preview”
+
+Elementi a favore:
+
+* molti lo vedono realmente durante i fuochi
+* non aveva accesso fisico alla sala istituzionale
+* non risulta avere preso il badge di Davide
+
+Stato narrativo:
+
+* sospetto forte
+* non colpevole
+
+### 10.5 Sofia Martelli — Business Analyst
+
+Ruolo: Business Analyst.
+
+Profilo:
+
+* italiana
+* molto socievole
+* ottima comunicatrice
+* gestisce minute, follow-up e materiali cliente
+
+Relazione con la vittima:
+
+* aveva preparato una nota sintetica per il protocollo istituzionale
+* aveva parlato con un assistente del Granduca
+
+Movente possibile:
+
+* evitare uno scandalo legato a un documento inviato per errore
+* proteggere un contatto esterno
+
+Alibi dichiarato:
+
+* dice di essere rimasta sempre con il gruppo a Gëlle Fra durante i fuochi
+* poi dice di essersi spostata verso Glacis
+
+Elementi contro:
+
+* un suo screenshot mostra un orario modificato
+* cancella una chat con un contatto chiamato “L.”
+* conosceva la sala dove il Granduca sarebbe passato
+
+Elementi a favore:
+
+* non ha competenze tecniche per alterare log
+* il contatto “L.” è una persona esterna legata all’organizzazione eventi
+* diversi colleghi confermano la sua presenza
+
+Stato narrativo:
+
+* falsa pista relazionale esterna
+* non colpevole
+
+### 10.6 Matteo Serra — Developer full-stack
+
+Ruolo: Full-stack Developer.
+
+Profilo:
+
+* italiano
+* pratico
+* veloce
+* spesso risolve problemi all’ultimo minuto
+* conosce sia frontend sia backend
+
+Relazione con la vittima:
+
+* aveva accesso al pacchetto finale della demo
+* aveva creato una patch urgente il 22 giugno
+
+Movente possibile:
+
+* nascondere una backdoor
+* evitare conseguenze professionali
+
+Alibi dichiarato:
+
+* dice di essere stato a Casa Armundia a lavorare su una fix
+* poi dice di essere uscito solo per vedere i fuochi da lontano
+
+Elementi contro:
+
+* il suo laptop mostra attività in orari sospetti
+* una patch è stata caricata alle 00:17
+* la password finale del gioco è collegata alle patch notes
+
+Elementi a favore:
+
+* l’attività laptop può essere automatica
+* la patch è stata preparata prima
+* non risulta presente vicino al luogo della morte
+
+Stato narrativo:
+
+* sospetto tecnico
+* non colpevole
+
+### 10.7 Giulia Ferri — Business Analyst junior
+
+Ruolo: Junior BA.
+
+Profilo:
+
+* italiana
+* nuova nel team
+* molto osservatrice
+* tende a non esporsi
+
+Relazione con la vittima:
+
+* nessuna diretta
+* ha visto qualcosa durante i fuochi
+
+Movente possibile:
+
+* nessuno forte
+
+Alibi dichiarato:
+
+* era con un piccolo gruppo sotto Gëlle Fra
+* ha perso il gruppo durante i fuochi
+
+Elementi contro:
+
+* dichiarazione iniziale confusa
+* non dice subito di aver visto Davide vicino al Pont Adolphe
+
+Elementi a favore:
+
+* più testimone che sospetta
+* la sua omissione nasce da insicurezza, non da colpa
+
+Stato narrativo:
+
+* testimone chiave
+* non colpevole
+
+### 10.8 Erion Dervishi — Developer QA / automation
+
+Ruolo: QA Automation Developer.
+
+Profilo:
+
+* albanese
+* metodico
+* ama log, screenshot, test automatici
+* tiene traccia di tutto
+
+Relazione con la vittima:
+
+* nessuna diretta
+* aveva registrato video/screenshot per testare la demo
+
+Movente possibile:
+
+* scarso
+
+Alibi dichiarato:
+
+* stava registrando parti della serata per un video interno del retreat
+* poi era al Glacis
+
+Elementi contro:
+
+* ha molti file video ma manca proprio il segmento 00:09–00:23
+* il suo telefono è stato spento
+
+Elementi a favore:
+
+* i suoi file aiutano a smontare un falso alibi
+* recupera un audio fondamentale
+
+Stato narrativo:
+
+* testimone tecnico
+* non colpevole
+
+### 10.9 Nora Weiss — Operations Coordinator
+
+Ruolo: Office / Operations Coordinator.
+
+Profilo:
+
+* lussemburghese
+* organizza logistica, badge, sale, spostamenti
+* conosce fornitori ed eventi cittadini
+
+Relazione con la vittima:
+
+* ha coordinato parte del protocollo logistico
+* sapeva dove e quando sarebbe passato il Granduca
+
+Movente possibile:
+
+* proteggere una persona esterna
+* ricatto legato a un fornitore
+
+Alibi dichiarato:
+
+* dice di essere stata al telefono con organizzatori eventi
+* poi a Casa Armundia
+
+Elementi contro:
+
+* aveva accesso ai badge temporanei
+* poteva sapere come entrare nella sala secondaria
+* un fornitore esterno la chiama più volte
+
+Elementi a favore:
+
+* non ha competenze tecniche per coprire i log
+* le chiamate sono realmente operative
+
+Stato narrativo:
+
+* sospetta logistica
+* non colpevole
+
+### 10.10 Luca Moretti — Business Analyst / Product Owner
+
+Ruolo: BA/Product Owner.
+
+Profilo:
+
+* italiano
+* ambizioso
+* vuole passare a un ruolo più alto
+* molto bravo a raccontare il prodotto
+
+Relazione con la vittima:
+
+* avrebbe dovuto presentare parte della demo al Granduca
+* aveva avuto un confronto teso con un assistente istituzionale
+
+Movente possibile:
+
+* occasione professionale fallita
+* paura che il Granduca bloccasse la partnership
+
+Alibi dichiarato:
+
+* era con Marco Bellandi durante i fuochi
+* poi è andato al Glacis
+
+Elementi contro:
+
+* mente su un breve spostamento alle 00:12
+* aveva un motivo reputazionale
+* il suo nome compare in una nota riservata
+
+Elementi a favore:
+
+* lo spostamento era per recuperare il telefono
+* non ha accesso tecnico né badge
+
+Stato narrativo:
+
+* falso sospetto business
+* non colpevole
+
+## 11. Colpevole vero
+
+### Colpevole
+
+**Nora Weiss — Operations Coordinator**
+
+## 12. Perché lei
+
+Nora è la persona che tutti sottovalutano.
+
+I developer sembrano più sospetti perché possono manipolare log. I business analyst sembrano sospetti perché gestiscono documenti e relazioni. Il direttore sembra sospetto perché ha il movente reputazionale più evidente.
+
+Ma Nora è l’unica che possiede contemporaneamente:
+
+* conoscenza logistica dei luoghi
+* accesso ai badge temporanei
+* contatti con fornitori esterni
+* conoscenza degli orari reali del Granduca
+* possibilità di muoversi senza destare sospetti
+* motivo personale esterno al gruppo
+* capacità di indirizzare i sospetti verso altri
+
+## 13. Movente vero
+
+Nora non uccide per Armundia.
+
+Uccide perché il Granduca stava per rivelare o bloccare un sistema di appalti e favori collegato a un fornitore eventi con cui Nora aveva un legame esterno.
+
+Il fornitore, chiamato nei documenti **LuxEvent Secure**, era coinvolto nella gestione di badge temporanei, percorsi tecnici e accessi secondari durante gli eventi della festa nazionale.
+
+Nora aveva favorito questo fornitore in più occasioni. Il Granduca aveva ricevuto una segnalazione interna e stava per chiedere una revisione del contratto proprio dopo il weekend.
+
+Nora temeva:
+
+* perdita del lavoro
+* indagine interna
+* scandalo pubblico
+* coinvolgimento di una persona esterna a lei vicina
+
+Il gruppo Armundia diventa copertura perfetta perché:
+
+* molti colleghi sono in città
+* ci sono badge, laptop e demo
+* ci sono developer facili da accusare per log alterati
+* la folla rende gli alibi fragili
+* gli eventi pubblici generano confusione
+
+## 14. Metodo dell’omicidio
+
+Nora recupera un badge temporaneo assegnato a Davide Rinaldi, che lui crede di aver perso.
+
+Usa il badge per accedere a una sala secondaria vicino al percorso istituzionale.
+
+Attira il Granduca con un falso messaggio operativo: una breve verifica riservata prima del discorso del 23 giugno.
+
+Durante la confusione dei fuochi e del rientro della folla, incontra il Granduca nella sala.
+
+Lo colpisce con una pesante torcia metallica tecnica usata dagli addetti eventi, poi la fa sparire tramite un contenitore del fornitore LuxEvent Secure.
+
+Lascia involontariamente:
+
+* frammento di badge holder vicino al corpo
+* traccia di polvere dorata da un nastro decorativo usato dal fornitore
+* una chiamata di 41 secondi al referente LuxEvent
+* incongruenza nei tempi tra Casa Armundia e LHoFT
+* accesso badge attribuito a Davide, ma impossibile per Davide secondo altri dati
+
+## 15. Falsa pista principale
+
+### Davide Rinaldi
+
+Davide è il falso colpevole perfetto.
+
+Contro di lui:
+
+* badge usato
+* telefono scarico
+* competenza sui log
+* messaggio “non devono vedere le patch notes”
+* presenza incerta al Glacis
+* personalità brusca
+
+Ma è innocente.
+
+La frase “patch notes” riguarda una correzione tecnica che avrebbe mostrato una vulnerabilità nella demo, non il delitto.
+
+Il suo badge è stato rubato o recuperato da Nora.
+
+La foto che lo colloca al Glacis ha metadati ambigui, ma un audio recuperato da Erion conferma che Davide era lì durante il momento critico.
+
+## 16. Altre false piste
+
+### 16.1 Marco Bellandi
+
+Sembra avere un movente reputazionale, ma sta solo tentando di evitare danni d’immagine dopo la morte.
+
+### 16.2 Arben Leka
+
+La voce nell’audio sembra la sua, ma è una frase in albanese detta da un’altra persona nella folla. Serve a coinvolgere i colleghi albanesi nell’analisi linguistica.
+
+### 16.3 Sofia Martelli
+
+La chat cancellata con “L.” sembra sospetta, ma riguarda un contatto sentimentale esterno o un referente eventi. Non è collegata all’omicidio.
+
+### 16.4 Matteo Serra
+
+La patch delle 00:17 sembra una manipolazione post-delitto, ma era un deploy automatico schedulato.
+
+### 16.5 Elira Kodra
+
+La frase “se esce fuori, siamo finiti” riguarda un bug funzionale nella demo, non il delitto.
+
+## 17. Timeline narrativa completa
+
+### 20 giugno — Prologo reale/fittizio
+
+* I colleghi Armundia arrivano in Lussemburgo.
+* Il gruppo si incontra.
+* Viene presentata informalmente la demo.
+* Qualcuno scherza sul fatto che “se succede qualcosa, con tutti questi log lo ricostruiamo”.
+* I giocatori iniziano la sessione Detective for a Day.
+
+### 21 giugno — Concerti diffusi
+
+* Dalle 20:00 partono vari microconcerti in città.
+* Alcuni colleghi si dividono tra techno, rock e hip hop.
+* Nora riceve più chiamate da LuxEvent Secure.
+* Davide segnala di aver perso il badge temporaneo.
+* Arben vede Nora parlare con un uomo vicino a un furgone tecnico.
+* Sofia cancella una chat.
+* Elira nota una discrepanza in un documento di accesso.
+
+### 22 giugno — Maxi concerto e fuochi
+
+* Il gruppo si ritrova in parte a Place de Glacis.
+* Alcuni decidono di andare verso Gëlle Fra per vedere i fuochi.
+* La città è piena.
+* Alle 23:40 i movimenti diventano confusi.
+* Alle 00:00 iniziano i fuochi.
+* Per 20 minuti musica epica e fuochi coprono rumori, urla, movimenti.
+* Nora lascia il gruppo per “una chiamata organizzativa”.
+* Davide è al Glacis o vicino al Glacis, ma il suo badge risulta usato altrove.
+* Arben viene registrato vicino a Pont Adolphe.
+* Marco Bellandi è visibile in una foto sotto Gëlle Fra.
+* Erion registra video, ma manca un segmento cruciale.
+* Alle 00:17 viene caricata una patch automatica.
+* Alle 00:23 Nora chiama LuxEvent Secure per 41 secondi.
+* Alle 00:28 un badge attribuito a Davide accede a una porta secondaria.
+* Alle 00:31 il Granduca fittizio entra nella sala secondaria.
+* Tra 00:33 e 00:39 avviene l’omicidio.
+* Alle 00:45 Nora rientra verso Casa Armundia.
+* Alle 01:10 diversi membri del gruppo si ritrovano al Glacis.
+
+### 23 giugno — Ritrovamento
+
+* La mattina del 23 viene trovato il corpo del Granduca.
+* La notizia viene inizialmente tenuta riservata.
+* La polizia acquisisce badge log, video, chat e testimonianze.
+* Poiché un badge Armundia risulta coinvolto, il gruppo viene interrogato.
+* I giocatori devono ricostruire il caso.
+
+## 18. Struttura in 4 capitoli
+
+## Capitolo 1 — Il corpo sotto i fuochi
+
+Durata target: 45 minuti.
+
+Obiettivo:
+
+* capire cosa è successo
+* identificare luogo e finestra temporale
+* capire perché il gruppo Armundia è coinvolto
+
+Prove consigliate:
+
+1. Articolo di giornale: “Mistero durante la Festa Nazionale”
+2. Verbale di ritrovamento del corpo
+3. Mappa eventi 21–23 giugno
+4. Programma ufficiale concerti e fuochi
+5. Prima cronologia della notte
+6. Foto/illustrazione Gëlle Fra e Pont Adolphe
+7. Chiamata emergenza trascritta
+
+Informazioni che devono emergere:
+
+* il Granduca muore durante o subito dopo i fuochi
+* la folla rende gli alibi difficili
+* un badge temporaneo legato ad Armundia è coinvolto
+* la zona Gëlle Fra/Pont Adolphe è centrale
+
+Falsa pista:
+
+* sembra che l’assassino sia uno dei developer per via del badge e dei log
+
+Password per Capitolo 2:
+`GELLEFRA`
+
+Enigma:
+“Il primo punto non è dove il corpo è stato trovato, ma dove tutti guardavano mentre nessuno vedeva.”
+
+## Capitolo 2 — Gli alibi del retreat
+
+Durata target: 45 minuti.
+
+Obiettivo:
+
+* confrontare dichiarazioni, orari e distanze
+* individuare chi mente
+* capire che più persone hanno alibi incompleti
+
+Prove consigliate:
+
+1. Dichiarazioni di Marco, Davide, Elira, Nora, Arben
+2. Tabella distanze a piedi
+3. Screenshot chat gruppo Armundia
+4. Cronologia chiamate Nora
+5. Foto del gruppo a Gëlle Fra
+6. Mappa Casa Armundia / LHoFT / Glacis
+7. Nota interna sugli accessi badge
+
+Informazioni che devono emergere:
+
+* Davide ha perso il badge
+* Nora gestiva badge e fornitori
+* Marco sta coprendo la reputazione aziendale
+* Arben ha visto qualcosa ma non lo collega subito
+* la distanza Glacis/LHoFT rende sospetto l’accesso attribuito a Davide
+
+Falsa pista:
+
+* Davide sembra mentire sul badge e sul telefono scarico
+
+Password per Capitolo 3:
+`ACIERIE86`
+
+Enigma:
+“Il luogo dove tutti tornano non è quello dove tutti dicono di essere stati. Cercate la base del gruppo.”
+
+## Capitolo 3 — Le prove non tornano
+
+Durata target: 45 minuti.
+
+Obiettivo:
+
+* analizzare prove tecniche e forensi
+* capire che il badge di Davide è stato usato da qualcun altro
+* smontare almeno una falsa pista
+
+Prove consigliate:
+
+1. Report accessi badge
+2. Referto frammento badge holder
+3. Analisi polvere dorata
+4. Log patch 00:17
+5. Trascrizione audio recuperata da Erion
+6. Perizia metadati foto Davide
+7. Documento LuxEvent Secure
+
+Informazioni che devono emergere:
+
+* la patch non è la prova del delitto
+* il badge holder rotto è compatibile con un lotto gestito da Nora
+* la polvere dorata non viene dai fuochi ma da nastro tecnico/decorativo del fornitore
+* Davide non poteva essere al LHoFT o nella sala nel momento esatto
+* qualcuno ha usato un accesso logistico, non tecnico
+
+Falsa pista:
+
+* Matteo e Davide sembrano i più sospetti per i log tecnici
+
+Password per Capitolo 4:
+`LAB9`
+
+Enigma:
+“Il laboratorio non è solo un indirizzo: è il posto dove il log dice la verità sbagliata.”
+
+## Capitolo 4 — Il codice del traditore
+
+Durata target: 45 minuti.
+
+Obiettivo:
+
+* collegare Nora, LuxEvent Secure, badge e movente
+* capire movente reale
+* trovare password finale
+* formulare accusa
+
+Prove consigliate:
+
+1. Contratto LuxEvent Secure
+2. Email riservata del Granduca su revisione fornitori
+3. Chiamata Nora-LuxEvent da 41 secondi
+4. Seconda dichiarazione di Arben
+5. Timeline finale ricostruita
+6. Memo su badge temporanei
+7. Report finale su torcia tecnica mancante
+8. Patch notes vere
+
+Informazioni che devono emergere:
+
+* il Granduca stava per bloccare il fornitore
+* Nora aveva legame con il fornitore
+* Nora poteva accedere a badge, percorsi e sale
+* Davide è stato incastrato usando il suo badge
+* la torcia tecnica è l’arma
+* il contenitore LuxEvent è stato usato per far sparire l’arma
+
+Password finale:
+`PATCHNOTES`
+
+Enigma:
+“Non cercate il codice che uccide. Cercate il documento che spiega cosa era stato corretto prima che tutti iniziassero a mentire.”
+
+## 19. Box risposta finale
+
+Domande:
+
+1. Chi è il colpevole?
+2. Qual è il movente?
+3. Quale oggetto è stato usato come arma?
+4. Come è stato incastrato Davide?
+5. Quale prova era la falsa pista più forte?
+6. Quale prova collega davvero Nora al caso?
+
+Risposte corrette:
+
+1. Nora Weiss
+2. Coprire il legame con LuxEvent Secure e impedire la revisione del contratto/lo scandalo
+3. Torcia metallica tecnica del fornitore
+4. Usando il badge temporaneo smarrito/rubato di Davide
+5. Log badge di Davide / patch 00:17 / telefono scarico
+6. Chiamata a LuxEvent + badge holder + polvere dorata + accesso logistico
+
+## 20. Spiegazione finale da mostrare se vincono
+
+Titolo:
+
+**Caso risolto — La logistica ha battuto la tecnologia**
+
+Testo:
+
+Avete individuato la persona che tutti avevano sottovalutato: Nora Weiss.
+
+Per tutta l’indagine, gli indizi sembravano puntare verso i profili più tecnici del gruppo. Il badge di Davide, la patch caricata alle 00:17, il telefono scarico, i log incompleti e la sua conoscenza dei sistemi rendevano Davide il sospetto perfetto.
+
+Ma proprio questo era il punto: era troppo perfetto.
+
+L’assassino non aveva bisogno di manipolare il sistema dall’interno. Aveva bisogno di sapere come muoversi tra eventi, badge, fornitori e accessi secondari. Nora era l’unica con conoscenza completa della logistica e con un collegamento diretto a LuxEvent Secure.
+
+Il Granduca Émeric IV stava per chiedere una revisione del contratto del fornitore dopo aver ricevuto una segnalazione. Nora, coinvolta nel sistema di favori che aveva favorito quel fornitore, rischiava di essere esposta.
+
+Durante i fuochi di mezzanotte, la città era perfetta per sparire: folla, rumore, musica, telefoni inutilizzabili, spostamenti confusi. Nora ha usato il badge temporaneo di Davide, ha attirato il Granduca in una sala secondaria e lo ha colpito con una torcia metallica tecnica. Poi ha fatto sparire l’arma attraverso il circuito logistico del fornitore.
+
+Le prove decisive non erano una sola, ma il mosaico:
+
+* il badge di Davide usato in un orario incompatibile con la sua posizione reale;
+* il frammento di badge holder;
+* la polvere dorata collegata al materiale LuxEvent, non ai fuochi;
+* la chiamata di 41 secondi tra Nora e il referente del fornitore;
+* la possibilità di accedere alle sale senza passare dai percorsi principali;
+* il movente legato alla revisione del contratto.
+
+Davide era stato incastrato. Marco proteggeva la reputazione. Elira temeva un bug. Matteo nascondeva una patch. Arben aveva visto un frammento della verità. Sofia nascondeva una chat personale. Ma Nora era l’unica per cui tutti gli elementi convergevano.
+
+## 21. Spiegazione se sbagliano
+
+Titolo:
+
+**Accusa errata — Avete seguito la prova più rumorosa**
+
+Testo:
+
+La vostra accusa è comprensibile, ma non regge fino in fondo.
+
+In questo caso la prova più evidente era anche la più pericolosa: il badge di Davide. Sembrava una prova tecnica oggettiva, ma un badge prova l’uso di un oggetto, non l’identità della persona che lo sta usando.
+
+La patch delle 00:17, il telefono scarico e i log incompleti creavano un sospetto forte, ma non spiegavano il movente reale né il collegamento con il fornitore esterno.
+
+La soluzione richiedeva di collegare logistica, tempi di percorrenza, accessi secondari e movente economico/reputazionale. L’unica persona al centro di tutti questi elementi era Nora Weiss.
+
+## 22. Lista documenti da creare
+
+### Capitolo 1
+
+1. `ch1-articolo-giornale.pdf`
+
+   * articolo sul ritrovamento
+   * crea atmosfera
+
+2. `ch1-verbale-ritrovamento.pdf`
+
+   * posizione corpo
+   * prima finestra temporale
+
+3. `ch1-mappa-eventi.png`
+
+   * Glacis, Gëlle Fra, Pont Adolphe, LHoFT, Casa Armundia
+
+4. `ch1-programma-festa.pdf`
+
+   * eventi 21–23 giugno
+
+5. `ch1-chiamata-emergenza.mp3`
+
+   * chiamata disturbata
+
+6. `ch1-trascrizione-chiamata.pdf`
+
+   * testo chiamata
+
+### Capitolo 2
+
+1. `ch2-dichiarazioni-sospetti.pdf`
+2. `ch2-distanze-a-piedi.pdf`
+3. `ch2-chat-gruppo.png`
+4. `ch2-cronologia-chiamate-nora.pdf`
+5. `ch2-foto-gellefra.jpg`
+6. `ch2-accessi-badge-prima-nota.pdf`
+
+### Capitolo 3
+
+1. `ch3-report-accessi-badge.pdf`
+2. `ch3-frammento-badge-holder.pdf`
+3. `ch3-analisi-polvere-dorata.pdf`
+4. `ch3-log-patch-0017.pdf`
+5. `ch3-audio-erion.mp3`
+6. `ch3-trascrizione-audio-erion.pdf`
+7. `ch3-metadati-foto-davide.pdf`
+
+### Capitolo 4
+
+1. `ch4-contratto-luxevent.pdf`
+2. `ch4-email-granduca-revisione.pdf`
+3. `ch4-chiamata-nora-luxevent.pdf`
+4. `ch4-seconda-dichiarazione-arben.pdf`
+5. `ch4-timeline-finale.pdf`
+6. `ch4-memo-badge-temporanei.pdf`
+7. `ch4-report-torcia-mancante.pdf`
+8. `ch4-patch-notes.pdf`
+
+## 23. Come rendere il gioco collaborativo
+
+Ogni capitolo deve contenere materiali che richiedono competenze diverse.
+
+Esempio Capitolo 3:
+
+* developer: legge log patch e accessi badge
+* business analyst: confronta dichiarazioni e requisiti
+* persona attenta ai dettagli: nota la polvere dorata
+* persona che parla albanese: interpreta audio/frase ambigua
+* persona pragmatica: controlla distanze e tempi
+
+Il gruppo deve capire che nessuno può risolvere tutto da solo in modo efficiente.
+
+## 24. Bilanciamento difficoltà
+
+Il caso deve essere risolvibile ma non ovvio.
+
+Regola:
+
+* Capitolo 1: atmosfera e contesto
+* Capitolo 2: tanti sospetti
+* Capitolo 3: quasi tutti accusano Davide
+* Capitolo 4: ribaltamento verso Nora
+
+A metà Capitolo 4, un gruppo bravo deve poter iniziare a sospettare Nora. Prima deve sembrare secondaria.
+
+## 25. Elementi da evitare
+
+Evitare:
+
+* nomi reali dei colleghi
+* accuse riconoscibili a persone reali
+* riferimenti sessuali interni al gruppo
+* gore eccessivo
+* politica reale lussemburghese
+* rappresentazioni offensive di nazionalità
+* rendere i colleghi albanesi o italiani “categorie”
+* soluzione basata su stereotipi
+
+## 26. Versione sintetica da usare come pitch
+
+Durante il weekend della festa nazionale del Lussemburgo, un gruppo Armundia si ritrova in città tra concerti, fuochi d’artificio e una demo istituzionale. La mattina dopo i fuochi, il Granduca fittizio Émeric IV viene trovato morto. Un badge temporaneo Armundia risulta coinvolto. Tutto sembra puntare a un developer che ha perso il badge e caricato una patch sospetta nel cuore della notte. Ma i log raccontano solo metà della verità. Per risolvere il caso, i giocatori devono unire distanze, chat, accessi, audio, mappe, documenti interni e prove forensi. Il vero colpevole è la persona che controllava la logistica: Nora Weiss, che ha usato la confusione della festa e il badge di un collega per coprire un movente esterno legato a un fornitore.
+
+## 27. JSON narrativo iniziale semplificato
+
+```json
+{
+  "caseId": "lux-gelle-fra-incident",
+  "title": {
+    "it": "Il Caso Gëlle Fra",
+    "en": "The Gëlle Fra Case",
+    "sq": "Rasti Gëlle Fra"
+  },
+  "culprit": "nora-weiss",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "title": {
+        "it": "Il corpo sotto i fuochi",
+        "en": "The Body Under the Fireworks",
+        "sq": "Trupi nën fishekzjarre"
+      },
+      "unlockPassword": "GELLEFRA"
+    },
+    {
+      "id": "chapter-2",
+      "title": {
+        "it": "Gli alibi del retreat",
+        "en": "The Retreat Alibis",
+        "sq": "Alibitë e retreat-it"
+      },
+      "unlockPassword": "ACIERIE86"
+    },
+    {
+      "id": "chapter-3",
+      "title": {
+        "it": "Le prove non tornano",
+        "en": "The Evidence Does Not Add Up",
+        "sq": "Provat nuk përputhen"
+      },
+      "unlockPassword": "LAB9"
+    },
+    {
+      "id": "chapter-4",
+      "title": {
+        "it": "Il codice del traditore",
+        "en": "The Traitor's Code",
+        "sq": "Kodi i tradhtarit"
+      },
+      "unlockPassword": "PATCHNOTES"
+    }
+  ],
+  "suspects": [
+    "marco-bellandi",
+    "elira-kodra",
+    "davide-rinaldi",
+    "arben-leka",
+    "sofia-martelli",
+    "matteo-serra",
+    "giulia-ferri",
+    "erion-dervishi",
+    "nora-weiss",
+    "luca-moretti"
+  ],
+  "finalSolution": {
+    "culprit": "nora-weiss",
+    "weapon": "torcia metallica tecnica",
+    "motive": "coprire il legame con LuxEvent Secure e impedire una revisione del contratto",
+    "framedSuspect": "davide-rinaldi",
+    "decisiveEvidence": [
+      "chiamata di 41 secondi a LuxEvent Secure",
+      "frammento badge holder",
+      "polvere dorata del fornitore",
+      "accesso logistico compatibile solo con Nora",
+      "badge di Davide usato da terzi"
+    ]
+  }
+}
+```
+
+## 28. Prossimo passo consigliato
+
+Dopo questa story bible, creare:
+
+1. testi reali dei documenti Capitolo 1
+2. immagini/mappe semplici
+3. file audio fittizio o trascrizione
+4. JSON completo da dare all’app
+5. password e hint definitivi
+6. traduzioni EN/SQ dei documenti chiave
+
+Priorità assoluta: completare Capitolo 1 e Capitolo 2 prima di rifinire tutto il resto. Il gioco deve partire forte, anche se gli ultimi documenti sono più semplici.

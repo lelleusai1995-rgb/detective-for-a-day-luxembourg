@@ -1,0 +1,59 @@
+- generic [ref=e46]:
+  - banner [ref=e47]:
+    - generic [ref=e48]: The Gëlle Fra Case
+    - 'button "Contrast: Normal" [ref=e49] [cursor=pointer]':
+      - generic [ref=e50]: ◐
+  - main [ref=e51]:
+    - paragraph [ref=e52]: Detective for a Day
+    - heading "The Gëlle Fra Case" [level=1] [ref=e53]
+    - paragraph [ref=e54]: Murder Under the Grand Ducal Fireworks
+    - generic [ref=e55]:
+      - paragraph [ref=e56]: Objective
+      - paragraph [ref=e57]: A fictional Grand Duke is dead and a temporary Armundia badge sits in the access trail. Read the archive, reconstruct the night, and name the culprit, the motive, the method and the decisive evidence. No single document tells the truth — trust the mosaic.
+    - generic [ref=e59]:
+      - generic [ref=e60]: Progress
+      - generic [ref=e61]: "Evidence viewed: 1/26"
+    - generic [ref=e64]:
+      - link "Evidence" [ref=e65] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/archive
+        - generic [ref=e66]: 🗂️
+        - text: Evidence
+      - link "Chapters" [ref=e67] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/chapters
+        - generic [ref=e68]: 📖
+        - text: Chapters
+      - link "Timeline" [ref=e69] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/timeline
+        - generic [ref=e70]: 🕒
+        - text: Timeline
+      - link "Suspects" [ref=e71] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/suspects
+        - generic [ref=e72]: 👥
+        - text: Suspects
+      - link "Final Accusation" [ref=e73] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/final
+        - generic [ref=e74]: ⚖️
+        - text: Final Accusation
+    - button "Reset progress" [ref=e76] [cursor=pointer]
+  - navigation "Primary" [ref=e77]:
+    - generic [ref=e78]:
+      - link "Home" [ref=e79] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/home
+        - generic [ref=e80]: 🏠
+        - generic [ref=e81]: Home
+      - link "Evidence" [ref=e82] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/archive
+        - generic [ref=e83]: 🗂️
+        - generic [ref=e84]: Evidence
+      - link "Chapters" [ref=e85] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/chapters
+        - generic [ref=e86]: 📖
+        - generic [ref=e87]: Chapters
+      - link "Timeline" [ref=e88] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/timeline
+        - generic [ref=e89]: 🕒
+        - generic [ref=e90]: Timeline
+      - link "Suspects" [ref=e91] [cursor=pointer]:
+        - /url: /game/lux-gelle-fra/suspects
+        - generic [ref=e92]: 👥
+        - generic [ref=e93]: Suspects

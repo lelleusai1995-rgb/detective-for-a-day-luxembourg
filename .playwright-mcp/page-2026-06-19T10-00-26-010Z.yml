@@ -1,0 +1,19 @@
+- generic [ref=e28]:
+  - banner [ref=e29]:
+    - generic [ref=e30]: Confidential Briefing
+    - 'button "Contrast: Normal" [ref=e31] [cursor=pointer]':
+      - generic [ref=e32]: ◐
+  - main [ref=e33]:
+    - paragraph [ref=e34]: Recommended first read
+    - heading "Police Liaison — Investigative Support Request" [level=1] [ref=e35]
+    - paragraph [ref=e36]: An urgent email asking your team to review a restricted evidence package.
+    - generic [ref=e37]:
+      - paragraph [ref=e38]: This document is a placeholder. The text below contains the full content you need.
+      - generic "Police Liaison — Investigative Support Request" [ref=e39]
+      - generic [ref=e40]:
+        - link "Open PDF in new tab ↗" [ref=e41] [cursor=pointer]:
+          - /url: /cases/lux-gelle-fra/assets/chapter-0/police-engagement-email.pdf
+        - link "Download file" [ref=e42] [cursor=pointer]:
+          - /url: /cases/lux-gelle-fra/assets/chapter-0/police-engagement-email.pdf
+      - generic [ref=e43]: "From: Fictional Luxembourg Police Liaison Office To: External Investigative Review Team Subject: Urgent Investigative Support Request — The Gëlle Fra Case Classification: CONFIDENTIAL (fictional) Dear colleagues, This is a fictional case file prepared for the Detective for a Day experience. All names, institutions and events below are invented for the game. You have been granted temporary access to a restricted evidence package concerning the death of Grand Duke Émeric IV of Luxembourg-Vallée, found on the morning of 23 June, a few hours after the National Day fireworks. A temporary access badge linked to the Armundia Luxembourg retreat appears in the access trail near the body. The official investigation is struggling with conflicting alibis, unreliable crowd-movement data and several misleading technical traces. Your task is to: 1. review the evidence archive in full; 2. reconstruct the timeline of the night; 3. identify the culprit; 4. explain the motive; 5. describe the method; 6. isolate the decisive evidence. A warning from our analysts: do not rely on a single document. The badge logs, call records, maps, chat screenshots and forensic notes only make sense when read together. The loudest clue is not always the true one. When your team is ready, submit your final accusation through this application. With thanks for your discretion, Fictional Luxembourg Police Liaison Office"
+    - button "Continue to the case →" [ref=e45] [cursor=pointer]
