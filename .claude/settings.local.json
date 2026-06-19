@@ -20,7 +20,10 @@
       "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('public/cases/lux-gelle-fra/case.json','utf8'\\)\\); console.log\\('JSON OK'\\)\")",
       "Bash(python -c 'import sys,re *)",
       "Bash(python -c ' *)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(node scripts/fill-sq-it.mjs)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('public/cases/lux-gelle-fra/case.json','utf8'\\)\\);console.log\\('JSON OK'\\)\")",
+      "Bash(rm scripts/fill-sq-it.mjs)"
     ]
   }
 }

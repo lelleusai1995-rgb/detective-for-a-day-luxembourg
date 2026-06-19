@@ -103,10 +103,12 @@ field, it jumps straight to the solution screen. Never shown to players.
 - **Edited text updated in EN/IT/SQ.** Every edited preview field is complete in
   all three languages; every edited string that already had IT/SQ was updated in
   step; the solution and wrong-answer explanations now include SQ.
-- **Albanian evidence preview/card text complete.** A script confirms every
-  evidence title/description, chapter title/intro/objective/question, suspect
-  role/profile and category label has `en`, `it` and `sq` (no missing language).
-  Long evidence bodies/transcripts may still fall back to EN by design.
+- **Albanian (and Italian) content fully complete.** A script confirms every
+  player-facing `case.json` field — titles, descriptions, **evidence bodies and
+  transcripts**, suspect motive/alibi/pro/contra, timeline descriptions, chapter
+  intros/objectives/questions and the solution — has `en`, `it` and `sq` (0
+  missing). In Albanian mode the archive, chapter lists, evidence detail and
+  suspects all show Albanian text with no English fallback.
 - **Suspects screen does not solve the case early.** No red badge; pro/contra
   hidden until Chapter 3.
 - **Chapter 3 does not point only at Nora.** The two forensic items have no
@@ -140,8 +142,8 @@ report.
   two files (then re-run `npm run assets:manifest`) to play purely from text.
 - **LATER story polish:** no second murder-grade alternative suspect; Sofia's "L."
   and Luca's "note" threads are loose ends; no hint feature (references removed).
-- **IT/SQ long bodies:** some long evidence bodies still fall back to EN (previews
-  are complete).
+- **UI labels:** `translations.ts` IT/SQ cover all active keys; any *new* UI key
+  added later must be translated in all three (else it falls back to EN).
 
 ---
 
@@ -153,7 +155,9 @@ report.
   ~0.8s, `dist/` produced (index.html, CSS 9.08 kB, JS 209.42 kB). **OK, no TS errors.**
 - `JSON.parse(case.json)` → **valid.**
 - Password normalization test (16 cases) → **all pass** (new + aliases unlock; old fail).
-- Preview-completeness script → **no preview field missing a language.**
+- Translation-completeness script → **0 player-facing `case.json` fields missing
+  `it` or `sq`** (titles, descriptions, evidence bodies, transcripts, suspect
+  motive/alibi/pro/contra, timeline descriptions, chapters, solution).
 - Repo grep → no old password appears as an active answer/test instruction in
   `src/` or `case.json`; remaining mentions are documentation history / "no longer valid" notes.
 
